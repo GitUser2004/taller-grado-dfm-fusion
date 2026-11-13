@@ -1,0 +1,863 @@
+{
+  "id": "20261104_091806_6c226c",
+  "ok": true,
+  "result": {
+    "checks": [
+      {
+        "check": "S0 first update is a rebuild, the rest are appends",
+        "ok": true,
+        "detail": [
+          "rebuild",
+          "append",
+          "append",
+          "append",
+          "append",
+          "append",
+          "append",
+          "append",
+          "append",
+          "append",
+          "append",
+          "append"
+        ]
+      },
+      {
+        "check": "S0 every face and edge has a record",
+        "ok": true,
+        "detail": []
+      },
+      {
+        "check": "S0 origin == Feature.faces owner for every face",
+        "ok": true,
+        "detail": []
+      },
+      {
+        "check": "S1 incremental == full replay (faces and edges)",
+        "ok": true,
+        "detail": []
+      },
+      {
+        "check": "S1 replay restored the marker to the end",
+        "ok": true,
+        "detail": [
+          11,
+          11
+        ]
+      },
+      {
+        "check": "S2 top face: origin Block, modified by every cut",
+        "ok": true,
+        "detail": [
+          "Pocket1",
+          "Pocket1 corners",
+          "Pocket2",
+          "Pocket3",
+          "Hole"
+        ]
+      },
+      {
+        "check": "S2 Pocket1 corner -> Pocket1 corners -> p1_r",
+        "ok": true,
+        "detail": {
+          "feature_type": "FilletFeature",
+          "face_role": "faces",
+          "parameters": [
+            {
+              "name": "d23",
+              "role": "Radius",
+              "expression": "p1_r",
+              "drives": [
+                "p1_r"
+              ]
+            }
+          ],
+          "parametric": true,
+          "note_heuristic": "dimensions are matched by shared sketch points; constraints propagate further, use sensitivity() for the exact answer"
+        }
+      },
+      {
+        "check": "S2 Pocket1 floor -> p1_D, modified by the fillet",
+        "ok": true,
+        "detail": {
+          "entity": "BRepFace",
+          "geometry": "Plane",
+          "origin": "Pocket1",
+          "modified_by": [
+            "Pocket1 corners"
+          ],
+          "controls": {
+            "feature_type": "ExtrudeFeature",
+            "face_role": "endFaces",
+            "parameters": [
+              {
+                "name": "d20",
+                "role": "AlongDistance",
+                "expression": "-( p1_D )",
+                "drives": [
+                  "p1_D"
+                ]
+              }
+            ],
+            "parametric": true,
+            "note_heuristic": "dimensions are matched by shared sketch points; constraints propagate further, use sensitivity() for the exact answer"
+          },
+          "modifier_parameters": {
+            "Pocket1 corners": [
+              "d22",
+              "d23"
+            ]
+          }
+        }
+      },
+      {
+        "check": "S2 Pocket1 long wall -> heuristic finds a pocket dimension (p1_L or p1_W)",
+        "ok": true,
+        "detail": {
+          "feature_type": "ExtrudeFeature",
+          "face_role": "sideFaces",
+          "parameters": [
+            {
+              "name": "d21",
+              "role": "TaperAngle",
+              "expression": "0.0 deg",
+              "drives": []
+            }
+          ],
+          "sketch_curves": [
+            {
+              "sketch": "Pocket1 sketch",
+              "curve": "SketchLine",
+              "fully_constrained": false,
+              "dimensions": [
+                {
+                  "name": "d19",
+                  "role": "Linear Dimension-3",
+                  "expression": "p1_W",
+                  "drives": [
+                    "p1_W"
+                  ],
+                  "dimension": "SketchLinearDimension"
+                }
+              ]
+            }
+          ],
+          "parametric": true,
+          "note_heuristic": "dimensions are matched by shared sketch points; constraints propagate further, use sensitivity() for the exact answer"
+        }
+      },
+      {
+        "check": "S2 Pocket3 corner -> undimensioned SketchArc, not parametric",
+        "ok": true,
+        "detail": {
+          "feature_type": "ExtrudeFeature",
+          "face_role": "sideFaces",
+          "parameters": [
+            {
+              "name": "d27",
+              "role": "TaperAngle",
+              "expression": "0.0 deg",
+              "drives": []
+            }
+          ],
+          "sketch_curves": [
+            {
+              "sketch": "Pocket3 sketch",
+              "curve": "SketchArc",
+              "fully_constrained": false,
+              "dimensions": []
+            }
+          ],
+          "parametric": false,
+          "note_heuristic": "dimensions are matched by shared sketch points; constraints propagate further, use sensitivity() for the exact answer"
+        }
+      },
+      {
+        "check": "S2 Pocket2 sharp edge -> Pocket2, its walls have no dimensions",
+        "ok": true,
+        "detail": "Pocket2"
+      },
+      {
+        "check": "S2 Hole wall -> hole_d",
+        "ok": true,
+        "detail": {
+          "feature_type": "HoleFeature",
+          "face_role": "sideFaces",
+          "parameters": [
+            {
+              "name": "d29",
+              "role": "HoleDiameter",
+              "expression": "hole_d",
+              "drives": [
+                "hole_d"
+              ]
+            }
+          ],
+          "parametric": true,
+          "note_heuristic": "dimensions are matched by shared sketch points; constraints propagate further, use sensitivity() for the exact answer"
+        }
+      },
+      {
+        "check": "S2b long wall: p1_W offsets it, p1_L/p1_D/p1_r change its area, blk_H moves it",
+        "ok": true,
+        "detail": {
+          "blk_H": {
+            "moved_mm": 0.3
+          },
+          "p1_L": {
+            "area": 10.0,
+            "moved_mm": 0.2
+          },
+          "p1_W": {
+            "moved_mm": 0.2,
+            "offset": 0.2
+          },
+          "p1_D": {
+            "area": 9.5,
+            "moved_mm": 0.125
+          },
+          "p1_r": {
+            "area": -0.5
+          }
+        }
+      },
+      {
+        "check": "S2b Pocket1 corner radius is controlled only by p1_r",
+        "ok": true,
+        "detail": [
+          "p1_r"
+        ]
+      },
+      {
+        "check": "S2b Pocket3 corner radius: no parameter controls it (all independent params tested)",
+        "ok": true,
+        "detail": {
+          "tested": 13,
+          "radius_params": []
+        }
+      },
+      {
+        "check": "S3 parameter edit triggers a rebuild",
+        "ok": true,
+        "detail": "rebuild"
+      },
+      {
+        "check": "S3 provenance unchanged after parameter edit",
+        "ok": true,
+        "detail": null
+      },
+      {
+        "check": "S4 moving the marker triggers a rebuild",
+        "ok": true,
+        "detail": "rebuild"
+      },
+      {
+        "check": "S4 rolled state has no Hole faces",
+        "ok": true,
+        "detail": null
+      },
+      {
+        "check": "S4 inserting before the end is not treated as append",
+        "ok": true,
+        "detail": "rebuild"
+      },
+      {
+        "check": "S4 top face modifiers follow timeline order with Pocket4 inserted",
+        "ok": true,
+        "detail": [
+          "Pocket1",
+          "Pocket1 corners",
+          "Pocket2",
+          "Pocket3",
+          "Pocket4",
+          "Hole"
+        ]
+      },
+      {
+        "check": "S5 suppress -> rebuild, no Pocket2 left",
+        "ok": true,
+        "detail": "rebuild"
+      },
+      {
+        "check": "S5 delete Pocket3 -> gone from top face modifiers",
+        "ok": true,
+        "detail": [
+          "Pocket1",
+          "Pocket1 corners",
+          "Pocket2",
+          "Pocket4",
+          "Hole"
+        ]
+      },
+      {
+        "check": "S6 save/load round trip",
+        "ok": true,
+        "detail": {
+          "bytes": 43698
+        }
+      },
+      {
+        "check": "S6 reloaded tracker sees no change (noop)",
+        "ok": true,
+        "detail": {
+          "mode": "noop",
+          "steps": 0
+        }
+      }
+    ],
+    "modes": [
+      {
+        "after": "user parameters",
+        "mode": "rebuild",
+        "steps": 0,
+        "ms": 0.2
+      },
+      {
+        "after": "Block sketch",
+        "mode": "append",
+        "steps": 1,
+        "ms": 1.1
+      },
+      {
+        "after": "Block",
+        "mode": "append",
+        "steps": 1,
+        "ms": 21.8
+      },
+      {
+        "after": "Top plane",
+        "mode": "append",
+        "steps": 1,
+        "ms": 15.8
+      },
+      {
+        "after": "Pocket1 sketch",
+        "mode": "append",
+        "steps": 1,
+        "ms": 15.6
+      },
+      {
+        "after": "Pocket1",
+        "mode": "append",
+        "steps": 1,
+        "ms": 28.8
+      },
+      {
+        "after": "Pocket1 corners",
+        "mode": "append",
+        "steps": 1,
+        "ms": 65.0
+      },
+      {
+        "after": "Pocket2 sketch",
+        "mode": "append",
+        "steps": 1,
+        "ms": 62.8
+      },
+      {
+        "after": "Pocket2",
+        "mode": "append",
+        "steps": 1,
+        "ms": 76.1
+      },
+      {
+        "after": "Pocket3 sketch",
+        "mode": "append",
+        "steps": 1,
+        "ms": 90.5
+      },
+      {
+        "after": "Pocket3",
+        "mode": "append",
+        "steps": 1,
+        "ms": 120.6
+      },
+      {
+        "after": "Hole",
+        "mode": "append",
+        "steps": 1,
+        "ms": 120.6
+      },
+      {
+        "after": "edit p1_D 25->20",
+        "mode": "rebuild",
+        "steps": 6,
+        "ms": 390.6
+      },
+      {
+        "after": "revert p1_D",
+        "mode": "rebuild",
+        "steps": 6,
+        "ms": 412.3
+      },
+      {
+        "after": "marker moved before Hole",
+        "mode": "rebuild",
+        "steps": 5,
+        "ms": 317.7
+      },
+      {
+        "after": "Pocket4 sketch (inserted)",
+        "mode": "rebuild",
+        "steps": 5,
+        "ms": 339.3
+      },
+      {
+        "after": "Pocket4 (inserted)",
+        "mode": "rebuild",
+        "steps": 6,
+        "ms": 519.2
+      },
+      {
+        "after": "marker back to end",
+        "mode": "rebuild",
+        "steps": 7,
+        "ms": 590.2
+      },
+      {
+        "after": "suppress Pocket2",
+        "mode": "rebuild",
+        "steps": 6,
+        "ms": 499.9
+      },
+      {
+        "after": "unsuppress Pocket2",
+        "mode": "rebuild",
+        "steps": 7,
+        "ms": 691.1
+      },
+      {
+        "after": "delete Pocket3",
+        "mode": "rebuild",
+        "steps": 6,
+        "ms": 449.9
+      }
+    ],
+    "errors": [],
+    "traces": {
+      "top face": {
+        "entity": "BRepFace",
+        "geometry": "Plane",
+        "origin": "Block",
+        "modified_by": [
+          "Pocket1",
+          "Pocket1 corners",
+          "Pocket2",
+          "Pocket3",
+          "Hole"
+        ],
+        "controls": {
+          "feature_type": "ExtrudeFeature",
+          "face_role": "endFaces",
+          "parameters": [
+            {
+              "name": "d14",
+              "role": "AlongDistance",
+              "expression": "blk_H",
+              "drives": [
+                "blk_H"
+              ]
+            }
+          ],
+          "parametric": true,
+          "note_heuristic": "dimensions are matched by shared sketch points; constraints propagate further, use sensitivity() for the exact answer"
+        },
+        "modifier_parameters": {
+          "Pocket1": [
+            "d20",
+            "d21"
+          ],
+          "Pocket1 corners": [
+            "d22",
+            "d23"
+          ],
+          "Pocket2": [
+            "d24",
+            "d25"
+          ],
+          "Pocket3": [
+            "d26",
+            "d27"
+          ],
+          "Hole": [
+            "d28",
+            "d29",
+            "d30"
+          ]
+        }
+      },
+      "pocket1 corner radius": {
+        "entity": "BRepFace",
+        "geometry": "Cylinder",
+        "origin": "Pocket1 corners",
+        "modified_by": [],
+        "controls": {
+          "feature_type": "FilletFeature",
+          "face_role": "faces",
+          "parameters": [
+            {
+              "name": "d23",
+              "role": "Radius",
+              "expression": "p1_r",
+              "drives": [
+                "p1_r"
+              ]
+            }
+          ],
+          "parametric": true,
+          "note_heuristic": "dimensions are matched by shared sketch points; constraints propagate further, use sensitivity() for the exact answer"
+        },
+        "modifier_parameters": {}
+      },
+      "pocket1 floor": {
+        "entity": "BRepFace",
+        "geometry": "Plane",
+        "origin": "Pocket1",
+        "modified_by": [
+          "Pocket1 corners"
+        ],
+        "controls": {
+          "feature_type": "ExtrudeFeature",
+          "face_role": "endFaces",
+          "parameters": [
+            {
+              "name": "d20",
+              "role": "AlongDistance",
+              "expression": "-( p1_D )",
+              "drives": [
+                "p1_D"
+              ]
+            }
+          ],
+          "parametric": true,
+          "note_heuristic": "dimensions are matched by shared sketch points; constraints propagate further, use sensitivity() for the exact answer"
+        },
+        "modifier_parameters": {
+          "Pocket1 corners": [
+            "d22",
+            "d23"
+          ]
+        }
+      },
+      "pocket1 long wall": {
+        "entity": "BRepFace",
+        "geometry": "Plane",
+        "origin": "Pocket1",
+        "modified_by": [
+          "Pocket1 corners"
+        ],
+        "controls": {
+          "feature_type": "ExtrudeFeature",
+          "face_role": "sideFaces",
+          "parameters": [
+            {
+              "name": "d21",
+              "role": "TaperAngle",
+              "expression": "0.0 deg",
+              "drives": []
+            }
+          ],
+          "sketch_curves": [
+            {
+              "sketch": "Pocket1 sketch",
+              "curve": "SketchLine",
+              "fully_constrained": false,
+              "dimensions": [
+                {
+                  "name": "d19",
+                  "role": "Linear Dimension-3",
+                  "expression": "p1_W",
+                  "drives": [
+                    "p1_W"
+                  ],
+                  "dimension": "SketchLinearDimension"
+                }
+              ]
+            }
+          ],
+          "parametric": true,
+          "note_heuristic": "dimensions are matched by shared sketch points; constraints propagate further, use sensitivity() for the exact answer"
+        },
+        "modifier_parameters": {
+          "Pocket1 corners": [
+            "d22",
+            "d23"
+          ]
+        }
+      },
+      "pocket3 corner": {
+        "entity": "BRepFace",
+        "geometry": "Cylinder",
+        "origin": "Pocket3",
+        "modified_by": [],
+        "controls": {
+          "feature_type": "ExtrudeFeature",
+          "face_role": "sideFaces",
+          "parameters": [
+            {
+              "name": "d27",
+              "role": "TaperAngle",
+              "expression": "0.0 deg",
+              "drives": []
+            }
+          ],
+          "sketch_curves": [
+            {
+              "sketch": "Pocket3 sketch",
+              "curve": "SketchArc",
+              "fully_constrained": false,
+              "dimensions": []
+            }
+          ],
+          "parametric": false,
+          "note_heuristic": "dimensions are matched by shared sketch points; constraints propagate further, use sensitivity() for the exact answer"
+        },
+        "modifier_parameters": {}
+      },
+      "pocket2 sharp corner edge": {
+        "entity": "BRepEdge",
+        "geometry": "Line3D",
+        "origin": "Pocket2",
+        "modified_by": [],
+        "faces": [
+          {
+            "entity": "BRepFace",
+            "geometry": "Plane",
+            "origin": "Pocket2",
+            "modified_by": [],
+            "controls": {
+              "feature_type": "ExtrudeFeature",
+              "face_role": "sideFaces",
+              "parameters": [
+                {
+                  "name": "d25",
+                  "role": "TaperAngle",
+                  "expression": "0.0 deg",
+                  "drives": []
+                }
+              ],
+              "sketch_curves": [
+                {
+                  "sketch": "Pocket2 sketch",
+                  "curve": "SketchLine",
+                  "fully_constrained": false,
+                  "dimensions": []
+                }
+              ],
+              "parametric": false,
+              "note_heuristic": "dimensions are matched by shared sketch points; constraints propagate further, use sensitivity() for the exact answer"
+            },
+            "modifier_parameters": {}
+          },
+          {
+            "entity": "BRepFace",
+            "geometry": "Plane",
+            "origin": "Pocket2",
+            "modified_by": [],
+            "controls": {
+              "feature_type": "ExtrudeFeature",
+              "face_role": "sideFaces",
+              "parameters": [
+                {
+                  "name": "d25",
+                  "role": "TaperAngle",
+                  "expression": "0.0 deg",
+                  "drives": []
+                }
+              ],
+              "sketch_curves": [
+                {
+                  "sketch": "Pocket2 sketch",
+                  "curve": "SketchLine",
+                  "fully_constrained": false,
+                  "dimensions": []
+                }
+              ],
+              "parametric": false,
+              "note_heuristic": "dimensions are matched by shared sketch points; constraints propagate further, use sensitivity() for the exact answer"
+            },
+            "modifier_parameters": {}
+          }
+        ]
+      },
+      "hole wall": {
+        "entity": "BRepFace",
+        "geometry": "Cylinder",
+        "origin": "Hole",
+        "modified_by": [],
+        "controls": {
+          "feature_type": "HoleFeature",
+          "face_role": "sideFaces",
+          "parameters": [
+            {
+              "name": "d29",
+              "role": "HoleDiameter",
+              "expression": "hole_d",
+              "drives": [
+                "hole_d"
+              ]
+            }
+          ],
+          "parametric": true,
+          "note_heuristic": "dimensions are matched by shared sketch points; constraints propagate further, use sensitivity() for the exact answer"
+        },
+        "modifier_parameters": {}
+      },
+      "sensitivity pocket1 long wall": {
+        "base": {
+          "area": 950.0,
+          "point": [
+            30.0,
+            20.0,
+            17.5
+          ],
+          "offset": -20.0
+        },
+        "effects": [
+          {
+            "parameter": "blk_H",
+            "expression": "30 mm",
+            "role": null,
+            "status": "ok",
+            "effect": {
+              "moved_mm": 0.3
+            }
+          },
+          {
+            "parameter": "p1_L",
+            "expression": "40 mm",
+            "role": null,
+            "status": "ok",
+            "effect": {
+              "area": 10.0,
+              "moved_mm": 0.2
+            }
+          },
+          {
+            "parameter": "p1_W",
+            "expression": "20 mm",
+            "role": null,
+            "status": "ok",
+            "effect": {
+              "moved_mm": 0.2,
+              "offset": 0.2
+            }
+          },
+          {
+            "parameter": "p1_D",
+            "expression": "25 mm",
+            "role": null,
+            "status": "ok",
+            "effect": {
+              "area": 9.5,
+              "moved_mm": 0.125
+            }
+          },
+          {
+            "parameter": "p1_r",
+            "expression": "1 mm",
+            "role": null,
+            "status": "ok",
+            "effect": {
+              "area": -0.5
+            }
+          }
+        ],
+        "tested": 11,
+        "restored": true
+      },
+      "sensitivity pocket1 corner": {
+        "base": {
+          "area": 39.269908,
+          "point": [
+            49.63661977236758,
+            20.36338022763242,
+            17.5
+          ],
+          "radius": 1.0
+        },
+        "effects": [
+          {
+            "parameter": "blk_H",
+            "expression": "30 mm",
+            "role": null,
+            "status": "ok",
+            "effect": {
+              "moved_mm": 0.3
+            }
+          },
+          {
+            "parameter": "p1_W",
+            "expression": "20 mm",
+            "role": null,
+            "status": "ok",
+            "effect": {
+              "moved_mm": 0.2
+            }
+          },
+          {
+            "parameter": "p1_D",
+            "expression": "25 mm",
+            "role": null,
+            "status": "ok",
+            "effect": {
+              "area": 0.392699,
+              "moved_mm": 0.125
+            }
+          },
+          {
+            "parameter": "p1_r",
+            "expression": "1 mm",
+            "role": null,
+            "status": "ok",
+            "effect": {
+              "area": 0.392699,
+              "moved_mm": 0.005139,
+              "radius": 0.01
+            }
+          }
+        ],
+        "tested": 11,
+        "restored": true
+      },
+      "sensitivity pocket3 corner": {
+        "base": {
+          "area": 25.132741,
+          "point": [
+            10.726760455264838,
+            46.72676045526485,
+            26.0
+          ],
+          "radius": 2.0
+        },
+        "effects": [
+          {
+            "parameter": "blk_H",
+            "expression": "30 mm",
+            "role": null,
+            "status": "ok",
+            "effect": {
+              "moved_mm": 0.3
+            }
+          },
+          {
+            "parameter": "p3_D",
+            "expression": "8 mm",
+            "role": null,
+            "status": "ok",
+            "effect": {
+              "area": 0.251328,
+              "moved_mm": 0.04
+            }
+          }
+        ],
+        "tested": 13,
+        "restored": true
+      }
+    },
+    "passed": 25,
+    "failed": 0
+  },
+  "stdout": "",
+  "error": null,
+  "elapsed_ms": 10098.058
+}

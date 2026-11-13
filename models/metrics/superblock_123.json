@@ -1,0 +1,1871 @@
+{
+  "tag": "superblock_123",
+  "document": "Untitled",
+  "units": "in",
+  "catalog": {
+    "version": "0.1",
+    "profile": "metal",
+    "overrides": {},
+    "thresholds": {
+      "topological_validity.error": true,
+      "topological_validity.short_edge_mm": 0.01,
+      "topological_validity.tiny_face_mm2": 0.001,
+      "feature_health.error": true,
+      "unused_parameter.info": true,
+      "internal_radius.error": 0.5,
+      "internal_radius_depth.warning": 0.3333,
+      "cavity_aspect_tool.warning": 6,
+      "cavity_aspect_tool.error": 10,
+      "cavity_aspect_opening.warning": 4,
+      "hole_aspect.warning": 4,
+      "hole_aspect.error": 10,
+      "hole_diameter.warning": 2.5,
+      "hole_diameter.error": 1.0,
+      "wall_thickness.warning": 0.8,
+      "wall_thickness.error": 0.5,
+      "accessibility.error": true,
+      "accessibility.min_free": 0.95
+    }
+  },
+  "topology_valid": true,
+  "unused_user_parameters": [
+    "sb_pitch"
+  ],
+  "timeline_items": 23,
+  "features": 10,
+  "user_parameters": 9,
+  "body": {
+    "faces": 120,
+    "edges": 284,
+    "volume_mm3": 62534.6
+  },
+  "topology": {
+    "is_solid": true,
+    "lumps": 1,
+    "shells": 1,
+    "open_shells": 0,
+    "void_shells": 0,
+    "faces": 120,
+    "edges": 284,
+    "degenerate_edges": 0,
+    "open_edges": 0,
+    "non_manifold_edges": 0,
+    "short_edges": 0,
+    "tiny_faces": 0
+  },
+  "edges": {
+    "concave": 23,
+    "convex": 261,
+    "tangent": 0
+  },
+  "setups": [
+    {
+      "direction": "+Z",
+      "faces": 44
+    },
+    {
+      "direction": "-Z",
+      "faces": 22
+    },
+    {
+      "direction": "-Y",
+      "faces": 20
+    },
+    {
+      "direction": "-X",
+      "faces": 17
+    },
+    {
+      "direction": "+Y",
+      "faces": 10
+    },
+    {
+      "direction": "+X",
+      "faces": 7
+    }
+  ],
+  "unreachable_faces": 0,
+  "min_wall_mm": 2.2451,
+  "cavities": [
+    {
+      "n_faces": 1,
+      "axis": "+X",
+      "all_faces_reachable_from_axis": true,
+      "kind": "hole",
+      "through": true,
+      "depth_mm": 6.35,
+      "depth_with_tip_mm": 6.35,
+      "opening_min_mm": 5.1054,
+      "opening_max_mm": 5.1054,
+      "internal_radii_mm": [
+        2.5527
+      ],
+      "sharp_internal_edges": 0,
+      "min_internal_radius_mm": 2.5527,
+      "depth_over_tool_d": 1.24,
+      "depth_over_opening": 1.24,
+      "hole_d_mm": 5.1054,
+      "hole_L_over_D": 1.24,
+      "id": 0,
+      "origins": [
+        "3X X broca THRU"
+      ]
+    },
+    {
+      "n_faces": 1,
+      "axis": "+X",
+      "all_faces_reachable_from_axis": true,
+      "kind": "hole",
+      "through": true,
+      "depth_mm": 6.35,
+      "depth_with_tip_mm": 6.35,
+      "opening_min_mm": 5.1054,
+      "opening_max_mm": 5.1054,
+      "internal_radii_mm": [
+        2.5527
+      ],
+      "sharp_internal_edges": 0,
+      "min_internal_radius_mm": 2.5527,
+      "depth_over_tool_d": 1.24,
+      "depth_over_opening": 1.24,
+      "hole_d_mm": 5.1054,
+      "hole_L_over_D": 1.24,
+      "id": 1,
+      "origins": [
+        "3X X broca THRU"
+      ]
+    },
+    {
+      "n_faces": 1,
+      "axis": "+X",
+      "all_faces_reachable_from_axis": true,
+      "kind": "hole",
+      "through": true,
+      "depth_mm": 6.35,
+      "depth_with_tip_mm": 6.35,
+      "opening_min_mm": 5.1054,
+      "opening_max_mm": 5.1054,
+      "internal_radii_mm": [
+        2.5527
+      ],
+      "sharp_internal_edges": 0,
+      "min_internal_radius_mm": 2.5527,
+      "depth_over_tool_d": 1.24,
+      "depth_over_opening": 1.24,
+      "hole_d_mm": 5.1054,
+      "hole_L_over_D": 1.24,
+      "id": 2,
+      "origins": [
+        "3X X broca THRU"
+      ]
+    },
+    {
+      "n_faces": 7,
+      "axis": "-X",
+      "all_faces_reachable_from_axis": true,
+      "kind": "hole",
+      "through": false,
+      "depth_mm": 69.85,
+      "depth_with_tip_mm": 69.85,
+      "opening_min_mm": 9.525,
+      "opening_max_mm": 9.525,
+      "internal_radii_mm": [
+        4.7625
+      ],
+      "sharp_internal_edges": 0,
+      "min_internal_radius_mm": 4.7625,
+      "depth_over_tool_d": 7.33,
+      "depth_over_opening": 7.33,
+      "hole_d_mm": 9.525,
+      "hole_L_over_D": 7.33,
+      "id": 3,
+      "origins": [
+        "3X X cajas lado -"
+      ]
+    },
+    {
+      "n_faces": 7,
+      "axis": "-X",
+      "all_faces_reachable_from_axis": true,
+      "kind": "hole",
+      "through": false,
+      "depth_mm": 69.85,
+      "depth_with_tip_mm": 69.85,
+      "opening_min_mm": 9.525,
+      "opening_max_mm": 9.525,
+      "internal_radii_mm": [
+        4.7625
+      ],
+      "sharp_internal_edges": 0,
+      "min_internal_radius_mm": 4.7625,
+      "depth_over_tool_d": 7.33,
+      "depth_over_opening": 7.33,
+      "hole_d_mm": 9.525,
+      "hole_L_over_D": 7.33,
+      "id": 4,
+      "origins": [
+        "3X X cajas lado -"
+      ]
+    },
+    {
+      "n_faces": 3,
+      "axis": "+Z",
+      "all_faces_reachable_from_axis": true,
+      "kind": "hole",
+      "through": false,
+      "depth_mm": 19.05,
+      "depth_with_tip_mm": 19.05,
+      "opening_min_mm": 9.525,
+      "opening_max_mm": 9.525,
+      "internal_radii_mm": [
+        4.7625
+      ],
+      "sharp_internal_edges": 0,
+      "min_internal_radius_mm": 4.7625,
+      "depth_over_tool_d": 2.0,
+      "depth_over_opening": 2.0,
+      "hole_d_mm": 9.525,
+      "hole_L_over_D": 2.0,
+      "id": 5,
+      "origins": [
+        "15X Z cajas lado +"
+      ]
+    },
+    {
+      "n_faces": 5,
+      "axis": "-Y",
+      "all_faces_reachable_from_axis": true,
+      "kind": "hole",
+      "through": false,
+      "depth_mm": 44.45,
+      "depth_with_tip_mm": 44.45,
+      "opening_min_mm": 9.525,
+      "opening_max_mm": 9.525,
+      "internal_radii_mm": [
+        4.7625
+      ],
+      "sharp_internal_edges": 0,
+      "min_internal_radius_mm": 4.7625,
+      "depth_over_tool_d": 4.67,
+      "depth_over_opening": 4.67,
+      "hole_d_mm": 9.525,
+      "hole_L_over_D": 4.67,
+      "id": 6,
+      "origins": [
+        "5X Y cajas lado -"
+      ]
+    },
+    {
+      "n_faces": 3,
+      "axis": "+Z",
+      "all_faces_reachable_from_axis": true,
+      "kind": "hole",
+      "through": false,
+      "depth_mm": 19.05,
+      "depth_with_tip_mm": 19.05,
+      "opening_min_mm": 9.525,
+      "opening_max_mm": 9.525,
+      "internal_radii_mm": [
+        4.7625
+      ],
+      "sharp_internal_edges": 0,
+      "min_internal_radius_mm": 4.7625,
+      "depth_over_tool_d": 2.0,
+      "depth_over_opening": 2.0,
+      "hole_d_mm": 9.525,
+      "hole_L_over_D": 2.0,
+      "id": 7,
+      "origins": [
+        "15X Z cajas lado +"
+      ]
+    },
+    {
+      "n_faces": 5,
+      "axis": "-Y",
+      "all_faces_reachable_from_axis": true,
+      "kind": "hole",
+      "through": false,
+      "depth_mm": 44.45,
+      "depth_with_tip_mm": 44.45,
+      "opening_min_mm": 9.525,
+      "opening_max_mm": 9.525,
+      "internal_radii_mm": [
+        4.7625
+      ],
+      "sharp_internal_edges": 0,
+      "min_internal_radius_mm": 4.7625,
+      "depth_over_tool_d": 4.67,
+      "depth_over_opening": 4.67,
+      "hole_d_mm": 9.525,
+      "hole_L_over_D": 4.67,
+      "id": 8,
+      "origins": [
+        "5X Y cajas lado -"
+      ]
+    },
+    {
+      "n_faces": 3,
+      "axis": "+Z",
+      "all_faces_reachable_from_axis": true,
+      "kind": "hole",
+      "through": false,
+      "depth_mm": 19.05,
+      "depth_with_tip_mm": 19.05,
+      "opening_min_mm": 9.525,
+      "opening_max_mm": 9.525,
+      "internal_radii_mm": [
+        4.7625
+      ],
+      "sharp_internal_edges": 0,
+      "min_internal_radius_mm": 4.7625,
+      "depth_over_tool_d": 2.0,
+      "depth_over_opening": 2.0,
+      "hole_d_mm": 9.525,
+      "hole_L_over_D": 2.0,
+      "id": 9,
+      "origins": [
+        "15X Z cajas lado +"
+      ]
+    },
+    {
+      "n_faces": 5,
+      "axis": "-Y",
+      "all_faces_reachable_from_axis": true,
+      "kind": "hole",
+      "through": false,
+      "depth_mm": 44.45,
+      "depth_with_tip_mm": 44.45,
+      "opening_min_mm": 9.525,
+      "opening_max_mm": 9.525,
+      "internal_radii_mm": [
+        4.7625
+      ],
+      "sharp_internal_edges": 0,
+      "min_internal_radius_mm": 4.7625,
+      "depth_over_tool_d": 4.67,
+      "depth_over_opening": 4.67,
+      "hole_d_mm": 9.525,
+      "hole_L_over_D": 4.67,
+      "id": 10,
+      "origins": [
+        "5X Y cajas lado -"
+      ]
+    },
+    {
+      "n_faces": 3,
+      "axis": "-Z",
+      "all_faces_reachable_from_axis": true,
+      "kind": "hole",
+      "through": false,
+      "depth_mm": 19.05,
+      "depth_with_tip_mm": 19.05,
+      "opening_min_mm": 9.525,
+      "opening_max_mm": 9.525,
+      "internal_radii_mm": [
+        4.7625
+      ],
+      "sharp_internal_edges": 0,
+      "min_internal_radius_mm": 4.7625,
+      "depth_over_tool_d": 2.0,
+      "depth_over_opening": 2.0,
+      "hole_d_mm": 9.525,
+      "hole_L_over_D": 2.0,
+      "id": 11,
+      "origins": [
+        "15X Z cajas lado -"
+      ]
+    },
+    {
+      "n_faces": 5,
+      "axis": "+Y",
+      "all_faces_reachable_from_axis": true,
+      "kind": "hole",
+      "through": false,
+      "depth_mm": 44.45,
+      "depth_with_tip_mm": 44.45,
+      "opening_min_mm": 9.525,
+      "opening_max_mm": 9.525,
+      "internal_radii_mm": [
+        4.7625
+      ],
+      "sharp_internal_edges": 0,
+      "min_internal_radius_mm": 4.7625,
+      "depth_over_tool_d": 4.67,
+      "depth_over_opening": 4.67,
+      "hole_d_mm": 9.525,
+      "hole_L_over_D": 4.67,
+      "id": 12,
+      "origins": [
+        "5X Y cajas lado +"
+      ]
+    },
+    {
+      "n_faces": 3,
+      "axis": "-Z",
+      "all_faces_reachable_from_axis": true,
+      "kind": "hole",
+      "through": false,
+      "depth_mm": 19.05,
+      "depth_with_tip_mm": 19.05,
+      "opening_min_mm": 9.525,
+      "opening_max_mm": 9.525,
+      "internal_radii_mm": [
+        4.7625
+      ],
+      "sharp_internal_edges": 0,
+      "min_internal_radius_mm": 4.7625,
+      "depth_over_tool_d": 2.0,
+      "depth_over_opening": 2.0,
+      "hole_d_mm": 9.525,
+      "hole_L_over_D": 2.0,
+      "id": 13,
+      "origins": [
+        "15X Z cajas lado -"
+      ]
+    },
+    {
+      "n_faces": 5,
+      "axis": "+Y",
+      "all_faces_reachable_from_axis": true,
+      "kind": "hole",
+      "through": false,
+      "depth_mm": 44.45,
+      "depth_with_tip_mm": 44.45,
+      "opening_min_mm": 9.525,
+      "opening_max_mm": 9.525,
+      "internal_radii_mm": [
+        4.7625
+      ],
+      "sharp_internal_edges": 0,
+      "min_internal_radius_mm": 4.7625,
+      "depth_over_tool_d": 4.67,
+      "depth_over_opening": 4.67,
+      "hole_d_mm": 9.525,
+      "hole_L_over_D": 4.67,
+      "id": 14,
+      "origins": [
+        "5X Y cajas lado +"
+      ]
+    },
+    {
+      "n_faces": 3,
+      "axis": "+Z",
+      "all_faces_reachable_from_axis": true,
+      "kind": "hole",
+      "through": false,
+      "depth_mm": 19.05,
+      "depth_with_tip_mm": 19.05,
+      "opening_min_mm": 9.525,
+      "opening_max_mm": 9.525,
+      "internal_radii_mm": [
+        4.7625
+      ],
+      "sharp_internal_edges": 0,
+      "min_internal_radius_mm": 4.7625,
+      "depth_over_tool_d": 2.0,
+      "depth_over_opening": 2.0,
+      "hole_d_mm": 9.525,
+      "hole_L_over_D": 2.0,
+      "id": 15,
+      "origins": [
+        "15X Z cajas lado +"
+      ]
+    },
+    {
+      "n_faces": 3,
+      "axis": "+Z",
+      "all_faces_reachable_from_axis": true,
+      "kind": "hole",
+      "through": false,
+      "depth_mm": 19.05,
+      "depth_with_tip_mm": 19.05,
+      "opening_min_mm": 9.525,
+      "opening_max_mm": 9.525,
+      "internal_radii_mm": [
+        4.7625
+      ],
+      "sharp_internal_edges": 0,
+      "min_internal_radius_mm": 4.7625,
+      "depth_over_tool_d": 2.0,
+      "depth_over_opening": 2.0,
+      "hole_d_mm": 9.525,
+      "hole_L_over_D": 2.0,
+      "id": 16,
+      "origins": [
+        "15X Z cajas lado +"
+      ]
+    },
+    {
+      "n_faces": 3,
+      "axis": "+Z",
+      "all_faces_reachable_from_axis": true,
+      "kind": "hole",
+      "through": false,
+      "depth_mm": 19.05,
+      "depth_with_tip_mm": 19.05,
+      "opening_min_mm": 9.525,
+      "opening_max_mm": 9.525,
+      "internal_radii_mm": [
+        4.7625
+      ],
+      "sharp_internal_edges": 0,
+      "min_internal_radius_mm": 4.7625,
+      "depth_over_tool_d": 2.0,
+      "depth_over_opening": 2.0,
+      "hole_d_mm": 9.525,
+      "hole_L_over_D": 2.0,
+      "id": 17,
+      "origins": [
+        "15X Z cajas lado +"
+      ]
+    },
+    {
+      "n_faces": 3,
+      "axis": "-Z",
+      "all_faces_reachable_from_axis": true,
+      "kind": "hole",
+      "through": false,
+      "depth_mm": 19.05,
+      "depth_with_tip_mm": 19.05,
+      "opening_min_mm": 9.525,
+      "opening_max_mm": 9.525,
+      "internal_radii_mm": [
+        4.7625
+      ],
+      "sharp_internal_edges": 0,
+      "min_internal_radius_mm": 4.7625,
+      "depth_over_tool_d": 2.0,
+      "depth_over_opening": 2.0,
+      "hole_d_mm": 9.525,
+      "hole_L_over_D": 2.0,
+      "id": 18,
+      "origins": [
+        "15X Z cajas lado -"
+      ]
+    },
+    {
+      "n_faces": 3,
+      "axis": "-Z",
+      "all_faces_reachable_from_axis": true,
+      "kind": "hole",
+      "through": false,
+      "depth_mm": 19.05,
+      "depth_with_tip_mm": 19.05,
+      "opening_min_mm": 9.525,
+      "opening_max_mm": 9.525,
+      "internal_radii_mm": [
+        4.7625
+      ],
+      "sharp_internal_edges": 0,
+      "min_internal_radius_mm": 4.7625,
+      "depth_over_tool_d": 2.0,
+      "depth_over_opening": 2.0,
+      "hole_d_mm": 9.525,
+      "hole_L_over_D": 2.0,
+      "id": 19,
+      "origins": [
+        "15X Z cajas lado -"
+      ]
+    },
+    {
+      "n_faces": 7,
+      "axis": "+X",
+      "all_faces_reachable_from_axis": true,
+      "kind": "hole",
+      "through": false,
+      "depth_mm": 69.85,
+      "depth_with_tip_mm": 69.85,
+      "opening_min_mm": 9.525,
+      "opening_max_mm": 9.525,
+      "internal_radii_mm": [
+        4.7625
+      ],
+      "sharp_internal_edges": 0,
+      "min_internal_radius_mm": 4.7625,
+      "depth_over_tool_d": 7.33,
+      "depth_over_opening": 7.33,
+      "hole_d_mm": 9.525,
+      "hole_L_over_D": 7.33,
+      "id": 20,
+      "origins": [
+        "3X X cajas lado +"
+      ]
+    },
+    {
+      "n_faces": 3,
+      "axis": "-Z",
+      "all_faces_reachable_from_axis": true,
+      "kind": "hole",
+      "through": false,
+      "depth_mm": 19.05,
+      "depth_with_tip_mm": 19.05,
+      "opening_min_mm": 9.525,
+      "opening_max_mm": 9.525,
+      "internal_radii_mm": [
+        4.7625
+      ],
+      "sharp_internal_edges": 0,
+      "min_internal_radius_mm": 4.7625,
+      "depth_over_tool_d": 2.0,
+      "depth_over_opening": 2.0,
+      "hole_d_mm": 9.525,
+      "hole_L_over_D": 2.0,
+      "id": 21,
+      "origins": [
+        "15X Z cajas lado -"
+      ]
+    },
+    {
+      "n_faces": 3,
+      "axis": "-Z",
+      "all_faces_reachable_from_axis": true,
+      "kind": "hole",
+      "through": false,
+      "depth_mm": 19.05,
+      "depth_with_tip_mm": 19.05,
+      "opening_min_mm": 9.525,
+      "opening_max_mm": 9.525,
+      "internal_radii_mm": [
+        4.7625
+      ],
+      "sharp_internal_edges": 0,
+      "min_internal_radius_mm": 4.7625,
+      "depth_over_tool_d": 2.0,
+      "depth_over_opening": 2.0,
+      "hole_d_mm": 9.525,
+      "hole_L_over_D": 2.0,
+      "id": 22,
+      "origins": [
+        "15X Z cajas lado -"
+      ]
+    },
+    {
+      "n_faces": 3,
+      "axis": "-Z",
+      "all_faces_reachable_from_axis": true,
+      "kind": "hole",
+      "through": false,
+      "depth_mm": 19.05,
+      "depth_with_tip_mm": 19.05,
+      "opening_min_mm": 9.525,
+      "opening_max_mm": 9.525,
+      "internal_radii_mm": [
+        4.7625
+      ],
+      "sharp_internal_edges": 0,
+      "min_internal_radius_mm": 4.7625,
+      "depth_over_tool_d": 2.0,
+      "depth_over_opening": 2.0,
+      "hole_d_mm": 9.525,
+      "hole_L_over_D": 2.0,
+      "id": 23,
+      "origins": [
+        "15X Z cajas lado -"
+      ]
+    },
+    {
+      "n_faces": 3,
+      "axis": "+Z",
+      "all_faces_reachable_from_axis": true,
+      "kind": "hole",
+      "through": false,
+      "depth_mm": 19.05,
+      "depth_with_tip_mm": 19.05,
+      "opening_min_mm": 9.525,
+      "opening_max_mm": 9.525,
+      "internal_radii_mm": [
+        4.7625
+      ],
+      "sharp_internal_edges": 0,
+      "min_internal_radius_mm": 4.7625,
+      "depth_over_tool_d": 2.0,
+      "depth_over_opening": 2.0,
+      "hole_d_mm": 9.525,
+      "hole_L_over_D": 2.0,
+      "id": 24,
+      "origins": [
+        "15X Z cajas lado +"
+      ]
+    },
+    {
+      "n_faces": 3,
+      "axis": "+Z",
+      "all_faces_reachable_from_axis": true,
+      "kind": "hole",
+      "through": false,
+      "depth_mm": 19.05,
+      "depth_with_tip_mm": 19.05,
+      "opening_min_mm": 9.525,
+      "opening_max_mm": 9.525,
+      "internal_radii_mm": [
+        4.7625
+      ],
+      "sharp_internal_edges": 0,
+      "min_internal_radius_mm": 4.7625,
+      "depth_over_tool_d": 2.0,
+      "depth_over_opening": 2.0,
+      "hole_d_mm": 9.525,
+      "hole_L_over_D": 2.0,
+      "id": 25,
+      "origins": [
+        "15X Z cajas lado +"
+      ]
+    },
+    {
+      "n_faces": 1,
+      "axis": "+Y",
+      "all_faces_reachable_from_axis": true,
+      "kind": "hole",
+      "through": true,
+      "depth_mm": 6.35,
+      "depth_with_tip_mm": 6.35,
+      "opening_min_mm": 5.1054,
+      "opening_max_mm": 5.1054,
+      "internal_radii_mm": [
+        2.5527
+      ],
+      "sharp_internal_edges": 0,
+      "min_internal_radius_mm": 2.5527,
+      "depth_over_tool_d": 1.24,
+      "depth_over_opening": 1.24,
+      "hole_d_mm": 5.1054,
+      "hole_L_over_D": 1.24,
+      "id": 26,
+      "origins": [
+        "5X Y broca THRU"
+      ]
+    },
+    {
+      "n_faces": 1,
+      "axis": "+Y",
+      "all_faces_reachable_from_axis": true,
+      "kind": "hole",
+      "through": true,
+      "depth_mm": 6.35,
+      "depth_with_tip_mm": 6.35,
+      "opening_min_mm": 5.1054,
+      "opening_max_mm": 5.1054,
+      "internal_radii_mm": [
+        2.5527
+      ],
+      "sharp_internal_edges": 0,
+      "min_internal_radius_mm": 2.5527,
+      "depth_over_tool_d": 1.24,
+      "depth_over_opening": 1.24,
+      "hole_d_mm": 5.1054,
+      "hole_L_over_D": 1.24,
+      "id": 27,
+      "origins": [
+        "5X Y broca THRU"
+      ]
+    },
+    {
+      "n_faces": 1,
+      "axis": "+Y",
+      "all_faces_reachable_from_axis": true,
+      "kind": "hole",
+      "through": true,
+      "depth_mm": 6.35,
+      "depth_with_tip_mm": 6.35,
+      "opening_min_mm": 5.1054,
+      "opening_max_mm": 5.1054,
+      "internal_radii_mm": [
+        2.5527
+      ],
+      "sharp_internal_edges": 0,
+      "min_internal_radius_mm": 2.5527,
+      "depth_over_tool_d": 1.24,
+      "depth_over_opening": 1.24,
+      "hole_d_mm": 5.1054,
+      "hole_L_over_D": 1.24,
+      "id": 28,
+      "origins": [
+        "5X Y broca THRU"
+      ]
+    },
+    {
+      "n_faces": 1,
+      "axis": "+Y",
+      "all_faces_reachable_from_axis": true,
+      "kind": "hole",
+      "through": true,
+      "depth_mm": 6.35,
+      "depth_with_tip_mm": 6.35,
+      "opening_min_mm": 5.1054,
+      "opening_max_mm": 5.1054,
+      "internal_radii_mm": [
+        2.5527
+      ],
+      "sharp_internal_edges": 0,
+      "min_internal_radius_mm": 2.5527,
+      "depth_over_tool_d": 1.24,
+      "depth_over_opening": 1.24,
+      "hole_d_mm": 5.1054,
+      "hole_L_over_D": 1.24,
+      "id": 29,
+      "origins": [
+        "5X Y broca THRU"
+      ]
+    },
+    {
+      "n_faces": 1,
+      "axis": "+Y",
+      "all_faces_reachable_from_axis": true,
+      "kind": "hole",
+      "through": true,
+      "depth_mm": 6.35,
+      "depth_with_tip_mm": 6.35,
+      "opening_min_mm": 5.1054,
+      "opening_max_mm": 5.1054,
+      "internal_radii_mm": [
+        2.5527
+      ],
+      "sharp_internal_edges": 0,
+      "min_internal_radius_mm": 2.5527,
+      "depth_over_tool_d": 1.24,
+      "depth_over_opening": 1.24,
+      "hole_d_mm": 5.1054,
+      "hole_L_over_D": 1.24,
+      "id": 30,
+      "origins": [
+        "5X Y broca THRU"
+      ]
+    },
+    {
+      "n_faces": 1,
+      "axis": "+Z",
+      "all_faces_reachable_from_axis": true,
+      "kind": "hole",
+      "through": true,
+      "depth_mm": 6.35,
+      "depth_with_tip_mm": 6.35,
+      "opening_min_mm": 5.1054,
+      "opening_max_mm": 5.1054,
+      "internal_radii_mm": [
+        2.5527
+      ],
+      "sharp_internal_edges": 0,
+      "min_internal_radius_mm": 2.5527,
+      "depth_over_tool_d": 1.24,
+      "depth_over_opening": 1.24,
+      "hole_d_mm": 5.1054,
+      "hole_L_over_D": 1.24,
+      "id": 31,
+      "origins": [
+        "15X Z broca THRU"
+      ]
+    },
+    {
+      "n_faces": 1,
+      "axis": "+Z",
+      "all_faces_reachable_from_axis": true,
+      "kind": "hole",
+      "through": true,
+      "depth_mm": 6.35,
+      "depth_with_tip_mm": 6.35,
+      "opening_min_mm": 5.1054,
+      "opening_max_mm": 5.1054,
+      "internal_radii_mm": [
+        2.5527
+      ],
+      "sharp_internal_edges": 0,
+      "min_internal_radius_mm": 2.5527,
+      "depth_over_tool_d": 1.24,
+      "depth_over_opening": 1.24,
+      "hole_d_mm": 5.1054,
+      "hole_L_over_D": 1.24,
+      "id": 32,
+      "origins": [
+        "15X Z broca THRU"
+      ]
+    },
+    {
+      "n_faces": 1,
+      "axis": "+Z",
+      "all_faces_reachable_from_axis": true,
+      "kind": "hole",
+      "through": true,
+      "depth_mm": 6.35,
+      "depth_with_tip_mm": 6.35,
+      "opening_min_mm": 5.1054,
+      "opening_max_mm": 5.1054,
+      "internal_radii_mm": [
+        2.5527
+      ],
+      "sharp_internal_edges": 0,
+      "min_internal_radius_mm": 2.5527,
+      "depth_over_tool_d": 1.24,
+      "depth_over_opening": 1.24,
+      "hole_d_mm": 5.1054,
+      "hole_L_over_D": 1.24,
+      "id": 33,
+      "origins": [
+        "15X Z broca THRU"
+      ]
+    },
+    {
+      "n_faces": 1,
+      "axis": "+Z",
+      "all_faces_reachable_from_axis": true,
+      "kind": "hole",
+      "through": true,
+      "depth_mm": 6.35,
+      "depth_with_tip_mm": 6.35,
+      "opening_min_mm": 5.1054,
+      "opening_max_mm": 5.1054,
+      "internal_radii_mm": [
+        2.5527
+      ],
+      "sharp_internal_edges": 0,
+      "min_internal_radius_mm": 2.5527,
+      "depth_over_tool_d": 1.24,
+      "depth_over_opening": 1.24,
+      "hole_d_mm": 5.1054,
+      "hole_L_over_D": 1.24,
+      "id": 34,
+      "origins": [
+        "15X Z broca THRU"
+      ]
+    },
+    {
+      "n_faces": 1,
+      "axis": "+Z",
+      "all_faces_reachable_from_axis": true,
+      "kind": "hole",
+      "through": true,
+      "depth_mm": 6.35,
+      "depth_with_tip_mm": 6.35,
+      "opening_min_mm": 5.1054,
+      "opening_max_mm": 5.1054,
+      "internal_radii_mm": [
+        2.5527
+      ],
+      "sharp_internal_edges": 0,
+      "min_internal_radius_mm": 2.5527,
+      "depth_over_tool_d": 1.24,
+      "depth_over_opening": 1.24,
+      "hole_d_mm": 5.1054,
+      "hole_L_over_D": 1.24,
+      "id": 35,
+      "origins": [
+        "15X Z broca THRU"
+      ]
+    },
+    {
+      "n_faces": 1,
+      "axis": "+Z",
+      "all_faces_reachable_from_axis": true,
+      "kind": "hole",
+      "through": true,
+      "depth_mm": 6.35,
+      "depth_with_tip_mm": 6.35,
+      "opening_min_mm": 5.1054,
+      "opening_max_mm": 5.1054,
+      "internal_radii_mm": [
+        2.5527
+      ],
+      "sharp_internal_edges": 0,
+      "min_internal_radius_mm": 2.5527,
+      "depth_over_tool_d": 1.24,
+      "depth_over_opening": 1.24,
+      "hole_d_mm": 5.1054,
+      "hole_L_over_D": 1.24,
+      "id": 36,
+      "origins": [
+        "15X Z broca THRU"
+      ]
+    },
+    {
+      "n_faces": 1,
+      "axis": "+Z",
+      "all_faces_reachable_from_axis": true,
+      "kind": "hole",
+      "through": true,
+      "depth_mm": 6.35,
+      "depth_with_tip_mm": 6.35,
+      "opening_min_mm": 5.1054,
+      "opening_max_mm": 5.1054,
+      "internal_radii_mm": [
+        2.5527
+      ],
+      "sharp_internal_edges": 0,
+      "min_internal_radius_mm": 2.5527,
+      "depth_over_tool_d": 1.24,
+      "depth_over_opening": 1.24,
+      "hole_d_mm": 5.1054,
+      "hole_L_over_D": 1.24,
+      "id": 37,
+      "origins": [
+        "15X Z broca THRU"
+      ]
+    },
+    {
+      "n_faces": 1,
+      "axis": "+Z",
+      "all_faces_reachable_from_axis": true,
+      "kind": "hole",
+      "through": true,
+      "depth_mm": 6.35,
+      "depth_with_tip_mm": 6.35,
+      "opening_min_mm": 5.1054,
+      "opening_max_mm": 5.1054,
+      "internal_radii_mm": [
+        2.5527
+      ],
+      "sharp_internal_edges": 0,
+      "min_internal_radius_mm": 2.5527,
+      "depth_over_tool_d": 1.24,
+      "depth_over_opening": 1.24,
+      "hole_d_mm": 5.1054,
+      "hole_L_over_D": 1.24,
+      "id": 38,
+      "origins": [
+        "15X Z broca THRU"
+      ]
+    },
+    {
+      "n_faces": 1,
+      "axis": "+Z",
+      "all_faces_reachable_from_axis": true,
+      "kind": "hole",
+      "through": true,
+      "depth_mm": 6.35,
+      "depth_with_tip_mm": 6.35,
+      "opening_min_mm": 5.1054,
+      "opening_max_mm": 5.1054,
+      "internal_radii_mm": [
+        2.5527
+      ],
+      "sharp_internal_edges": 0,
+      "min_internal_radius_mm": 2.5527,
+      "depth_over_tool_d": 1.24,
+      "depth_over_opening": 1.24,
+      "hole_d_mm": 5.1054,
+      "hole_L_over_D": 1.24,
+      "id": 39,
+      "origins": [
+        "15X Z broca THRU"
+      ]
+    },
+    {
+      "n_faces": 1,
+      "axis": "+Z",
+      "all_faces_reachable_from_axis": true,
+      "kind": "hole",
+      "through": true,
+      "depth_mm": 6.35,
+      "depth_with_tip_mm": 6.35,
+      "opening_min_mm": 5.1054,
+      "opening_max_mm": 5.1054,
+      "internal_radii_mm": [
+        2.5527
+      ],
+      "sharp_internal_edges": 0,
+      "min_internal_radius_mm": 2.5527,
+      "depth_over_tool_d": 1.24,
+      "depth_over_opening": 1.24,
+      "hole_d_mm": 5.1054,
+      "hole_L_over_D": 1.24,
+      "id": 40,
+      "origins": [
+        "15X Z broca THRU"
+      ]
+    },
+    {
+      "n_faces": 1,
+      "axis": "+Z",
+      "all_faces_reachable_from_axis": true,
+      "kind": "hole",
+      "through": true,
+      "depth_mm": 6.35,
+      "depth_with_tip_mm": 6.35,
+      "opening_min_mm": 5.1054,
+      "opening_max_mm": 5.1054,
+      "internal_radii_mm": [
+        2.5527
+      ],
+      "sharp_internal_edges": 0,
+      "min_internal_radius_mm": 2.5527,
+      "depth_over_tool_d": 1.24,
+      "depth_over_opening": 1.24,
+      "hole_d_mm": 5.1054,
+      "hole_L_over_D": 1.24,
+      "id": 41,
+      "origins": [
+        "15X Z broca THRU"
+      ]
+    },
+    {
+      "n_faces": 1,
+      "axis": "+Z",
+      "all_faces_reachable_from_axis": true,
+      "kind": "hole",
+      "through": true,
+      "depth_mm": 6.35,
+      "depth_with_tip_mm": 6.35,
+      "opening_min_mm": 5.1054,
+      "opening_max_mm": 5.1054,
+      "internal_radii_mm": [
+        2.5527
+      ],
+      "sharp_internal_edges": 0,
+      "min_internal_radius_mm": 2.5527,
+      "depth_over_tool_d": 1.24,
+      "depth_over_opening": 1.24,
+      "hole_d_mm": 5.1054,
+      "hole_L_over_D": 1.24,
+      "id": 42,
+      "origins": [
+        "15X Z broca THRU"
+      ]
+    },
+    {
+      "n_faces": 1,
+      "axis": "+Z",
+      "all_faces_reachable_from_axis": true,
+      "kind": "hole",
+      "through": true,
+      "depth_mm": 6.35,
+      "depth_with_tip_mm": 6.35,
+      "opening_min_mm": 5.1054,
+      "opening_max_mm": 5.1054,
+      "internal_radii_mm": [
+        2.5527
+      ],
+      "sharp_internal_edges": 0,
+      "min_internal_radius_mm": 2.5527,
+      "depth_over_tool_d": 1.24,
+      "depth_over_opening": 1.24,
+      "hole_d_mm": 5.1054,
+      "hole_L_over_D": 1.24,
+      "id": 43,
+      "origins": [
+        "15X Z broca THRU"
+      ]
+    },
+    {
+      "n_faces": 1,
+      "axis": "+Z",
+      "all_faces_reachable_from_axis": true,
+      "kind": "hole",
+      "through": true,
+      "depth_mm": 6.35,
+      "depth_with_tip_mm": 6.35,
+      "opening_min_mm": 5.1054,
+      "opening_max_mm": 5.1054,
+      "internal_radii_mm": [
+        2.5527
+      ],
+      "sharp_internal_edges": 0,
+      "min_internal_radius_mm": 2.5527,
+      "depth_over_tool_d": 1.24,
+      "depth_over_opening": 1.24,
+      "hole_d_mm": 5.1054,
+      "hole_L_over_D": 1.24,
+      "id": 44,
+      "origins": [
+        "15X Z broca THRU"
+      ]
+    },
+    {
+      "n_faces": 1,
+      "axis": "+Z",
+      "all_faces_reachable_from_axis": true,
+      "kind": "hole",
+      "through": true,
+      "depth_mm": 6.35,
+      "depth_with_tip_mm": 6.35,
+      "opening_min_mm": 5.1054,
+      "opening_max_mm": 5.1054,
+      "internal_radii_mm": [
+        2.5527
+      ],
+      "sharp_internal_edges": 0,
+      "min_internal_radius_mm": 2.5527,
+      "depth_over_tool_d": 1.24,
+      "depth_over_opening": 1.24,
+      "hole_d_mm": 5.1054,
+      "hole_L_over_D": 1.24,
+      "id": 45,
+      "origins": [
+        "15X Z broca THRU"
+      ]
+    }
+  ],
+  "provenance": {
+    "faces_modified_after_creation": 79,
+    "max_modifiers_on_one_face": 2
+  },
+  "findings": [
+    {
+      "rule": "hole_aspect",
+      "rule_id": "hole_aspect",
+      "severity": "warning",
+      "value": 7.33,
+      "threshold": 4.0,
+      "note": "cavity 3",
+      "faces": 7,
+      "trace": [
+        {
+          "origin": "3X X cajas lado -",
+          "modified_by": [],
+          "face_role": "sideFaces",
+          "parametric": true,
+          "parameters": [
+            {
+              "name": "d76",
+              "expr": "0.0 deg",
+              "role": "TaperAngle"
+            },
+            {
+              "name": "d73",
+              "expr": "sb_cb",
+              "role": "SketchDiameterDimension",
+              "sketch": "3X X cajas lado - - centros"
+            }
+          ],
+          "sketch_curves_without_dims": []
+        },
+        {
+          "origin": "3X X cajas lado -",
+          "modified_by": [],
+          "face_role": "sideFaces",
+          "parametric": true,
+          "parameters": [
+            {
+              "name": "d76",
+              "expr": "0.0 deg",
+              "role": "TaperAngle"
+            },
+            {
+              "name": "d73",
+              "expr": "sb_cb",
+              "role": "SketchDiameterDimension",
+              "sketch": "3X X cajas lado - - centros"
+            }
+          ],
+          "sketch_curves_without_dims": []
+        },
+        {
+          "origin": "3X X cajas lado -",
+          "modified_by": [],
+          "face_role": "sideFaces",
+          "parametric": true,
+          "parameters": [
+            {
+              "name": "d76",
+              "expr": "0.0 deg",
+              "role": "TaperAngle"
+            },
+            {
+              "name": "d73",
+              "expr": "sb_cb",
+              "role": "SketchDiameterDimension",
+              "sketch": "3X X cajas lado - - centros"
+            }
+          ],
+          "sketch_curves_without_dims": []
+        }
+      ],
+      "rule_name": "Relación largo/diámetro de agujeros",
+      "category": "proceso",
+      "thesis_scope": "comprometida",
+      "sources": [
+        "HUBS",
+        "SANDVIK",
+        "PL_6WAYS",
+        "DFMX",
+        "FIVEFLUTE"
+      ]
+    },
+    {
+      "rule": "hole_aspect",
+      "rule_id": "hole_aspect",
+      "severity": "warning",
+      "value": 7.33,
+      "threshold": 4.0,
+      "note": "cavity 4",
+      "faces": 7,
+      "trace": [
+        {
+          "origin": "3X X cajas lado -",
+          "modified_by": [],
+          "face_role": "sideFaces",
+          "parametric": true,
+          "parameters": [
+            {
+              "name": "d76",
+              "expr": "0.0 deg",
+              "role": "TaperAngle"
+            },
+            {
+              "name": "d74",
+              "expr": "sb_cb",
+              "role": "SketchDiameterDimension",
+              "sketch": "3X X cajas lado - - centros"
+            }
+          ],
+          "sketch_curves_without_dims": []
+        },
+        {
+          "origin": "3X X cajas lado -",
+          "modified_by": [],
+          "face_role": "sideFaces",
+          "parametric": true,
+          "parameters": [
+            {
+              "name": "d76",
+              "expr": "0.0 deg",
+              "role": "TaperAngle"
+            },
+            {
+              "name": "d74",
+              "expr": "sb_cb",
+              "role": "SketchDiameterDimension",
+              "sketch": "3X X cajas lado - - centros"
+            }
+          ],
+          "sketch_curves_without_dims": []
+        },
+        {
+          "origin": "3X X cajas lado -",
+          "modified_by": [],
+          "face_role": "sideFaces",
+          "parametric": true,
+          "parameters": [
+            {
+              "name": "d76",
+              "expr": "0.0 deg",
+              "role": "TaperAngle"
+            },
+            {
+              "name": "d74",
+              "expr": "sb_cb",
+              "role": "SketchDiameterDimension",
+              "sketch": "3X X cajas lado - - centros"
+            }
+          ],
+          "sketch_curves_without_dims": []
+        }
+      ],
+      "rule_name": "Relación largo/diámetro de agujeros",
+      "category": "proceso",
+      "thesis_scope": "comprometida",
+      "sources": [
+        "HUBS",
+        "SANDVIK",
+        "PL_6WAYS",
+        "DFMX",
+        "FIVEFLUTE"
+      ]
+    },
+    {
+      "rule": "hole_aspect",
+      "rule_id": "hole_aspect",
+      "severity": "warning",
+      "value": 4.67,
+      "threshold": 4.0,
+      "note": "cavity 6",
+      "faces": 5,
+      "trace": [
+        {
+          "origin": "5X Y cajas lado -",
+          "modified_by": [
+            "3X X cajas lado +",
+            "3X X cajas lado -"
+          ],
+          "face_role": "sideFaces",
+          "parametric": true,
+          "parameters": [
+            {
+              "name": "d61",
+              "expr": "0.0 deg",
+              "role": "TaperAngle"
+            },
+            {
+              "name": "d57",
+              "expr": "sb_cb",
+              "role": "SketchDiameterDimension",
+              "sketch": "5X Y cajas lado - - centros"
+            }
+          ],
+          "sketch_curves_without_dims": []
+        },
+        {
+          "origin": "5X Y cajas lado -",
+          "modified_by": [
+            "3X X cajas lado -"
+          ],
+          "face_role": "sideFaces",
+          "parametric": true,
+          "parameters": [
+            {
+              "name": "d61",
+              "expr": "0.0 deg",
+              "role": "TaperAngle"
+            },
+            {
+              "name": "d57",
+              "expr": "sb_cb",
+              "role": "SketchDiameterDimension",
+              "sketch": "5X Y cajas lado - - centros"
+            }
+          ],
+          "sketch_curves_without_dims": []
+        },
+        {
+          "origin": "5X Y cajas lado -",
+          "modified_by": [
+            "5X Y broca THRU"
+          ],
+          "face_role": "endFaces",
+          "parametric": true,
+          "parameters": [
+            {
+              "name": "d60",
+              "expr": "sb_cbY",
+              "role": "AlongDistance"
+            }
+          ],
+          "sketch_curves_without_dims": []
+        }
+      ],
+      "rule_name": "Relación largo/diámetro de agujeros",
+      "category": "proceso",
+      "thesis_scope": "comprometida",
+      "sources": [
+        "HUBS",
+        "SANDVIK",
+        "PL_6WAYS",
+        "DFMX",
+        "FIVEFLUTE"
+      ]
+    },
+    {
+      "rule": "hole_aspect",
+      "rule_id": "hole_aspect",
+      "severity": "warning",
+      "value": 4.67,
+      "threshold": 4.0,
+      "note": "cavity 8",
+      "faces": 5,
+      "trace": [
+        {
+          "origin": "5X Y cajas lado -",
+          "modified_by": [
+            "3X X cajas lado +",
+            "3X X cajas lado -"
+          ],
+          "face_role": "sideFaces",
+          "parametric": true,
+          "parameters": [
+            {
+              "name": "d61",
+              "expr": "0.0 deg",
+              "role": "TaperAngle"
+            },
+            {
+              "name": "d58",
+              "expr": "sb_cb",
+              "role": "SketchDiameterDimension",
+              "sketch": "5X Y cajas lado - - centros"
+            }
+          ],
+          "sketch_curves_without_dims": []
+        },
+        {
+          "origin": "5X Y cajas lado -",
+          "modified_by": [
+            "3X X cajas lado -"
+          ],
+          "face_role": "sideFaces",
+          "parametric": true,
+          "parameters": [
+            {
+              "name": "d61",
+              "expr": "0.0 deg",
+              "role": "TaperAngle"
+            },
+            {
+              "name": "d58",
+              "expr": "sb_cb",
+              "role": "SketchDiameterDimension",
+              "sketch": "5X Y cajas lado - - centros"
+            }
+          ],
+          "sketch_curves_without_dims": []
+        },
+        {
+          "origin": "5X Y cajas lado -",
+          "modified_by": [
+            "5X Y broca THRU"
+          ],
+          "face_role": "endFaces",
+          "parametric": true,
+          "parameters": [
+            {
+              "name": "d60",
+              "expr": "sb_cbY",
+              "role": "AlongDistance"
+            }
+          ],
+          "sketch_curves_without_dims": []
+        }
+      ],
+      "rule_name": "Relación largo/diámetro de agujeros",
+      "category": "proceso",
+      "thesis_scope": "comprometida",
+      "sources": [
+        "HUBS",
+        "SANDVIK",
+        "PL_6WAYS",
+        "DFMX",
+        "FIVEFLUTE"
+      ]
+    },
+    {
+      "rule": "hole_aspect",
+      "rule_id": "hole_aspect",
+      "severity": "warning",
+      "value": 4.67,
+      "threshold": 4.0,
+      "note": "cavity 10",
+      "faces": 5,
+      "trace": [
+        {
+          "origin": "5X Y cajas lado -",
+          "modified_by": [
+            "3X X cajas lado +",
+            "3X X cajas lado -"
+          ],
+          "face_role": "sideFaces",
+          "parametric": true,
+          "parameters": [
+            {
+              "name": "d61",
+              "expr": "0.0 deg",
+              "role": "TaperAngle"
+            },
+            {
+              "name": "d59",
+              "expr": "sb_cb",
+              "role": "SketchDiameterDimension",
+              "sketch": "5X Y cajas lado - - centros"
+            }
+          ],
+          "sketch_curves_without_dims": []
+        },
+        {
+          "origin": "5X Y cajas lado -",
+          "modified_by": [
+            "3X X cajas lado -"
+          ],
+          "face_role": "sideFaces",
+          "parametric": true,
+          "parameters": [
+            {
+              "name": "d61",
+              "expr": "0.0 deg",
+              "role": "TaperAngle"
+            },
+            {
+              "name": "d59",
+              "expr": "sb_cb",
+              "role": "SketchDiameterDimension",
+              "sketch": "5X Y cajas lado - - centros"
+            }
+          ],
+          "sketch_curves_without_dims": []
+        },
+        {
+          "origin": "5X Y cajas lado -",
+          "modified_by": [
+            "5X Y broca THRU"
+          ],
+          "face_role": "endFaces",
+          "parametric": true,
+          "parameters": [
+            {
+              "name": "d60",
+              "expr": "sb_cbY",
+              "role": "AlongDistance"
+            }
+          ],
+          "sketch_curves_without_dims": []
+        }
+      ],
+      "rule_name": "Relación largo/diámetro de agujeros",
+      "category": "proceso",
+      "thesis_scope": "comprometida",
+      "sources": [
+        "HUBS",
+        "SANDVIK",
+        "PL_6WAYS",
+        "DFMX",
+        "FIVEFLUTE"
+      ]
+    },
+    {
+      "rule": "hole_aspect",
+      "rule_id": "hole_aspect",
+      "severity": "warning",
+      "value": 4.67,
+      "threshold": 4.0,
+      "note": "cavity 12",
+      "faces": 5,
+      "trace": [
+        {
+          "origin": "5X Y cajas lado +",
+          "modified_by": [
+            "3X X cajas lado -"
+          ],
+          "face_role": "sideFaces",
+          "parametric": true,
+          "parameters": [
+            {
+              "name": "d56",
+              "expr": "0.0 deg",
+              "role": "TaperAngle"
+            },
+            {
+              "name": "d53",
+              "expr": "sb_cb",
+              "role": "SketchDiameterDimension",
+              "sketch": "5X Y cajas lado + - centros"
+            }
+          ],
+          "sketch_curves_without_dims": []
+        },
+        {
+          "origin": "5X Y cajas lado +",
+          "modified_by": [
+            "3X X cajas lado -"
+          ],
+          "face_role": "sideFaces",
+          "parametric": true,
+          "parameters": [
+            {
+              "name": "d56",
+              "expr": "0.0 deg",
+              "role": "TaperAngle"
+            },
+            {
+              "name": "d53",
+              "expr": "sb_cb",
+              "role": "SketchDiameterDimension",
+              "sketch": "5X Y cajas lado + - centros"
+            }
+          ],
+          "sketch_curves_without_dims": []
+        },
+        {
+          "origin": "5X Y cajas lado +",
+          "modified_by": [
+            "5X Y broca THRU"
+          ],
+          "face_role": "endFaces",
+          "parametric": true,
+          "parameters": [
+            {
+              "name": "d55",
+              "expr": "-( sb_cbY )",
+              "role": "AlongDistance"
+            }
+          ],
+          "sketch_curves_without_dims": []
+        }
+      ],
+      "rule_name": "Relación largo/diámetro de agujeros",
+      "category": "proceso",
+      "thesis_scope": "comprometida",
+      "sources": [
+        "HUBS",
+        "SANDVIK",
+        "PL_6WAYS",
+        "DFMX",
+        "FIVEFLUTE"
+      ]
+    },
+    {
+      "rule": "hole_aspect",
+      "rule_id": "hole_aspect",
+      "severity": "warning",
+      "value": 4.67,
+      "threshold": 4.0,
+      "note": "cavity 14",
+      "faces": 5,
+      "trace": [
+        {
+          "origin": "5X Y cajas lado +",
+          "modified_by": [
+            "3X X cajas lado -"
+          ],
+          "face_role": "sideFaces",
+          "parametric": true,
+          "parameters": [
+            {
+              "name": "d56",
+              "expr": "0.0 deg",
+              "role": "TaperAngle"
+            },
+            {
+              "name": "d54",
+              "expr": "sb_cb",
+              "role": "SketchDiameterDimension",
+              "sketch": "5X Y cajas lado + - centros"
+            }
+          ],
+          "sketch_curves_without_dims": []
+        },
+        {
+          "origin": "5X Y cajas lado +",
+          "modified_by": [
+            "3X X cajas lado -"
+          ],
+          "face_role": "sideFaces",
+          "parametric": true,
+          "parameters": [
+            {
+              "name": "d56",
+              "expr": "0.0 deg",
+              "role": "TaperAngle"
+            },
+            {
+              "name": "d54",
+              "expr": "sb_cb",
+              "role": "SketchDiameterDimension",
+              "sketch": "5X Y cajas lado + - centros"
+            }
+          ],
+          "sketch_curves_without_dims": []
+        },
+        {
+          "origin": "5X Y cajas lado +",
+          "modified_by": [
+            "5X Y broca THRU"
+          ],
+          "face_role": "endFaces",
+          "parametric": true,
+          "parameters": [
+            {
+              "name": "d55",
+              "expr": "-( sb_cbY )",
+              "role": "AlongDistance"
+            }
+          ],
+          "sketch_curves_without_dims": []
+        }
+      ],
+      "rule_name": "Relación largo/diámetro de agujeros",
+      "category": "proceso",
+      "thesis_scope": "comprometida",
+      "sources": [
+        "HUBS",
+        "SANDVIK",
+        "PL_6WAYS",
+        "DFMX",
+        "FIVEFLUTE"
+      ]
+    },
+    {
+      "rule": "hole_aspect",
+      "rule_id": "hole_aspect",
+      "severity": "warning",
+      "value": 7.33,
+      "threshold": 4.0,
+      "note": "cavity 20",
+      "faces": 7,
+      "trace": [
+        {
+          "origin": "3X X cajas lado +",
+          "modified_by": [],
+          "face_role": "sideFaces",
+          "parametric": true,
+          "parameters": [
+            {
+              "name": "d72",
+              "expr": "0.0 deg",
+              "role": "TaperAngle"
+            },
+            {
+              "name": "d70",
+              "expr": "sb_cb",
+              "role": "SketchDiameterDimension",
+              "sketch": "3X X cajas lado + - centros"
+            }
+          ],
+          "sketch_curves_without_dims": []
+        },
+        {
+          "origin": "3X X cajas lado +",
+          "modified_by": [],
+          "face_role": "sideFaces",
+          "parametric": true,
+          "parameters": [
+            {
+              "name": "d72",
+              "expr": "0.0 deg",
+              "role": "TaperAngle"
+            },
+            {
+              "name": "d70",
+              "expr": "sb_cb",
+              "role": "SketchDiameterDimension",
+              "sketch": "3X X cajas lado + - centros"
+            }
+          ],
+          "sketch_curves_without_dims": []
+        },
+        {
+          "origin": "3X X cajas lado +",
+          "modified_by": [],
+          "face_role": "sideFaces",
+          "parametric": true,
+          "parameters": [
+            {
+              "name": "d72",
+              "expr": "0.0 deg",
+              "role": "TaperAngle"
+            },
+            {
+              "name": "d70",
+              "expr": "sb_cb",
+              "role": "SketchDiameterDimension",
+              "sketch": "3X X cajas lado + - centros"
+            }
+          ],
+          "sketch_curves_without_dims": []
+        }
+      ],
+      "rule_name": "Relación largo/diámetro de agujeros",
+      "category": "proceso",
+      "thesis_scope": "comprometida",
+      "sources": [
+        "HUBS",
+        "SANDVIK",
+        "PL_6WAYS",
+        "DFMX",
+        "FIVEFLUTE"
+      ]
+    }
+  ],
+  "summary": {
+    "error": 0,
+    "warning": 8
+  },
+  "summary_by_category": {
+    "diseno_preliminar": {
+      "error": 0,
+      "warning": 0
+    },
+    "proceso": {
+      "error": 0,
+      "warning": 8
+    }
+  },
+  "timing_s": {
+    "provenance_mode": "rebuild",
+    "provenance_s": 4.03,
+    "analysis_s": 12.944
+  }
+}

@@ -1,0 +1,30 @@
+{
+  "id": "20261104_095627_fa00ff",
+  "ok": true,
+  "result": {
+    "bodies": [
+      {
+        "name": "Body1",
+        "solid": true,
+        "faces": 26,
+        "edges": 72,
+        "volume_in3": 5.31396
+      }
+    ],
+    "expected_volume_in3": 5.31396,
+    "unhealthy": [],
+    "timeline_items": 14,
+    "user_parameters": 9,
+    "log": [
+      "V superior 90: ok (pos), 1.0460 in^3 removed",
+      "Alivio V superior: ok (pos), 0.0473 in^3 removed",
+      "V inferior 90: ok (pos), 0.4553 in^3 removed",
+      "Alivio V inferior: ok (pos), 0.0473 in^3 removed",
+      "Muesca izquierda: ok (pos), 0.1816 in^3 removed",
+      "Muesca derecha: ok (pos), 0.1816 in^3 removed"
+    ]
+  },
+  "stdout": "",
+  "error": null,
+  "elapsed_ms": 1217.78
+}

@@ -1,0 +1,173 @@
+{
+  "tag": "edge_clamp",
+  "document": "Untitled",
+  "units": "in",
+  "catalog": {
+    "version": "0.1",
+    "profile": "metal",
+    "overrides": {},
+    "thresholds": {
+      "topological_validity.error": true,
+      "topological_validity.short_edge_mm": 0.01,
+      "topological_validity.tiny_face_mm2": 0.001,
+      "feature_health.error": true,
+      "unused_parameter.info": true,
+      "internal_radius.error": 0.5,
+      "internal_radius_depth.warning": 0.3333,
+      "cavity_aspect_tool.warning": 6,
+      "cavity_aspect_tool.error": 10,
+      "cavity_aspect_opening.warning": 4,
+      "hole_aspect.warning": 4,
+      "hole_aspect.error": 10,
+      "hole_diameter.warning": 2.5,
+      "hole_diameter.error": 1.0,
+      "wall_thickness.warning": 0.8,
+      "wall_thickness.error": 0.5,
+      "accessibility.error": true,
+      "accessibility.min_free": 0.95
+    }
+  },
+  "topology_valid": true,
+  "unused_user_parameters": [
+    "ec_c1",
+    "ec_c2",
+    "ec_hole_x"
+  ],
+  "timeline_items": 9,
+  "features": 4,
+  "user_parameters": 10,
+  "body": {
+    "faces": 16,
+    "edges": 38,
+    "volume_mm3": 53086.34
+  },
+  "topology": {
+    "is_solid": true,
+    "lumps": 1,
+    "shells": 1,
+    "open_shells": 0,
+    "void_shells": 0,
+    "faces": 16,
+    "edges": 38,
+    "degenerate_edges": 0,
+    "open_edges": 0,
+    "non_manifold_edges": 0,
+    "short_edges": 0,
+    "tiny_faces": 0
+  },
+  "edges": {
+    "concave": 4,
+    "convex": 26,
+    "tangent": 8
+  },
+  "setups": [
+    {
+      "direction": "+Z",
+      "faces": 15
+    },
+    {
+      "direction": "-Z",
+      "faces": 1
+    }
+  ],
+  "unreachable_faces": 0,
+  "min_wall_mm": 5.715,
+  "cavities": [
+    {
+      "n_faces": 1,
+      "axis": "+Z",
+      "all_faces_reachable_from_axis": true,
+      "kind": "hole",
+      "through": true,
+      "depth_mm": 25.4,
+      "depth_with_tip_mm": 25.4,
+      "opening_min_mm": 10.7163,
+      "opening_max_mm": 10.7163,
+      "internal_radii_mm": [
+        5.3581
+      ],
+      "sharp_internal_edges": 0,
+      "min_internal_radius_mm": 5.3581,
+      "depth_over_tool_d": 2.37,
+      "depth_over_opening": 2.37,
+      "hole_d_mm": 10.7163,
+      "hole_L_over_D": 2.37,
+      "id": 0,
+      "origins": [
+        "Rosca 1/2-13 THRU"
+      ]
+    },
+    {
+      "n_faces": 4,
+      "axis": "+Z",
+      "all_faces_reachable_from_axis": true,
+      "kind": "pocket/slot/step",
+      "through": true,
+      "depth_mm": 9.525,
+      "depth_with_tip_mm": 9.525,
+      "opening_min_mm": 13.4874,
+      "opening_max_mm": 57.9374,
+      "internal_radii_mm": [
+        6.7437
+      ],
+      "sharp_internal_edges": 0,
+      "min_internal_radius_mm": 6.7437,
+      "depth_over_tool_d": 0.71,
+      "depth_over_opening": 0.71,
+      "hole_d_mm": null,
+      "hole_L_over_D": null,
+      "id": 1,
+      "origins": [
+        "Ranura pasante .531"
+      ]
+    },
+    {
+      "n_faces": 5,
+      "axis": "+Z",
+      "all_faces_reachable_from_axis": true,
+      "kind": "pocket/slot/step",
+      "through": false,
+      "depth_mm": 15.875,
+      "depth_with_tip_mm": 15.875,
+      "opening_min_mm": 20.32,
+      "opening_max_mm": 64.77,
+      "internal_radii_mm": [
+        10.16
+      ],
+      "sharp_internal_edges": 0,
+      "min_internal_radius_mm": 10.16,
+      "depth_over_tool_d": 0.78,
+      "depth_over_opening": 0.78,
+      "hole_d_mm": null,
+      "hole_L_over_D": null,
+      "id": 2,
+      "origins": [
+        "Caja de la ranura .800"
+      ]
+    }
+  ],
+  "provenance": {
+    "faces_modified_after_creation": 3,
+    "max_modifiers_on_one_face": 2
+  },
+  "findings": [],
+  "summary": {
+    "error": 0,
+    "warning": 0
+  },
+  "summary_by_category": {
+    "diseno_preliminar": {
+      "error": 0,
+      "warning": 0
+    },
+    "proceso": {
+      "error": 0,
+      "warning": 0
+    }
+  },
+  "timing_s": {
+    "provenance_mode": "rebuild",
+    "provenance_s": 0.318,
+    "analysis_s": 0.267
+  }
+}

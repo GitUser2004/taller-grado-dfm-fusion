@@ -1,0 +1,33 @@
+{
+  "id": "20261104_095715_93263e",
+  "ok": true,
+  "result": {
+    "bodies": [
+      {
+        "name": "Body1",
+        "solid": true,
+        "faces": 120,
+        "edges": 284,
+        "volume_in3": 3.8161
+      }
+    ],
+    "expected_volume_in3": null,
+    "unhealthy": [],
+    "timeline_items": 23,
+    "user_parameters": 9,
+    "log": [
+      "15X Z cajas lado +: ok (neg), 0.6627 in^3 removed",
+      "15X Z cajas lado -: ok (pos), 0.5798 in^3 removed",
+      "15X Z broca THRU: ok (pos), 0.1190 in^3 removed",
+      "5X Y cajas lado +: ok (neg), 0.1756 in^3 removed",
+      "5X Y cajas lado -: ok (pos), 0.2634 in^3 removed",
+      "5X Y broca THRU: ok (pos), 0.0397 in^3 removed",
+      "3X X cajas lado +: ok (neg), 0.1066 in^3 removed",
+      "3X X cajas lado -: ok (pos), 0.2132 in^3 removed",
+      "3X X broca THRU: ok (pos), 0.0238 in^3 removed"
+    ]
+  },
+  "stdout": "",
+  "error": null,
+  "elapsed_ms": 3987.177
+}

@@ -1,0 +1,27 @@
+{
+  "id": "20261104_095836_06fb01",
+  "ok": true,
+  "result": {
+    "bodies": [
+      {
+        "name": "Body1",
+        "solid": true,
+        "faces": 16,
+        "edges": 38,
+        "volume_in3": 3.23953
+      }
+    ],
+    "expected_volume_in3": 3.23953,
+    "unhealthy": [],
+    "timeline_items": 9,
+    "user_parameters": 10,
+    "log": [
+      "Caja de la ranura .800: ok (neg), 1.1892 in^3 removed",
+      "Ranura pasante .531: ok (pos), 0.4315 in^3 removed",
+      "Rosca 1/2-13 THRU: ok (pos), 0.1398 in^3 removed"
+    ]
+  },
+  "stdout": "",
+  "error": null,
+  "elapsed_ms": 1283.414
+}

@@ -1,0 +1,1124 @@
+{
+  "tag": "vise_base",
+  "document": "Untitled",
+  "units": "in",
+  "catalog": {
+    "version": "0.1",
+    "profile": "metal",
+    "overrides": {},
+    "thresholds": {
+      "topological_validity.error": true,
+      "topological_validity.short_edge_mm": 0.01,
+      "topological_validity.tiny_face_mm2": 0.001,
+      "feature_health.error": true,
+      "unused_parameter.info": true,
+      "internal_radius.error": 0.5,
+      "internal_radius_depth.warning": 0.3333,
+      "cavity_aspect_tool.warning": 6,
+      "cavity_aspect_tool.error": 10,
+      "cavity_aspect_opening.warning": 4,
+      "hole_aspect.warning": 4,
+      "hole_aspect.error": 10,
+      "hole_diameter.warning": 2.5,
+      "hole_diameter.error": 1.0,
+      "wall_thickness.warning": 0.8,
+      "wall_thickness.error": 0.5,
+      "accessibility.error": true,
+      "accessibility.min_free": 0.95
+    }
+  },
+  "topology_valid": true,
+  "unused_user_parameters": [
+    "vb_slot_W"
+  ],
+  "timeline_items": 23,
+  "features": 11,
+  "user_parameters": 23,
+  "body": {
+    "faces": 68,
+    "edges": 209,
+    "volume_mm3": 255092.65
+  },
+  "topology": {
+    "is_solid": true,
+    "lumps": 1,
+    "shells": 1,
+    "open_shells": 0,
+    "void_shells": 0,
+    "faces": 68,
+    "edges": 209,
+    "degenerate_edges": 2,
+    "open_edges": 0,
+    "non_manifold_edges": 0,
+    "short_edges": 0,
+    "tiny_faces": 0
+  },
+  "edges": {
+    "concave": 35,
+    "convex": 160,
+    "tangent": 12
+  },
+  "setups": [
+    {
+      "direction": "-Z",
+      "faces": 38
+    },
+    {
+      "direction": "+Y",
+      "faces": 25
+    },
+    {
+      "direction": "-Y",
+      "faces": 5
+    }
+  ],
+  "unreachable_faces": 0,
+  "min_wall_mm": 1.5875,
+  "cavities": [
+    {
+      "n_faces": 2,
+      "axis": "-Y",
+      "all_faces_reachable_from_axis": true,
+      "kind": "hole",
+      "through": false,
+      "depth_mm": 12.7,
+      "depth_with_tip_mm": 14.2376,
+      "opening_min_mm": 5.1181,
+      "opening_max_mm": 5.1181,
+      "internal_radii_mm": [
+        2.5591
+      ],
+      "sharp_internal_edges": 0,
+      "min_internal_radius_mm": 2.5591,
+      "depth_over_tool_d": 2.48,
+      "depth_over_opening": 2.48,
+      "hole_d_mm": 5.1181,
+      "hole_L_over_D": 2.48,
+      "id": 0,
+      "origins": [
+        "Roscado 1/4-20 lado B"
+      ]
+    },
+    {
+      "n_faces": 2,
+      "axis": "+Y",
+      "all_faces_reachable_from_axis": true,
+      "kind": "hole",
+      "through": false,
+      "depth_mm": 12.7,
+      "depth_with_tip_mm": 14.2376,
+      "opening_min_mm": 5.1181,
+      "opening_max_mm": 5.1181,
+      "internal_radii_mm": [
+        2.5591
+      ],
+      "sharp_internal_edges": 0,
+      "min_internal_radius_mm": 2.5591,
+      "depth_over_tool_d": 2.48,
+      "depth_over_opening": 2.48,
+      "hole_d_mm": 5.1181,
+      "hole_L_over_D": 2.48,
+      "id": 1,
+      "origins": [
+        "Roscado 1/4-20 lado A"
+      ]
+    },
+    {
+      "n_faces": 2,
+      "axis": "+Y",
+      "all_faces_reachable_from_axis": true,
+      "kind": "hole",
+      "through": true,
+      "depth_mm": 62.23,
+      "depth_with_tip_mm": 62.23,
+      "opening_min_mm": 9.525,
+      "opening_max_mm": 9.525,
+      "internal_radii_mm": [
+        4.7625
+      ],
+      "sharp_internal_edges": 0,
+      "min_internal_radius_mm": 4.7625,
+      "depth_over_tool_d": 6.53,
+      "depth_over_opening": 6.53,
+      "hole_d_mm": 9.525,
+      "hole_L_over_D": 6.53,
+      "id": 2,
+      "origins": [
+        "Agujeros pasantes 8X (patron)"
+      ]
+    },
+    {
+      "n_faces": 5,
+      "axis": "-Z",
+      "all_faces_reachable_from_axis": true,
+      "kind": "pocket/slot/step",
+      "through": false,
+      "depth_mm": 14.2748,
+      "depth_with_tip_mm": 14.2748,
+      "opening_min_mm": 13.4874,
+      "opening_max_mm": 115.0874,
+      "internal_radii_mm": [
+        6.7437
+      ],
+      "sharp_internal_edges": 0,
+      "min_internal_radius_mm": 6.7437,
+      "depth_over_tool_d": 1.06,
+      "depth_over_opening": 1.06,
+      "hole_d_mm": null,
+      "hole_L_over_D": null,
+      "id": 3,
+      "origins": [
+        "Ranura pasante"
+      ]
+    },
+    {
+      "n_faces": 26,
+      "axis": "-Z",
+      "all_faces_reachable_from_axis": true,
+      "kind": "pocket/slot/step",
+      "through": false,
+      "depth_mm": 17.4752,
+      "depth_with_tip_mm": 17.4752,
+      "opening_min_mm": 27.0002,
+      "opening_max_mm": 115.0874,
+      "internal_radii_mm": [
+        6.35
+      ],
+      "sharp_internal_edges": 0,
+      "min_internal_radius_mm": 6.35,
+      "depth_over_tool_d": 1.38,
+      "depth_over_opening": 0.65,
+      "hole_d_mm": null,
+      "hole_L_over_D": null,
+      "id": 4,
+      "origins": [
+        "Agujeros pasantes 8X (patron)",
+        "Cajera inferior",
+        "Cajera inferior - radios R.250"
+      ]
+    },
+    {
+      "n_faces": 2,
+      "axis": "+Y",
+      "all_faces_reachable_from_axis": true,
+      "kind": "hole",
+      "through": true,
+      "depth_mm": 62.23,
+      "depth_with_tip_mm": 62.23,
+      "opening_min_mm": 9.525,
+      "opening_max_mm": 9.525,
+      "internal_radii_mm": [
+        4.7625
+      ],
+      "sharp_internal_edges": 0,
+      "min_internal_radius_mm": 4.7625,
+      "depth_over_tool_d": 6.53,
+      "depth_over_opening": 6.53,
+      "hole_d_mm": 9.525,
+      "hole_L_over_D": 6.53,
+      "id": 5,
+      "origins": [
+        "Agujeros pasantes 8X (patron)"
+      ]
+    },
+    {
+      "n_faces": 2,
+      "axis": "+Y",
+      "all_faces_reachable_from_axis": true,
+      "kind": "hole",
+      "through": true,
+      "depth_mm": 62.23,
+      "depth_with_tip_mm": 62.23,
+      "opening_min_mm": 9.525,
+      "opening_max_mm": 9.525,
+      "internal_radii_mm": [
+        4.7625
+      ],
+      "sharp_internal_edges": 0,
+      "min_internal_radius_mm": 4.7625,
+      "depth_over_tool_d": 6.53,
+      "depth_over_opening": 6.53,
+      "hole_d_mm": 9.525,
+      "hole_L_over_D": 6.53,
+      "id": 6,
+      "origins": [
+        "Agujeros pasantes 8X (patron)"
+      ]
+    },
+    {
+      "n_faces": 2,
+      "axis": "+Y",
+      "all_faces_reachable_from_axis": true,
+      "kind": "hole",
+      "through": true,
+      "depth_mm": 62.23,
+      "depth_with_tip_mm": 62.23,
+      "opening_min_mm": 9.525,
+      "opening_max_mm": 9.525,
+      "internal_radii_mm": [
+        4.7625
+      ],
+      "sharp_internal_edges": 0,
+      "min_internal_radius_mm": 4.7625,
+      "depth_over_tool_d": 6.53,
+      "depth_over_opening": 6.53,
+      "hole_d_mm": 9.525,
+      "hole_L_over_D": 6.53,
+      "id": 7,
+      "origins": [
+        "Agujeros pasantes 8X (patron)"
+      ]
+    },
+    {
+      "n_faces": 2,
+      "axis": "+Y",
+      "all_faces_reachable_from_axis": true,
+      "kind": "hole",
+      "through": true,
+      "depth_mm": 62.23,
+      "depth_with_tip_mm": 62.23,
+      "opening_min_mm": 9.525,
+      "opening_max_mm": 9.525,
+      "internal_radii_mm": [
+        4.7625
+      ],
+      "sharp_internal_edges": 0,
+      "min_internal_radius_mm": 4.7625,
+      "depth_over_tool_d": 6.53,
+      "depth_over_opening": 6.53,
+      "hole_d_mm": 9.525,
+      "hole_L_over_D": 6.53,
+      "id": 8,
+      "origins": [
+        "Agujeros pasantes 8X (patron)"
+      ]
+    },
+    {
+      "n_faces": 2,
+      "axis": "+Y",
+      "all_faces_reachable_from_axis": true,
+      "kind": "hole",
+      "through": true,
+      "depth_mm": 62.23,
+      "depth_with_tip_mm": 62.23,
+      "opening_min_mm": 9.525,
+      "opening_max_mm": 9.525,
+      "internal_radii_mm": [
+        4.7625
+      ],
+      "sharp_internal_edges": 0,
+      "min_internal_radius_mm": 4.7625,
+      "depth_over_tool_d": 6.53,
+      "depth_over_opening": 6.53,
+      "hole_d_mm": 9.525,
+      "hole_L_over_D": 6.53,
+      "id": 9,
+      "origins": [
+        "Agujeros pasantes 8X (patron)"
+      ]
+    },
+    {
+      "n_faces": 2,
+      "axis": "+Y",
+      "all_faces_reachable_from_axis": true,
+      "kind": "hole",
+      "through": true,
+      "depth_mm": 62.23,
+      "depth_with_tip_mm": 62.23,
+      "opening_min_mm": 9.525,
+      "opening_max_mm": 9.525,
+      "internal_radii_mm": [
+        4.7625
+      ],
+      "sharp_internal_edges": 0,
+      "min_internal_radius_mm": 4.7625,
+      "depth_over_tool_d": 6.53,
+      "depth_over_opening": 6.53,
+      "hole_d_mm": 9.525,
+      "hole_L_over_D": 6.53,
+      "id": 10,
+      "origins": [
+        "Agujeros pasantes 8X (patron)"
+      ]
+    },
+    {
+      "n_faces": 2,
+      "axis": "+Y",
+      "all_faces_reachable_from_axis": true,
+      "kind": "hole",
+      "through": true,
+      "depth_mm": 62.23,
+      "depth_with_tip_mm": 62.23,
+      "opening_min_mm": 9.525,
+      "opening_max_mm": 9.525,
+      "internal_radii_mm": [
+        4.7625
+      ],
+      "sharp_internal_edges": 0,
+      "min_internal_radius_mm": 4.7625,
+      "depth_over_tool_d": 6.53,
+      "depth_over_opening": 6.53,
+      "hole_d_mm": 9.525,
+      "hole_L_over_D": 6.53,
+      "id": 11,
+      "origins": [
+        "Agujero pasante .375"
+      ]
+    },
+    {
+      "n_faces": 1,
+      "axis": "+Y",
+      "all_faces_reachable_from_axis": true,
+      "kind": "hole",
+      "through": true,
+      "depth_mm": 62.23,
+      "depth_with_tip_mm": 62.23,
+      "opening_min_mm": 3.175,
+      "opening_max_mm": 3.175,
+      "internal_radii_mm": [
+        1.5875
+      ],
+      "sharp_internal_edges": 0,
+      "min_internal_radius_mm": 1.5875,
+      "depth_over_tool_d": 19.6,
+      "depth_over_opening": 19.6,
+      "hole_d_mm": 3.175,
+      "hole_L_over_D": 19.6,
+      "id": 12,
+      "origins": [
+        "Alivio U-cut 1/8"
+      ]
+    },
+    {
+      "n_faces": 3,
+      "axis": "-Y",
+      "all_faces_reachable_from_axis": true,
+      "kind": "pocket/slot/step",
+      "through": false,
+      "depth_mm": 4.7625,
+      "depth_with_tip_mm": 4.7625,
+      "opening_min_mm": 9.525,
+      "opening_max_mm": 152.4,
+      "internal_radii_mm": [],
+      "sharp_internal_edges": 0,
+      "min_internal_radius_mm": null,
+      "depth_over_tool_d": null,
+      "depth_over_opening": 0.5,
+      "hole_d_mm": null,
+      "hole_L_over_D": null,
+      "id": 13,
+      "origins": [
+        "Guias (rebaje lateral)"
+      ]
+    },
+    {
+      "n_faces": 3,
+      "axis": "+Y",
+      "all_faces_reachable_from_axis": true,
+      "kind": "pocket/slot/step",
+      "through": false,
+      "depth_mm": 4.7625,
+      "depth_with_tip_mm": 4.7625,
+      "opening_min_mm": 9.525,
+      "opening_max_mm": 152.4,
+      "internal_radii_mm": [],
+      "sharp_internal_edges": 0,
+      "min_internal_radius_mm": null,
+      "depth_over_tool_d": null,
+      "depth_over_opening": 0.5,
+      "hole_d_mm": null,
+      "hole_L_over_D": null,
+      "id": 14,
+      "origins": [
+        "Guias (rebaje lateral)"
+      ]
+    }
+  ],
+  "provenance": {
+    "faces_modified_after_creation": 24,
+    "max_modifiers_on_one_face": 4
+  },
+  "findings": [
+    {
+      "rule": "hole_aspect",
+      "rule_id": "hole_aspect",
+      "severity": "warning",
+      "value": 6.53,
+      "threshold": 4.0,
+      "note": "cavity 2",
+      "faces": 2,
+      "trace": [
+        {
+          "origin": "Agujeros pasantes 8X (patron)",
+          "modified_by": [],
+          "face_role": "faces",
+          "parametric": true,
+          "parameters": [
+            {
+              "name": "d72",
+              "expr": "vb_pin_n",
+              "role": "countU"
+            },
+            {
+              "name": "d73",
+              "expr": "3",
+              "role": "CountV"
+            },
+            {
+              "name": "d74",
+              "expr": "vb_pin_p",
+              "role": "uSpaceDistance"
+            },
+            {
+              "name": "d75",
+              "expr": "0.00 in",
+              "role": "vSpaceDistance"
+            }
+          ],
+          "sketch_curves_without_dims": []
+        },
+        {
+          "origin": "Agujeros pasantes 8X (patron)",
+          "modified_by": [],
+          "face_role": "faces",
+          "parametric": true,
+          "parameters": [
+            {
+              "name": "d72",
+              "expr": "vb_pin_n",
+              "role": "countU"
+            },
+            {
+              "name": "d73",
+              "expr": "3",
+              "role": "CountV"
+            },
+            {
+              "name": "d74",
+              "expr": "vb_pin_p",
+              "role": "uSpaceDistance"
+            },
+            {
+              "name": "d75",
+              "expr": "0.00 in",
+              "role": "vSpaceDistance"
+            }
+          ],
+          "sketch_curves_without_dims": []
+        }
+      ],
+      "rule_name": "Relación largo/diámetro de agujeros",
+      "category": "proceso",
+      "thesis_scope": "comprometida",
+      "sources": [
+        "HUBS",
+        "SANDVIK",
+        "PL_6WAYS",
+        "DFMX",
+        "FIVEFLUTE"
+      ]
+    },
+    {
+      "rule": "hole_aspect",
+      "rule_id": "hole_aspect",
+      "severity": "warning",
+      "value": 6.53,
+      "threshold": 4.0,
+      "note": "cavity 5",
+      "faces": 2,
+      "trace": [
+        {
+          "origin": "Agujeros pasantes 8X (patron)",
+          "modified_by": [],
+          "face_role": "faces",
+          "parametric": true,
+          "parameters": [
+            {
+              "name": "d72",
+              "expr": "vb_pin_n",
+              "role": "countU"
+            },
+            {
+              "name": "d73",
+              "expr": "3",
+              "role": "CountV"
+            },
+            {
+              "name": "d74",
+              "expr": "vb_pin_p",
+              "role": "uSpaceDistance"
+            },
+            {
+              "name": "d75",
+              "expr": "0.00 in",
+              "role": "vSpaceDistance"
+            }
+          ],
+          "sketch_curves_without_dims": []
+        },
+        {
+          "origin": "Agujeros pasantes 8X (patron)",
+          "modified_by": [],
+          "face_role": "faces",
+          "parametric": true,
+          "parameters": [
+            {
+              "name": "d72",
+              "expr": "vb_pin_n",
+              "role": "countU"
+            },
+            {
+              "name": "d73",
+              "expr": "3",
+              "role": "CountV"
+            },
+            {
+              "name": "d74",
+              "expr": "vb_pin_p",
+              "role": "uSpaceDistance"
+            },
+            {
+              "name": "d75",
+              "expr": "0.00 in",
+              "role": "vSpaceDistance"
+            }
+          ],
+          "sketch_curves_without_dims": []
+        }
+      ],
+      "rule_name": "Relación largo/diámetro de agujeros",
+      "category": "proceso",
+      "thesis_scope": "comprometida",
+      "sources": [
+        "HUBS",
+        "SANDVIK",
+        "PL_6WAYS",
+        "DFMX",
+        "FIVEFLUTE"
+      ]
+    },
+    {
+      "rule": "hole_aspect",
+      "rule_id": "hole_aspect",
+      "severity": "warning",
+      "value": 6.53,
+      "threshold": 4.0,
+      "note": "cavity 6",
+      "faces": 2,
+      "trace": [
+        {
+          "origin": "Agujeros pasantes 8X (patron)",
+          "modified_by": [],
+          "face_role": "faces",
+          "parametric": true,
+          "parameters": [
+            {
+              "name": "d72",
+              "expr": "vb_pin_n",
+              "role": "countU"
+            },
+            {
+              "name": "d73",
+              "expr": "3",
+              "role": "CountV"
+            },
+            {
+              "name": "d74",
+              "expr": "vb_pin_p",
+              "role": "uSpaceDistance"
+            },
+            {
+              "name": "d75",
+              "expr": "0.00 in",
+              "role": "vSpaceDistance"
+            }
+          ],
+          "sketch_curves_without_dims": []
+        },
+        {
+          "origin": "Agujeros pasantes 8X (patron)",
+          "modified_by": [],
+          "face_role": "faces",
+          "parametric": true,
+          "parameters": [
+            {
+              "name": "d72",
+              "expr": "vb_pin_n",
+              "role": "countU"
+            },
+            {
+              "name": "d73",
+              "expr": "3",
+              "role": "CountV"
+            },
+            {
+              "name": "d74",
+              "expr": "vb_pin_p",
+              "role": "uSpaceDistance"
+            },
+            {
+              "name": "d75",
+              "expr": "0.00 in",
+              "role": "vSpaceDistance"
+            }
+          ],
+          "sketch_curves_without_dims": []
+        }
+      ],
+      "rule_name": "Relación largo/diámetro de agujeros",
+      "category": "proceso",
+      "thesis_scope": "comprometida",
+      "sources": [
+        "HUBS",
+        "SANDVIK",
+        "PL_6WAYS",
+        "DFMX",
+        "FIVEFLUTE"
+      ]
+    },
+    {
+      "rule": "hole_aspect",
+      "rule_id": "hole_aspect",
+      "severity": "warning",
+      "value": 6.53,
+      "threshold": 4.0,
+      "note": "cavity 7",
+      "faces": 2,
+      "trace": [
+        {
+          "origin": "Agujeros pasantes 8X (patron)",
+          "modified_by": [],
+          "face_role": "faces",
+          "parametric": true,
+          "parameters": [
+            {
+              "name": "d72",
+              "expr": "vb_pin_n",
+              "role": "countU"
+            },
+            {
+              "name": "d73",
+              "expr": "3",
+              "role": "CountV"
+            },
+            {
+              "name": "d74",
+              "expr": "vb_pin_p",
+              "role": "uSpaceDistance"
+            },
+            {
+              "name": "d75",
+              "expr": "0.00 in",
+              "role": "vSpaceDistance"
+            }
+          ],
+          "sketch_curves_without_dims": []
+        },
+        {
+          "origin": "Agujeros pasantes 8X (patron)",
+          "modified_by": [],
+          "face_role": "faces",
+          "parametric": true,
+          "parameters": [
+            {
+              "name": "d72",
+              "expr": "vb_pin_n",
+              "role": "countU"
+            },
+            {
+              "name": "d73",
+              "expr": "3",
+              "role": "CountV"
+            },
+            {
+              "name": "d74",
+              "expr": "vb_pin_p",
+              "role": "uSpaceDistance"
+            },
+            {
+              "name": "d75",
+              "expr": "0.00 in",
+              "role": "vSpaceDistance"
+            }
+          ],
+          "sketch_curves_without_dims": []
+        }
+      ],
+      "rule_name": "Relación largo/diámetro de agujeros",
+      "category": "proceso",
+      "thesis_scope": "comprometida",
+      "sources": [
+        "HUBS",
+        "SANDVIK",
+        "PL_6WAYS",
+        "DFMX",
+        "FIVEFLUTE"
+      ]
+    },
+    {
+      "rule": "hole_aspect",
+      "rule_id": "hole_aspect",
+      "severity": "warning",
+      "value": 6.53,
+      "threshold": 4.0,
+      "note": "cavity 8",
+      "faces": 2,
+      "trace": [
+        {
+          "origin": "Agujeros pasantes 8X (patron)",
+          "modified_by": [],
+          "face_role": "faces",
+          "parametric": true,
+          "parameters": [
+            {
+              "name": "d72",
+              "expr": "vb_pin_n",
+              "role": "countU"
+            },
+            {
+              "name": "d73",
+              "expr": "3",
+              "role": "CountV"
+            },
+            {
+              "name": "d74",
+              "expr": "vb_pin_p",
+              "role": "uSpaceDistance"
+            },
+            {
+              "name": "d75",
+              "expr": "0.00 in",
+              "role": "vSpaceDistance"
+            }
+          ],
+          "sketch_curves_without_dims": []
+        },
+        {
+          "origin": "Agujeros pasantes 8X (patron)",
+          "modified_by": [],
+          "face_role": "faces",
+          "parametric": true,
+          "parameters": [
+            {
+              "name": "d72",
+              "expr": "vb_pin_n",
+              "role": "countU"
+            },
+            {
+              "name": "d73",
+              "expr": "3",
+              "role": "CountV"
+            },
+            {
+              "name": "d74",
+              "expr": "vb_pin_p",
+              "role": "uSpaceDistance"
+            },
+            {
+              "name": "d75",
+              "expr": "0.00 in",
+              "role": "vSpaceDistance"
+            }
+          ],
+          "sketch_curves_without_dims": []
+        }
+      ],
+      "rule_name": "Relación largo/diámetro de agujeros",
+      "category": "proceso",
+      "thesis_scope": "comprometida",
+      "sources": [
+        "HUBS",
+        "SANDVIK",
+        "PL_6WAYS",
+        "DFMX",
+        "FIVEFLUTE"
+      ]
+    },
+    {
+      "rule": "hole_aspect",
+      "rule_id": "hole_aspect",
+      "severity": "warning",
+      "value": 6.53,
+      "threshold": 4.0,
+      "note": "cavity 9",
+      "faces": 2,
+      "trace": [
+        {
+          "origin": "Agujeros pasantes 8X (patron)",
+          "modified_by": [],
+          "face_role": "faces",
+          "parametric": true,
+          "parameters": [
+            {
+              "name": "d72",
+              "expr": "vb_pin_n",
+              "role": "countU"
+            },
+            {
+              "name": "d73",
+              "expr": "3",
+              "role": "CountV"
+            },
+            {
+              "name": "d74",
+              "expr": "vb_pin_p",
+              "role": "uSpaceDistance"
+            },
+            {
+              "name": "d75",
+              "expr": "0.00 in",
+              "role": "vSpaceDistance"
+            }
+          ],
+          "sketch_curves_without_dims": []
+        },
+        {
+          "origin": "Agujeros pasantes 8X (patron)",
+          "modified_by": [],
+          "face_role": "faces",
+          "parametric": true,
+          "parameters": [
+            {
+              "name": "d72",
+              "expr": "vb_pin_n",
+              "role": "countU"
+            },
+            {
+              "name": "d73",
+              "expr": "3",
+              "role": "CountV"
+            },
+            {
+              "name": "d74",
+              "expr": "vb_pin_p",
+              "role": "uSpaceDistance"
+            },
+            {
+              "name": "d75",
+              "expr": "0.00 in",
+              "role": "vSpaceDistance"
+            }
+          ],
+          "sketch_curves_without_dims": []
+        }
+      ],
+      "rule_name": "Relación largo/diámetro de agujeros",
+      "category": "proceso",
+      "thesis_scope": "comprometida",
+      "sources": [
+        "HUBS",
+        "SANDVIK",
+        "PL_6WAYS",
+        "DFMX",
+        "FIVEFLUTE"
+      ]
+    },
+    {
+      "rule": "hole_aspect",
+      "rule_id": "hole_aspect",
+      "severity": "warning",
+      "value": 6.53,
+      "threshold": 4.0,
+      "note": "cavity 10",
+      "faces": 2,
+      "trace": [
+        {
+          "origin": "Agujeros pasantes 8X (patron)",
+          "modified_by": [],
+          "face_role": "faces",
+          "parametric": true,
+          "parameters": [
+            {
+              "name": "d72",
+              "expr": "vb_pin_n",
+              "role": "countU"
+            },
+            {
+              "name": "d73",
+              "expr": "3",
+              "role": "CountV"
+            },
+            {
+              "name": "d74",
+              "expr": "vb_pin_p",
+              "role": "uSpaceDistance"
+            },
+            {
+              "name": "d75",
+              "expr": "0.00 in",
+              "role": "vSpaceDistance"
+            }
+          ],
+          "sketch_curves_without_dims": []
+        },
+        {
+          "origin": "Agujeros pasantes 8X (patron)",
+          "modified_by": [],
+          "face_role": "faces",
+          "parametric": true,
+          "parameters": [
+            {
+              "name": "d72",
+              "expr": "vb_pin_n",
+              "role": "countU"
+            },
+            {
+              "name": "d73",
+              "expr": "3",
+              "role": "CountV"
+            },
+            {
+              "name": "d74",
+              "expr": "vb_pin_p",
+              "role": "uSpaceDistance"
+            },
+            {
+              "name": "d75",
+              "expr": "0.00 in",
+              "role": "vSpaceDistance"
+            }
+          ],
+          "sketch_curves_without_dims": []
+        }
+      ],
+      "rule_name": "Relación largo/diámetro de agujeros",
+      "category": "proceso",
+      "thesis_scope": "comprometida",
+      "sources": [
+        "HUBS",
+        "SANDVIK",
+        "PL_6WAYS",
+        "DFMX",
+        "FIVEFLUTE"
+      ]
+    },
+    {
+      "rule": "hole_aspect",
+      "rule_id": "hole_aspect",
+      "severity": "warning",
+      "value": 6.53,
+      "threshold": 4.0,
+      "note": "cavity 11",
+      "faces": 2,
+      "trace": [
+        {
+          "origin": "Agujero pasante .375",
+          "modified_by": [],
+          "face_role": "sideFaces",
+          "parametric": true,
+          "parameters": [
+            {
+              "name": "d70",
+              "expr": "vb_pin_d",
+              "role": "HoleDiameter"
+            }
+          ],
+          "sketch_curves_without_dims": []
+        },
+        {
+          "origin": "Agujero pasante .375",
+          "modified_by": [],
+          "face_role": "sideFaces",
+          "parametric": true,
+          "parameters": [
+            {
+              "name": "d70",
+              "expr": "vb_pin_d",
+              "role": "HoleDiameter"
+            }
+          ],
+          "sketch_curves_without_dims": []
+        }
+      ],
+      "rule_name": "Relación largo/diámetro de agujeros",
+      "category": "proceso",
+      "thesis_scope": "comprometida",
+      "sources": [
+        "HUBS",
+        "SANDVIK",
+        "PL_6WAYS",
+        "DFMX",
+        "FIVEFLUTE"
+      ]
+    },
+    {
+      "rule": "hole_aspect",
+      "rule_id": "hole_aspect",
+      "severity": "error",
+      "value": 19.6,
+      "threshold": 10.0,
+      "note": "cavity 12",
+      "faces": 1,
+      "trace": [
+        {
+          "origin": "Alivio U-cut 1/8",
+          "modified_by": [
+            "Ranura pasante"
+          ],
+          "face_role": "sideFaces",
+          "parametric": true,
+          "parameters": [
+            {
+              "name": "d49",
+              "expr": "0.0 deg",
+              "role": "TaperAngle"
+            },
+            {
+              "name": "d50",
+              "expr": "0.0 deg",
+              "role": "Side2TaperAngle"
+            },
+            {
+              "name": "d46",
+              "expr": "vb_up_L",
+              "role": "SketchLinearDimension",
+              "sketch": "Alivio U-cut - perfil"
+            },
+            {
+              "name": "d47",
+              "expr": "vb_base_H",
+              "role": "SketchLinearDimension",
+              "sketch": "Alivio U-cut - perfil"
+            },
+            {
+              "name": "d48",
+              "expr": "vb_ucut_d",
+              "role": "SketchDiameterDimension",
+              "sketch": "Alivio U-cut - perfil"
+            }
+          ],
+          "sketch_curves_without_dims": []
+        }
+      ],
+      "rule_name": "Relación largo/diámetro de agujeros",
+      "category": "proceso",
+      "thesis_scope": "comprometida",
+      "sources": [
+        "HUBS",
+        "SANDVIK",
+        "PL_6WAYS",
+        "DFMX",
+        "FIVEFLUTE"
+      ]
+    }
+  ],
+  "summary": {
+    "error": 1,
+    "warning": 8
+  },
+  "summary_by_category": {
+    "diseno_preliminar": {
+      "error": 0,
+      "warning": 0
+    },
+    "proceso": {
+      "error": 1,
+      "warning": 8
+    }
+  },
+  "timing_s": {
+    "provenance_mode": "rebuild",
+    "provenance_s": 3.315,
+    "analysis_s": 5.485
+  }
+}

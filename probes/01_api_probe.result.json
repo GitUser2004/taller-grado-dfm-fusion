@@ -1,0 +1,520 @@
+﻿{
+  "id": "20261104_084110_e496d0",
+  "ok": true,
+  "result": {
+    "errors": {},
+    "timing_ms": {
+      "build_part": 1260.179,
+      "A_face_to_feature_map": 2.065,
+      "A_feature_to_parameter": 1.198,
+      "B_face_measurements": 3.86,
+      "B_pocket_depth_and_aspect": 3.569,
+      "C_tokens_before": 5.332,
+      "C_recompute_r_corner_1_to_3mm": 143.044,
+      "C_tokens_after": 3.32,
+      "D_rollback_before_fillet": 21.383,
+      "D_topology": 3.037,
+      "D_break_feature_on_purpose": 110.52
+    },
+    "A": {
+      "features": [
+        {
+          "index": 0,
+          "name": "Block sketch",
+          "type": "Sketch",
+          "n_faces": null,
+          "health": 0
+        },
+        {
+          "index": 1,
+          "name": "Block",
+          "type": "ExtrudeFeature",
+          "n_faces": 6,
+          "health": 0
+        },
+        {
+          "index": 2,
+          "name": "Plane1",
+          "type": "ConstructionPlane",
+          "n_faces": null,
+          "health": 0
+        },
+        {
+          "index": 3,
+          "name": "Pocket sketch",
+          "type": "Sketch",
+          "n_faces": null,
+          "health": 0
+        },
+        {
+          "index": 4,
+          "name": "Pocket",
+          "type": "ExtrudeFeature",
+          "n_faces": 5,
+          "health": 0
+        },
+        {
+          "index": 5,
+          "name": "Pocket corners",
+          "type": "FilletFeature",
+          "n_faces": 4,
+          "health": 0
+        },
+        {
+          "index": 6,
+          "name": "Hole",
+          "type": "HoleFeature",
+          "n_faces": 2,
+          "health": 0
+        }
+      ],
+      "body_faces": 17,
+      "faces_with_owner": 17,
+      "faces_without_owner": 0,
+      "faces_with_multiple_owners": 0,
+      "params_by_feature": {
+        "Block sketch": [
+          {
+            "param": "d10",
+            "role": "Linear Dimension-2",
+            "expression": "block_L",
+            "depends_on": [
+              "block_L"
+            ]
+          },
+          {
+            "param": "d11",
+            "role": "Linear Dimension-3",
+            "expression": "block_W",
+            "depends_on": [
+              "block_W"
+            ]
+          }
+        ],
+        "Block": [
+          {
+            "param": "d12",
+            "role": "AlongDistance",
+            "expression": "block_H",
+            "depends_on": [
+              "block_H"
+            ]
+          },
+          {
+            "param": "d13",
+            "role": "TaperAngle",
+            "expression": "0.0 deg",
+            "depends_on": []
+          }
+        ],
+        "Plane1": [
+          {
+            "param": "d14",
+            "role": "AlongDistance",
+            "expression": "block_H",
+            "depends_on": [
+              "block_H"
+            ]
+          },
+          {
+            "param": "d15",
+            "role": "ExtraOffset",
+            "expression": "0.00 mm",
+            "depends_on": []
+          }
+        ],
+        "Pocket sketch": [
+          {
+            "param": "d16",
+            "role": "Linear Dimension-2",
+            "expression": "pocket_L",
+            "depends_on": [
+              "pocket_L"
+            ]
+          },
+          {
+            "param": "d17",
+            "role": "Linear Dimension-3",
+            "expression": "pocket_W",
+            "depends_on": [
+              "pocket_W"
+            ]
+          }
+        ],
+        "Pocket": [
+          {
+            "param": "d18",
+            "role": "AlongDistance",
+            "expression": "-( pocket_D )",
+            "depends_on": [
+              "pocket_D"
+            ]
+          },
+          {
+            "param": "d19",
+            "role": "TaperAngle",
+            "expression": "0.0 deg",
+            "depends_on": []
+          }
+        ],
+        "Pocket corners": [
+          {
+            "param": "d20",
+            "role": "TangencyWeight",
+            "expression": "1",
+            "depends_on": []
+          },
+          {
+            "param": "d21",
+            "role": "Radius",
+            "expression": "r_corner",
+            "depends_on": [
+              "r_corner"
+            ]
+          }
+        ],
+        "Hole": [
+          {
+            "param": "d22",
+            "role": "HoleDepth",
+            "expression": "hole_depth",
+            "depends_on": [
+              "hole_depth"
+            ]
+          },
+          {
+            "param": "d23",
+            "role": "HoleDiameter",
+            "expression": "hole_d",
+            "depends_on": [
+              "hole_d"
+            ]
+          },
+          {
+            "param": "d24",
+            "role": "TipAngle",
+            "expression": "118.0 deg",
+            "depends_on": []
+          }
+        ]
+      }
+    },
+    "B": {
+      "faces": [
+        {
+          "tempId": 38,
+          "type": "Cone",
+          "area_mm2": 32.986,
+          "owner": [
+            "Hole"
+          ]
+        },
+        {
+          "tempId": 39,
+          "type": "Cylinder",
+          "area_mm2": 376.991,
+          "owner": [
+            "Hole"
+          ],
+          "radius_mm": 3.0,
+          "concave": true
+        },
+        {
+          "tempId": 24,
+          "type": "Cylinder",
+          "area_mm2": 39.27,
+          "owner": [
+            "Pocket corners"
+          ],
+          "radius_mm": 1.0,
+          "concave": true
+        },
+        {
+          "tempId": 25,
+          "type": "Plane",
+          "area_mm2": 950.0,
+          "owner": [
+            "Pocket"
+          ]
+        },
+        {
+          "tempId": 26,
+          "type": "Cylinder",
+          "area_mm2": 39.27,
+          "owner": [
+            "Pocket corners"
+          ],
+          "radius_mm": 1.0,
+          "concave": true
+        },
+        {
+          "tempId": 27,
+          "type": "Plane",
+          "area_mm2": 450.0,
+          "owner": [
+            "Pocket"
+          ]
+        },
+        {
+          "tempId": 28,
+          "type": "Cylinder",
+          "area_mm2": 39.27,
+          "owner": [
+            "Pocket corners"
+          ],
+          "radius_mm": 1.0,
+          "concave": true
+        },
+        {
+          "tempId": 29,
+          "type": "Plane",
+          "area_mm2": 799.142,
+          "owner": [
+            "Pocket"
+          ]
+        },
+        {
+          "tempId": 30,
+          "type": "Plane",
+          "area_mm2": 950.0,
+          "owner": [
+            "Pocket"
+          ]
+        },
+        {
+          "tempId": 31,
+          "type": "Cylinder",
+          "area_mm2": 39.27,
+          "owner": [
+            "Pocket corners"
+          ],
+          "radius_mm": 1.0,
+          "concave": true
+        },
+        {
+          "tempId": 21,
+          "type": "Plane",
+          "area_mm2": 450.0,
+          "owner": [
+            "Pocket"
+          ]
+        },
+        {
+          "tempId": 32,
+          "type": "Plane",
+          "area_mm2": 2400.0,
+          "owner": [
+            "Block"
+          ]
+        },
+        {
+          "tempId": 33,
+          "type": "Plane",
+          "area_mm2": 1500.0,
+          "owner": [
+            "Block"
+          ]
+        },
+        {
+          "tempId": 34,
+          "type": "Plane",
+          "area_mm2": 2400.0,
+          "owner": [
+            "Block"
+          ]
+        },
+        {
+          "tempId": 35,
+          "type": "Plane",
+          "area_mm2": 1500.0,
+          "owner": [
+            "Block"
+          ]
+        },
+        {
+          "tempId": 36,
+          "type": "Plane",
+          "area_mm2": 3172.584,
+          "owner": [
+            "Block"
+          ]
+        },
+        {
+          "tempId": 37,
+          "type": "Plane",
+          "area_mm2": 4000.0,
+          "owner": [
+            "Block"
+          ]
+        }
+      ],
+      "concave_edges": 9,
+      "convex_edges": 30,
+      "pocket": {
+        "depth_mm_measured": 25.0,
+        "min_internal_radius_mm": 1.0,
+        "aspect_depth_over_tool_d": 12.5
+      }
+    },
+    "C": {
+      "tokens": 4,
+      "resolved": [
+        {
+          "old_tempId": 31,
+          "found": 1,
+          "new_radius_mm": 3.0
+        },
+        {
+          "old_tempId": 24,
+          "found": 1,
+          "new_radius_mm": 3.0
+        },
+        {
+          "old_tempId": 28,
+          "found": 1,
+          "new_radius_mm": 3.0
+        },
+        {
+          "old_tempId": 26,
+          "found": 1,
+          "new_radius_mm": 3.0
+        }
+      ]
+    },
+    "D": {
+      "faces_when_rolled_before_fillet": 11,
+      "faces_at_end": 17,
+      "topology": {
+        "isSolid": true,
+        "lumps": 1,
+        "shells": 1,
+        "faces": 17,
+        "edges": 39,
+        "vertices": 27,
+        "tiny_faces(<1e-4 mm2)": 0,
+        "health": [
+          [
+            "Block sketch",
+            0
+          ],
+          [
+            "Block",
+            0
+          ],
+          [
+            "Plane1",
+            0
+          ],
+          [
+            "Pocket sketch",
+            0
+          ],
+          [
+            "Pocket",
+            0
+          ],
+          [
+            "Pocket corners",
+            0
+          ],
+          [
+            "Hole",
+            0
+          ]
+        ]
+      },
+      "body_methods_with_check_or_valid": [
+        "_get_isValid",
+        "isValid"
+      ],
+      "after_bad_param": [
+        [
+          "Block sketch",
+          0,
+          ""
+        ],
+        [
+          "Block",
+          0,
+          ""
+        ],
+        [
+          "Plane1",
+          0,
+          ""
+        ],
+        [
+          "Pocket sketch",
+          0,
+          ""
+        ],
+        [
+          "Pocket",
+          0,
+          ""
+        ],
+        [
+          "Pocket corners",
+          0,
+          ""
+        ],
+        [
+          "Hole",
+          1,
+          "Can't create hole toolbody, please check inputs.<b>1 Reference Failures</b><br/>Can't create hole toolbody, please check inputs.Zero distance<b>1 Reference Failures</b><br/>Zero distanceHole"
+        ]
+      ]
+    },
+    "E_ui_events": [
+      "activeCommand",
+      "activeSelectionChanged",
+      "activeSelections",
+      "activeToolbar",
+      "activeToolbarTab",
+      "activeWorkspace",
+      "commandCreated",
+      "commandDefinitions",
+      "commandStarting",
+      "commandTerminated",
+      "markingMenuDisplaying",
+      "selectEntity",
+      "terminateActiveCommand",
+      "workspaceDeactivated",
+      "workspacePreDeactivate"
+    ],
+    "E_app_events": [
+      "_get_activeDocument",
+      "_get_documentActivated",
+      "_get_documentActivating",
+      "_get_documentClosed",
+      "_get_documentClosing",
+      "_get_documentCreated",
+      "_get_documentDeactivated",
+      "_get_documentDeactivating",
+      "_get_documentOpened",
+      "_get_documentOpening",
+      "_get_documentSaved",
+      "_get_documentSaving",
+      "_get_documents",
+      "activeDocument",
+      "documentActivated",
+      "documentActivating",
+      "documentClosed",
+      "documentClosing",
+      "documentCreated",
+      "documentDeactivated",
+      "documentDeactivating",
+      "documentOpened",
+      "documentOpening",
+      "documentSaved",
+      "documentSaving",
+      "documents",
+      "fireCustomEvent",
+      "registerCustomEvent",
+      "unregisterCustomEvent"
+    ]
+  },
+  "stdout": "",
+  "error": null,
+  "elapsed_ms": 1569.275
+}

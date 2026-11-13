@@ -1,0 +1,463 @@
+[
+  {
+    "case": "A",
+    "part": "vise_base",
+    "kind": "param",
+    "target": "vb_cb_R",
+    "value": "0.015 in",
+    "description": "Radio de la cajera inferior R.250 -> R.015 (0,38 mm, menor que cualquier fresa comun)",
+    "baseline": {
+      "error": 1,
+      "warning": 8
+    },
+    "injected": {
+      "error": 3,
+      "warning": 8
+    },
+    "reverted": {
+      "error": 1,
+      "warning": 8
+    },
+    "new_findings": [
+      {
+        "rule": "internal_radius",
+        "severity": "error",
+        "value": 0.381,
+        "threshold": 0.5,
+        "faces": 4,
+        "origin": "Cajera inferior - radios R.250",
+        "modified_by": [],
+        "parameters": [
+          "vb_cb_R"
+        ]
+      },
+      {
+        "rule": "cavity_aspect_tool",
+        "severity": "error",
+        "value": 22.93,
+        "threshold": 10.0,
+        "faces": 4,
+        "origin": "Cajera inferior - radios R.250",
+        "modified_by": [],
+        "parameters": [
+          "vb_cb_R"
+        ]
+      }
+    ],
+    "expected": "error internal_radius",
+    "detected": true,
+    "traced_to_target": true,
+    "revert_restores_baseline": true,
+    "geometry_changed": true,
+    "volume_mm3": [
+      255092.65,
+      254489.95
+    ],
+    "detection": {
+      "provenance_mode": "rebuild",
+      "provenance_s": 5.708,
+      "analysis_s": 5.476,
+      "total_s": 12.03
+    },
+    "passed": true
+  },
+  {
+    "case": "B",
+    "part": "vise_base",
+    "kind": "suppress",
+    "target": "Cajera inferior - radios R.250",
+    "value": null,
+    "description": "Se suprime el redondeo: la cajera queda con esquinas verticales vivas (r = 0)",
+    "baseline": {
+      "error": 1,
+      "warning": 8
+    },
+    "injected": {
+      "error": 2,
+      "warning": 8
+    },
+    "reverted": {
+      "error": 1,
+      "warning": 8
+    },
+    "new_findings": [
+      {
+        "rule": "internal_radius",
+        "severity": "error",
+        "value": 0.0,
+        "threshold": 0.5,
+        "faces": 22,
+        "origin": "Cajera inferior",
+        "modified_by": [
+          "Ranura pasante"
+        ],
+        "parameters": [
+          "0.0 deg",
+          "0.00 in",
+          "3",
+          "vb_cb_D",
+          "vb_cb_W",
+          "vb_cb_W / 2",
+          "vb_pin_n",
+          "vb_pin_p",
+          "vb_slot_L",
+          "vb_slot_x"
+        ]
+      }
+    ],
+    "expected": "error internal_radius",
+    "detected": true,
+    "traced_to_target": true,
+    "revert_restores_baseline": true,
+    "geometry_changed": true,
+    "volume_mm3": [
+      255092.65,
+      254487.78
+    ],
+    "detection": {
+      "provenance_mode": "rebuild",
+      "provenance_s": 5.259,
+      "analysis_s": 4.969,
+      "total_s": 11.8
+    },
+    "passed": true
+  },
+  {
+    "case": "C",
+    "part": "vise_base",
+    "kind": "param",
+    "target": "vb_cb_D",
+    "value": "1.225 in",
+    "description": "Cajera inferior .688 -> 1.225 de profundidad: deja 0,64 mm hasta la cara superior",
+    "baseline": {
+      "error": 1,
+      "warning": 8
+    },
+    "injected": {
+      "error": 1,
+      "warning": 10
+    },
+    "reverted": {
+      "error": 1,
+      "warning": 8
+    },
+    "new_findings": [
+      {
+        "rule": "internal_radius",
+        "severity": "warning",
+        "value": 6.35,
+        "threshold": 10.3706,
+        "faces": 4,
+        "origin": "Cajera inferior - radios R.250",
+        "modified_by": [],
+        "parameters": [
+          "vb_cb_R"
+        ]
+      },
+      {
+        "rule": "wall_thickness",
+        "severity": "warning",
+        "value": 0.635,
+        "threshold": 0.8,
+        "faces": 11,
+        "origin": "Base",
+        "modified_by": [
+          "Montante fijo",
+          "Guias (rebaje lateral)",
+          "Alivio U-cut 1/8",
+          "Ranura pasante"
+        ],
+        "parameters": [
+          "0.0 deg",
+          "vb_base_H",
+          "vb_cb_D",
+          "vb_cb_R",
+          "vb_cb_W",
+          "vb_cb_W / 2",
+          "vb_slot_L",
+          "vb_slot_x"
+        ]
+      }
+    ],
+    "expected": "warning wall_thickness",
+    "detected": true,
+    "traced_to_target": true,
+    "revert_restores_baseline": true,
+    "geometry_changed": true,
+    "volume_mm3": [
+      255092.65,
+      236082.63
+    ],
+    "detection": {
+      "provenance_mode": "rebuild",
+      "provenance_s": 4.883,
+      "analysis_s": 4.142,
+      "total_s": 10.56
+    },
+    "passed": true
+  },
+  {
+    "case": "D",
+    "part": "tap_guide",
+    "kind": "param",
+    "target": "tg_d1",
+    "value": "0.040 in",
+    "description": "Agujero 1 de .136 a .040 (1 mm): L/D = 16",
+    "baseline": {
+      "error": 0,
+      "warning": 1
+    },
+    "injected": {
+      "error": 1,
+      "warning": 1
+    },
+    "reverted": {
+      "error": 0,
+      "warning": 1
+    },
+    "new_findings": [
+      {
+        "rule": "hole_aspect",
+        "severity": "error",
+        "value": 14.56,
+        "threshold": 10.0,
+        "faces": 1,
+        "origin": "Agujero 1 D0.136 THRU",
+        "modified_by": [],
+        "parameters": [
+          "0.0 deg",
+          "tg_d1"
+        ]
+      },
+      {
+        "rule": "hole_diameter",
+        "severity": "warning",
+        "value": 1.016,
+        "threshold": 2.5,
+        "faces": 1,
+        "origin": "Agujero 1 D0.136 THRU",
+        "modified_by": [],
+        "parameters": [
+          "0.0 deg",
+          "tg_d1"
+        ]
+      }
+    ],
+    "expected": "error hole_aspect",
+    "detected": true,
+    "traced_to_target": true,
+    "revert_restores_baseline": true,
+    "geometry_changed": true,
+    "volume_mm3": [
+      36936.66,
+      37065.68
+    ],
+    "detection": {
+      "provenance_mode": "rebuild",
+      "provenance_s": 0.831,
+      "analysis_s": 0.311,
+      "total_s": 1.17
+    },
+    "passed": true
+  },
+  {
+    "case": "E",
+    "part": "superblock_123",
+    "kind": "param",
+    "target": "sb_cb",
+    "value": "0.480 in",
+    "description": "Cajas de .375 a .480 con paso .500: pared de 0,51 mm entre cajas vecinas",
+    "baseline": {
+      "error": 0,
+      "warning": 8
+    },
+    "injected": {
+      "error": 1,
+      "warning": 4
+    },
+    "reverted": {
+      "error": 0,
+      "warning": 8
+    },
+    "new_findings": [
+      {
+        "rule": "wall_thickness",
+        "severity": "error",
+        "value": 0.3592,
+        "threshold": 0.5,
+        "faces": 15,
+        "origin": "15X Z cajas lado +",
+        "modified_by": [
+          "15X Z broca THRU"
+        ],
+        "parameters": [
+          "-( sb_cbY )",
+          "-( sb_cbZ )",
+          "sb_cbY",
+          "sb_cbZ"
+        ]
+      },
+      {
+        "rule": "wall_thickness",
+        "severity": "warning",
+        "value": 0.508,
+        "threshold": 0.8,
+        "faces": 54,
+        "origin": "15X Z cajas lado +",
+        "modified_by": [
+          "5X Y cajas lado -",
+          "3X X cajas lado -"
+        ],
+        "parameters": [
+          "-( sb_cbZ )",
+          "0.0 deg",
+          "sb_cb"
+        ]
+      }
+    ],
+    "expected": "error wall_thickness",
+    "detected": true,
+    "traced_to_target": true,
+    "revert_restores_baseline": true,
+    "geometry_changed": true,
+    "volume_mm3": [
+      62534.6,
+      50006.08
+    ],
+    "detection": {
+      "provenance_mode": "rebuild",
+      "provenance_s": 3.575,
+      "analysis_s": 5.457,
+      "total_s": 9.97
+    },
+    "passed": true
+  },
+  {
+    "case": "E2",
+    "part": "superblock_123",
+    "kind": "param",
+    "target": "sb_pitch",
+    "value": "0.400 in",
+    "description": "Control: sb_pitch existe pero las posiciones se dibujaron fijas; no debe cambiar nada",
+    "baseline": {
+      "error": 0,
+      "warning": 8
+    },
+    "injected": {
+      "error": 0,
+      "warning": 8
+    },
+    "reverted": {
+      "error": 0,
+      "warning": 8
+    },
+    "new_findings": [],
+    "expected": "no new findings",
+    "detected": true,
+    "traced_to_target": null,
+    "revert_restores_baseline": true,
+    "geometry_changed": false,
+    "volume_mm3": [
+      62534.6,
+      62534.6
+    ],
+    "detection": {
+      "provenance_mode": "rebuild",
+      "provenance_s": 3.366,
+      "analysis_s": 4.777,
+      "total_s": 9.23
+    },
+    "passed": true
+  },
+  {
+    "case": "F",
+    "part": "edge_clamp",
+    "kind": "param",
+    "target": "ec_cb_w",
+    "value": "1.200 in",
+    "description": "Caja de la ranura .800 -> 1.200 en un cuerpo de 1.250: paredes de 0,64 mm",
+    "baseline": {
+      "error": 0,
+      "warning": 0
+    },
+    "injected": {
+      "error": 0,
+      "warning": 1
+    },
+    "reverted": {
+      "error": 0,
+      "warning": 0
+    },
+    "new_findings": [
+      {
+        "rule": "wall_thickness",
+        "severity": "warning",
+        "value": 0.635,
+        "threshold": 0.8,
+        "faces": 3,
+        "origin": "Cuerpo",
+        "modified_by": [],
+        "parameters": [
+          "-( ec_cb_d )",
+          "0.0 deg",
+          "ec_L",
+          "ec_W",
+          "ec_cb_w"
+        ]
+      }
+    ],
+    "expected": "warning wall_thickness",
+    "detected": true,
+    "traced_to_target": true,
+    "revert_restores_baseline": true,
+    "geometry_changed": true,
+    "volume_mm3": [
+      53086.34,
+      43664.3
+    ],
+    "detection": {
+      "provenance_mode": "rebuild",
+      "provenance_s": 0.288,
+      "analysis_s": 0.228,
+      "total_s": 0.56
+    },
+    "passed": true
+  },
+  {
+    "case": "H",
+    "part": "vee_block",
+    "kind": "suppress",
+    "target": "Alivio V superior",
+    "value": null,
+    "description": "Control: sin la ranura de alivio la V queda con arista viva HORIZONTAL (la hace una fresa en V)",
+    "baseline": {
+      "error": 0,
+      "warning": 0
+    },
+    "injected": {
+      "error": 0,
+      "warning": 0
+    },
+    "reverted": {
+      "error": 0,
+      "warning": 0
+    },
+    "new_findings": [],
+    "expected": "no new findings",
+    "detected": true,
+    "traced_to_target": null,
+    "revert_restores_baseline": true,
+    "geometry_changed": true,
+    "volume_mm3": [
+      87080.27,
+      87856.16
+    ],
+    "detection": {
+      "provenance_mode": "rebuild",
+      "provenance_s": 0.388,
+      "analysis_s": 0.251,
+      "total_s": 0.65
+    },
+    "passed": true
+  }
+]

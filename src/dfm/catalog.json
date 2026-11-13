@@ -1,0 +1,251 @@
+{
+  "version": "0.1",
+  "fecha": "2026-11-04",
+  "proceso": "Fresado de 3 ejes (taladrado incluido), piezas de un solo cuerpo sólido",
+  "doc": "docs/catalogo_reglas.md",
+  "severidades": {
+    "error": "Fuera del límite factible con herramienta estándar: exige otro proceso (electroerosión), herramienta especial o no se puede fabricar. Para diseño preliminar: el modelo no es válido o no reconstruye.",
+    "warning": "Factible, pero fuera del valor recomendado: más costo, vibración, desgaste o riesgo de rechazo.",
+    "info": "No es una restricción del proceso: describe la intención de diseño del modelo."
+  },
+  "categorias": {
+    "diseno_preliminar": "Error propio de un diseño preliminar (modelo inválido, operaciones con error, parámetros desconectados). Se corrige en el modelado, no cambia con el proceso.",
+    "proceso": "Violación de una restricción geométrica del fresado de 3 ejes. Es lo que atiende el sistema y su umbral depende del perfil (material, taller)."
+  },
+  "perfiles": {
+    "metal": {},
+    "plastico": {"wall_thickness.warning": 1.5, "wall_thickness.error": 1.0}
+  },
+  "reglas": [
+    {
+      "id": "topological_validity",
+      "nombre": "Validez topológica del sólido",
+      "categoria": "diseno_preliminar",
+      "alcance_tesis": "comprometida",
+      "bloqueante": true,
+      "aplica_a": "cuerpo",
+      "medicion": "analysis.topology: cuerpo sólido cerrado, 1 lump, 1 cuerpo en el diseño, 0 aristas abiertas o no variedad, 0 cáscaras abiertas o de vacío; aristas cortas y caras diminutas (excluye aristas degeneradas del ápice de los conos)",
+      "niveles": {"error": {"op": "any", "valor": true}},
+      "parametros": {
+        "short_edge_mm": {"valor": 0.01, "rango": [0.001, 0.1], "fuente": "criterio propio"},
+        "tiny_face_mm2": {"valor": 0.001, "rango": [0.0001, 0.1], "fuente": "criterio propio"}
+      },
+      "fuentes": [
+        {"id": "REQUICHA1980", "uso": "Un sólido válido es un conjunto regular cerrado y acotado (r-set); la frontera debe ser una variedad 2D cerrada"},
+        {"id": "PROBE02", "uso": "Fusion no tiene verificación de geometría: validez compuesta (T3) contrastada con BRepCheck de OCC"}
+      ],
+      "justificacion": "Si el sólido no es válido, ninguna medición posterior es confiable: es una precondición de todas las reglas de proceso.",
+      "correccion_tipica": "Revisar la operación de origen de las aristas abiertas o no variedad; unir cuerpos o eliminar cuerpos sobrantes.",
+      "estado": "implementada"
+    },
+    {
+      "id": "feature_health",
+      "nombre": "Operaciones con error o advertencia",
+      "categoria": "diseno_preliminar",
+      "alcance_tesis": "adicional",
+      "aplica_a": "línea de tiempo",
+      "medicion": "TimelineObject.healthState != 0 en operaciones no suprimidas",
+      "niveles": {"error": {"op": "any", "valor": true}},
+      "fuentes": [{"id": "FUSIONAPI", "uso": "healthState: 0 sano, 1 advertencia, 2 error"}],
+      "justificacion": "Una operación que falla deja geometría distinta a la intención; una operación sana tampoco garantiza la geometría (se verifica el volumen al construir).",
+      "correccion_tipica": "Abrir la operación indicada y resolver referencias perdidas o perfiles inválidos.",
+      "estado": "implementada"
+    },
+    {
+      "id": "unused_parameter",
+      "nombre": "Parámetro de usuario sin efecto",
+      "categoria": "diseno_preliminar",
+      "alcance_tesis": "adicional",
+      "aplica_a": "parámetros de usuario",
+      "medicion": "UserParameter.dependentParameters.count == 0",
+      "niveles": {"info": {"op": "any", "valor": true}},
+      "fuentes": [
+        {"id": "CAMBA2016", "uso": "Reutilización de modelos paramétricos: la geometría debe responder a sus parámetros"},
+        {"id": "INYECCION", "uso": "Caso E2: sb_pitch existe pero no mueve la geometría"}
+      ],
+      "justificacion": "Un parámetro desconectado no es un defecto de mecanizado, pero una corrección aplicada sobre ese parámetro no tendría efecto.",
+      "correccion_tipica": "Conectar la cota del boceto al parámetro o eliminar el parámetro.",
+      "estado": "implementada"
+    },
+    {
+      "id": "internal_radius",
+      "nombre": "Radio interno mínimo absoluto",
+      "categoria": "proceso",
+      "alcance_tesis": "comprometida",
+      "aplica_a": "cajeras, ranuras y rebajes; solo aristas cóncavas paralelas al eje de la herramienta (las horizontales las deja el flanco o una fresa de forma)",
+      "medicion": "analysis.cavities: min_internal_radius_mm (0 si hay aristas vivas paralelas al eje)",
+      "niveles": {"error": {"op": "<", "valor": 0.5, "unidad": "mm", "rango": [0.1, 5.0]}},
+      "fuentes": [
+        {"id": "PL_COMPLEX", "valor": "fresas desde 1 mm: radios internos algo mayores que 0,5 mm"},
+        {"id": "JLC", "valor": "R 0,5 mm como mínimo, y solo con profundidad ≤ 3 mm"},
+        {"id": "DFMX", "valor": "esquinas internas vivas: no se logran con fresado tradicional (EDM)"}
+      ],
+      "justificacion": "La fresa es cilíndrica: el radio de una esquina vertical no puede ser menor que el de la herramienta más chica disponible.",
+      "correccion_tipica": "Subir el radio del redondeo de la cajera; si no hay redondeo (r = 0), restaurar o agregar la operación de redondeo.",
+      "estado": "implementada"
+    },
+    {
+      "id": "internal_radius_depth",
+      "nombre": "Radio interno respecto de la profundidad",
+      "categoria": "proceso",
+      "alcance_tesis": "comprometida",
+      "aplica_a": "cajeras, ranuras y rebajes",
+      "medicion": "min_internal_radius_mm / depth_mm",
+      "niveles": {"warning": {"op": "<", "valor": 0.3333, "unidad": "r/profundidad", "rango": [0.05, 0.5]}},
+      "fuentes": [
+        {"id": "HUBS", "valor": "radio vertical ≥ 1/3 de la profundidad de la cavidad (recomendado)"},
+        {"id": "JLC", "valor": "alternativa: R mínimo factible = H/10 + 0,5 mm con fresa D = H/5"}
+      ],
+      "justificacion": "Una esquina con radio chico respecto de la profundidad obliga a una fresa larga y delgada.",
+      "correccion_tipica": "Subir el radio o bajar la profundidad.",
+      "estado": "implementada"
+    },
+    {
+      "id": "cavity_aspect_tool",
+      "nombre": "Profundidad respecto del diámetro de la fresa",
+      "categoria": "proceso",
+      "alcance_tesis": "comprometida",
+      "aplica_a": "cajeras, ranuras y rebajes con radio interno > 0",
+      "medicion": "depth_mm / (2 · min_internal_radius_mm): la fresa más grande que deja ese radio",
+      "niveles": {
+        "warning": {"op": ">", "valor": 6, "unidad": "prof./D", "rango": [2, 15]},
+        "error": {"op": ">", "valor": 10, "unidad": "prof./D", "rango": [4, 30]}
+      },
+      "fuentes": [
+        {"id": "FIVEFLUTE", "valor": "máximo general 6 D; desde 10 D se vuelve difícil"},
+        {"id": "PL_COMPLEX", "valor": "con fresa de 1 mm la cajera no pasa de 9,52 mm de profundidad (≈ 9,5 D)"},
+        {"id": "JLC", "valor": "mejor resultado con 2–3 D; 5 D o más exige herramienta especial"},
+        {"id": "DFMX", "valor": "alternativa estricta: 3:1"},
+        {"id": "HUBS", "valor": "hasta 30:1 con herramienta especial"},
+        {"id": "MMC", "valor": "la deflexión crece con el cubo del voladizo"}
+      ],
+      "justificacion": "El voladizo de la fresa define la deflexión y la vibración; el radio interno impone el diámetro máximo de fresa.",
+      "correccion_tipica": "Subir el radio interno (permite una fresa más gruesa) o bajar la profundidad.",
+      "estado": "implementada"
+    },
+    {
+      "id": "cavity_aspect_opening",
+      "nombre": "Profundidad respecto del ancho de la cavidad",
+      "categoria": "proceso",
+      "alcance_tesis": "comprometida",
+      "aplica_a": "cajeras, ranuras y rebajes",
+      "medicion": "depth_mm / opening_min_mm (ancho: la menor extensión de la abertura)",
+      "niveles": {"warning": {"op": ">", "valor": 4, "unidad": "prof./ancho", "rango": [2, 10]}},
+      "fuentes": [
+        {"id": "HUBS", "valor": "profundidad recomendada: 4 veces el ancho"},
+        {"id": "PL_COMPLEX", "valor": "regla práctica: profundidad < 6 veces el ancho del elemento"},
+        {"id": "JLC", "valor": "alternativa por costo: profundidad ≤ 5 veces la mayor medida en XY"}
+      ],
+      "justificacion": "La fresa tiene que caber en el ancho; una cavidad profunda y angosta exige una fresa larga y evacuar viruta es difícil.",
+      "correccion_tipica": "Ensanchar la cavidad o bajar su profundidad.",
+      "estado": "implementada"
+    },
+    {
+      "id": "hole_aspect",
+      "nombre": "Relación largo/diámetro de agujeros",
+      "categoria": "proceso",
+      "alcance_tesis": "comprometida",
+      "aplica_a": "agujeros (cilindros cóncavos coaxiales fusionados si el tramo entre ellos es hueco)",
+      "medicion": "hole_L_over_D",
+      "niveles": {
+        "warning": {"op": ">", "valor": 4, "unidad": "L/D", "rango": [2, 10]},
+        "error": {"op": ">", "valor": 10, "unidad": "L/D", "rango": [5, 40]}
+      },
+      "fuentes": [
+        {"id": "HUBS", "valor": "recomendado 4 D; típico 10 D; factible 40 D"},
+        {"id": "SANDVIK", "valor": "más de 10 D es agujero profundo y exige técnica especial; el taladrado común rara vez pasa de 5 D"},
+        {"id": "PL_6WAYS", "valor": "más de 6 diámetros se vuelve un desafío"},
+        {"id": "DFMX", "valor": "alternativa estricta: 2,75"},
+        {"id": "FIVEFLUTE", "valor": "hasta 20 D con taladrado profundo"}
+      ],
+      "justificacion": "La broca larga se desvía y evacua mal la viruta; sobre 10 D hace falta taladrado profundo.",
+      "correccion_tipica": "Agrandar el diámetro, acortar el agujero o taladrar desde ambas caras.",
+      "estado": "implementada"
+    },
+    {
+      "id": "hole_diameter",
+      "nombre": "Diámetro mínimo de agujero",
+      "categoria": "proceso",
+      "alcance_tesis": "adicional",
+      "aplica_a": "agujeros",
+      "medicion": "hole_d_mm",
+      "niveles": {
+        "warning": {"op": "<", "valor": 2.5, "unidad": "mm", "rango": [1.0, 6.0]},
+        "error": {"op": "<", "valor": 1.0, "unidad": "mm", "rango": [0.05, 3.0]}
+      },
+      "fuentes": [
+        {"id": "HUBS", "valor": "agujero mínimo recomendado 2,5 mm; factible cualquier diámetro mayor que 1 mm"},
+        {"id": "DFMX", "valor": "diámetros menores que 3 mm se consideran difíciles"}
+      ],
+      "justificacion": "Las brocas muy chicas se rompen y exigen micromecanizado.",
+      "correccion_tipica": "Agrandar el diámetro a un tamaño de broca estándar.",
+      "estado": "implementada"
+    },
+    {
+      "id": "wall_thickness",
+      "nombre": "Espesor mínimo de pared",
+      "categoria": "proceso",
+      "alcance_tesis": "deseable",
+      "aplica_a": "pares de caras opuestas con material entre ellas",
+      "medicion": "analysis.thickness: rayos + distancia mínima exacta entre caras no adyacentes (punto medio dentro del material)",
+      "niveles": {
+        "warning": {"op": "<", "valor": 0.8, "unidad": "mm", "rango": [0.3, 5.0]},
+        "error": {"op": "<", "valor": 0.5, "unidad": "mm", "rango": [0.1, 3.0]}
+      },
+      "fuentes": [
+        {"id": "HUBS", "valor": "metal: recomendado 0,8 mm, factible 0,5 mm; plástico: 1,5 y 1,0 mm"},
+        {"id": "JLC", "valor": "metal 0,8 mm (mínimo absoluto 0,5); plástico 1,5 mm (mínimo absoluto 1)"},
+        {"id": "PL_GUIDE", "valor": "elementos de más de 0,51 mm en toda la pieza"},
+        {"id": "PL_COMPLEX", "valor": "dejar al menos 0,5 mm de pared en el material vecino"}
+      ],
+      "justificacion": "Una pared delgada vibra y se deforma con la fuerza de corte.",
+      "correccion_tipica": "Reducir la cavidad que adelgaza la pared o separar los elementos vecinos.",
+      "estado": "implementada"
+    },
+    {
+      "id": "accessibility",
+      "nombre": "Accesibilidad desde las direcciones de 3 ejes",
+      "categoria": "proceso",
+      "alcance_tesis": "deseable",
+      "aplica_a": "todas las caras",
+      "medicion": "analysis.accessibility: rayos desde ±X, ±Y, ±Z; una cara es alcanzable si ≥ min_free de sus muestras ven libre esa dirección",
+      "niveles": {"error": {"op": "any", "valor": true}},
+      "parametros": {"min_free": {"valor": 0.95, "rango": [0.5, 1.0], "fuente": "criterio propio"}},
+      "fuentes": [
+        {"id": "GUPTA1997", "uso": "La accesibilidad de la herramienta según direcciones de aproximación es un criterio central del análisis automático de fabricabilidad"},
+        {"id": "DFMX", "uso": "regla de operaciones inaccesibles"}
+      ],
+      "justificacion": "En 3 ejes la herramienta solo se acerca por direcciones de montaje; una cara que ninguna ve no se puede mecanizar sin 4/5 ejes o herramientas especiales.",
+      "correccion_tipica": "Reorientar el elemento hacia una cara de montaje o eliminar el contradesmoldeo.",
+      "estado": "implementada"
+    }
+  ],
+  "excluidas": [
+    {"tema": "Tolerancias lineales y angulares", "motivo": "fuera del alcance de la tesis (solo geometría)", "fuentes": ["HUBS", "PL_GUIDE", "DFMX"]},
+    {"tema": "Número de montajes", "motivo": "es costo, no restricción geométrica; se reporta como métrica", "fuentes": []},
+    {"tema": "Roscas (tamaño mínimo, largo ≤ 3 D)", "motivo": "los modelos usan la broca de roscado; requiere la operación de rosca", "fuentes": ["HUBS", "JLC", "PL_GUIDE"]},
+    {"tema": "Texto grabado", "motivo": "no aparece en las piezas de prueba", "fuentes": ["HUBS", "PL_GUIDE"]},
+    {"tema": "Tamaños de broca estándar", "motivo": "candidata; exige tabla de brocas por taller", "fuentes": ["DFMX", "HUBS"]},
+    {"tema": "Agujeros de fondo plano, entrada y salida no perpendiculares, agujeros parciales (< 75 %)", "motivo": "candidatas de taladrado", "fuentes": ["DFMX"]},
+    {"tema": "Redondeos en aristas externas", "motivo": "candidata; exige fresa de forma, se prefiere chaflán", "fuentes": ["DFMX"]},
+    {"tema": "Contradesmoldeos (ranuras en T, cola de milano)", "motivo": "exigen herramienta de forma; hoy se reportan como inaccesibles", "fuentes": ["HUBS"]},
+    {"tema": "Profundidad máxima por cara y tamaño máximo de pieza", "motivo": "dependen de la máquina del taller, no de la geometría", "fuentes": ["PL_GUIDE"]}
+  ],
+  "fuentes": {
+    "HUBS": {"tipo": "guía de fabricante", "cita": "Protolabs Network (Hubs), \"How to design parts for CNC machining\", base de conocimiento.", "url": "https://www.hubs.com/knowledge-base/how-design-parts-cnc-machining/", "consultado": "2026-11-04"},
+    "PL_GUIDE": {"tipo": "guía de fabricante", "cita": "Protolabs, \"Design Guidelines: CNC Milling\".", "url": "https://www.protolabs.com/services/cnc-machining/cnc-milling/design-guidelines/", "consultado": "2026-11-04"},
+    "PL_COMPLEX": {"tipo": "guía de fabricante", "cita": "Protolabs, \"CNC Machining Tips for Complex Parts\" (Mastering complex features on machined parts).", "url": "https://www.protolabs.com/resources/design-tips/mastering-complex-features-on-machined-parts/", "consultado": "2026-11-04"},
+    "PL_6WAYS": {"tipo": "guía de fabricante", "cita": "Protolabs, \"6 Ways to Optimize Part Design for CNC Machining\".", "url": "https://www.protolabs.com/resources/design-tips/6-ways-to-optimize-part-design-for-cnc-machining/", "consultado": "2026-11-04"},
+    "JLC": {"tipo": "guía de fabricante", "cita": "JLCCNC, \"CNC Machining Design Guideline\", centro de ayuda, actualizado 2025-08-20.", "url": "https://jlccnc.com/help/article/CNC-Machining-Design-Guideline", "consultado": "2026-11-04"},
+    "FIVEFLUTE": {"tipo": "guía técnica", "cita": "Five Flute, \"CNC Machining DFM - Design Guidelines for Milled Parts\".", "url": "https://www.fiveflute.com/guide/cnc-machining-dfm-design-guidelines-for-milled-parts", "consultado": "2026-11-04"},
+    "SANDVIK": {"tipo": "fabricante de herramientas", "cita": "Sandvik Coromant, guía de aplicación de taladrado profundo (agujero profundo > 10 × D).", "url": null, "consultado": "2026-11-04", "pendiente": "ubicar la edición vigente de la guía y su URL o página"},
+    "MMC": {"tipo": "fabricante de herramientas", "cita": "Mitsubishi Materials, curso técnico \"Length of cut\" (deflexión proporcional al cubo del voladizo).", "url": "https://www.mmc-carbide.com/permanent/courses/70/length-of-cut.html", "consultado": "2026-11-04"},
+    "DFMX": {"tipo": "herramienta CAD nativa", "cita": "Dassault Systèmes, ayuda de DFMXpress, SOLIDWORKS 2026 (lang\\spanish\\dfmxpress.chm), reglas de fresado y taladrado con valores por defecto.", "url": "https://help.solidworks.com/2019/English/SolidWorks/dfmxpress/c_rules_mill_deep_pockets_slots.htm", "consultado": "2026-11-04"},
+    "REQUICHA1980": {"tipo": "artículo", "cita": "A. A. G. Requicha, \"Representations for rigid solids: Theory, methods, and systems\", ACM Computing Surveys, 12(4), 437–464, 1980. [38] del perfil.", "url": null},
+    "GUPTA1997": {"tipo": "artículo", "cita": "S. K. Gupta, D. Das, W. C. Regli, D. S. Nau, \"Automated manufacturability analysis: A survey\", Research in Engineering Design, 9(3), 168–190, 1997. doi:10.1007/BF01596601.", "url": "https://www.cs.umd.edu/~nau/papers/gupta1997automated.pdf"},
+    "CAMBA2016": {"tipo": "artículo", "cita": "J. D. Camba, M. Contero, P. Company, \"Parametric CAD modeling: An analysis of strategies for design reusability\", Computer-Aided Design, 74, 18–31, 2016. [1] del perfil.", "url": null},
+    "FUSIONAPI": {"tipo": "documentación de API", "cita": "Autodesk, Fusion API Reference: TimelineObject.healthState.", "url": null, "consultado": "2026-11-04"},
+    "PROBE02": {"tipo": "evidencia del proyecto", "cita": "probes/02_limites_y_tecnicas.md (técnica T3, validez compuesta)", "url": null},
+    "INYECCION": {"tipo": "evidencia del proyecto", "cita": "docs/inyeccion_defectos.md (caso E2)", "url": null}
+  }
+}

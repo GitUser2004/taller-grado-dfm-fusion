@@ -1,0 +1,8 @@
+__pycache__/
+*.pyc
+out/
+# Material de terceros: no se redistribuye (ver bibliografia/README.md)
+bibliografia/piezas_de_prueba/
+bibliografia/maquina/
+bibliografia/herramientas/
+*.pdf

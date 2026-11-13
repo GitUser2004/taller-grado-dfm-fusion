@@ -1,0 +1,929 @@
+﻿{
+  "id": "20261104_085824_c0e9c6",
+  "ok": true,
+  "result": {
+    "errors": {},
+    "timing_ms": {
+      "build_part": 1419.2,
+      "T1_attribute_provenance": 30.6,
+      "T1_attributes_survive_recompute": 430.7,
+      "T2_rollback_diff": 320.5,
+      "T3_topology_checks": 8.3,
+      "T3_text_commands": 26.0,
+      "T4_edge_convexity": 37.8,
+      "T5_aag_depressions": 70.2,
+      "T6_accessibility_rays": 45.3,
+      "T7_wall_thickness_rays": 47.7,
+      "T8_sketch_curve_trace": 19.2,
+      "T9_exports": 209.3,
+      "T10_python_env": 6.4,
+      "T11_highlight_and_config": 155.2
+    },
+    "T1": {
+      "faces": [
+        {
+          "tempId": 55,
+          "owner_api": "SideHole",
+          "origin_attr": "SideHole",
+          "modified_by_attr": ""
+        },
+        {
+          "tempId": 56,
+          "owner_api": "SideHole",
+          "origin_attr": "SideHole",
+          "modified_by_attr": ""
+        },
+        {
+          "tempId": 53,
+          "owner_api": "Hole",
+          "origin_attr": "Hole",
+          "modified_by_attr": ""
+        },
+        {
+          "tempId": 54,
+          "owner_api": "Hole",
+          "origin_attr": "Hole",
+          "modified_by_attr": ""
+        },
+        {
+          "tempId": 44,
+          "owner_api": "Pocket3",
+          "origin_attr": "Pocket3",
+          "modified_by_attr": ""
+        },
+        {
+          "tempId": 45,
+          "owner_api": "Pocket3",
+          "origin_attr": "Pocket3",
+          "modified_by_attr": ""
+        },
+        {
+          "tempId": 46,
+          "owner_api": "Pocket3",
+          "origin_attr": "Pocket3",
+          "modified_by_attr": ""
+        },
+        {
+          "tempId": 47,
+          "owner_api": "Pocket3",
+          "origin_attr": "Pocket3",
+          "modified_by_attr": ""
+        },
+        {
+          "tempId": 48,
+          "owner_api": "Pocket3",
+          "origin_attr": "Pocket3",
+          "modified_by_attr": ""
+        },
+        {
+          "tempId": 49,
+          "owner_api": "Pocket3",
+          "origin_attr": "Pocket3",
+          "modified_by_attr": ""
+        },
+        {
+          "tempId": 50,
+          "owner_api": "Pocket3",
+          "origin_attr": "Pocket3",
+          "modified_by_attr": ""
+        },
+        {
+          "tempId": 51,
+          "owner_api": "Pocket3",
+          "origin_attr": "Pocket3",
+          "modified_by_attr": ""
+        },
+        {
+          "tempId": 52,
+          "owner_api": "Pocket3",
+          "origin_attr": "Pocket3",
+          "modified_by_attr": ""
+        },
+        {
+          "tempId": 39,
+          "owner_api": "Pocket2",
+          "origin_attr": "Pocket2",
+          "modified_by_attr": ""
+        },
+        {
+          "tempId": 40,
+          "owner_api": "Pocket2",
+          "origin_attr": "Pocket2",
+          "modified_by_attr": ""
+        },
+        {
+          "tempId": 41,
+          "owner_api": "Pocket2",
+          "origin_attr": "Pocket2",
+          "modified_by_attr": ""
+        },
+        {
+          "tempId": 42,
+          "owner_api": "Pocket2",
+          "origin_attr": "Pocket2",
+          "modified_by_attr": ""
+        },
+        {
+          "tempId": 43,
+          "owner_api": "Pocket2",
+          "origin_attr": "Pocket2",
+          "modified_by_attr": ""
+        },
+        {
+          "tempId": 31,
+          "owner_api": "Pocket1 corners",
+          "origin_attr": "Pocket1 corners",
+          "modified_by_attr": ""
+        },
+        {
+          "tempId": 32,
+          "owner_api": "Pocket1",
+          "origin_attr": "Pocket1",
+          "modified_by_attr": "Pocket1 corners"
+        },
+        {
+          "tempId": 33,
+          "owner_api": "Pocket1 corners",
+          "origin_attr": "Pocket1 corners",
+          "modified_by_attr": ""
+        },
+        {
+          "tempId": 34,
+          "owner_api": "Pocket1",
+          "origin_attr": "Pocket1",
+          "modified_by_attr": "Pocket1 corners"
+        },
+        {
+          "tempId": 35,
+          "owner_api": "Pocket1 corners",
+          "origin_attr": "Pocket1 corners",
+          "modified_by_attr": ""
+        },
+        {
+          "tempId": 36,
+          "owner_api": "Pocket1",
+          "origin_attr": "Pocket1",
+          "modified_by_attr": "Pocket1 corners"
+        },
+        {
+          "tempId": 37,
+          "owner_api": "Pocket1",
+          "origin_attr": "Pocket1",
+          "modified_by_attr": "Pocket1 corners"
+        },
+        {
+          "tempId": 38,
+          "owner_api": "Pocket1 corners",
+          "origin_attr": "Pocket1 corners",
+          "modified_by_attr": ""
+        },
+        {
+          "tempId": 9,
+          "owner_api": "Pocket1",
+          "origin_attr": "Pocket1",
+          "modified_by_attr": "Pocket1 corners"
+        },
+        {
+          "tempId": 0,
+          "owner_api": "Block",
+          "origin_attr": "Block",
+          "modified_by_attr": ""
+        },
+        {
+          "tempId": 1,
+          "owner_api": "Block",
+          "origin_attr": "Block",
+          "modified_by_attr": ""
+        },
+        {
+          "tempId": 2,
+          "owner_api": "Block",
+          "origin_attr": "Block",
+          "modified_by_attr": ""
+        },
+        {
+          "tempId": 3,
+          "owner_api": "Block",
+          "origin_attr": "Block",
+          "modified_by_attr": "SideHole"
+        },
+        {
+          "tempId": 4,
+          "owner_api": "Block",
+          "origin_attr": "Block",
+          "modified_by_attr": "Pocket1,Pocket1 corners,Pocket2,Pocket3,Hole"
+        },
+        {
+          "tempId": 5,
+          "owner_api": "Block",
+          "origin_attr": "Block",
+          "modified_by_attr": ""
+        }
+      ],
+      "agree_with_feature_faces": 33,
+      "total": 33,
+      "faces_with_modified_by": [
+        {
+          "tempId": 32,
+          "owner_api": "Pocket1",
+          "origin_attr": "Pocket1",
+          "modified_by_attr": "Pocket1 corners"
+        },
+        {
+          "tempId": 34,
+          "owner_api": "Pocket1",
+          "origin_attr": "Pocket1",
+          "modified_by_attr": "Pocket1 corners"
+        },
+        {
+          "tempId": 36,
+          "owner_api": "Pocket1",
+          "origin_attr": "Pocket1",
+          "modified_by_attr": "Pocket1 corners"
+        },
+        {
+          "tempId": 37,
+          "owner_api": "Pocket1",
+          "origin_attr": "Pocket1",
+          "modified_by_attr": "Pocket1 corners"
+        },
+        {
+          "tempId": 9,
+          "owner_api": "Pocket1",
+          "origin_attr": "Pocket1",
+          "modified_by_attr": "Pocket1 corners"
+        },
+        {
+          "tempId": 3,
+          "owner_api": "Block",
+          "origin_attr": "Block",
+          "modified_by_attr": "SideHole"
+        },
+        {
+          "tempId": 4,
+          "owner_api": "Block",
+          "origin_attr": "Block",
+          "modified_by_attr": "Pocket1,Pocket1 corners,Pocket2,Pocket3,Hole"
+        }
+      ],
+      "after_recompute": {
+        "faces": 33,
+        "still_tagged": 33
+      },
+      "after_revert": {
+        "faces": 33,
+        "still_tagged": 33
+      }
+    },
+    "T2": {
+      "per_feature": [
+        {
+          "feature": "Top plane",
+          "deleted": 0,
+          "split": 0,
+          "modified": 0,
+          "unchanged": 6,
+          "new": 0
+        },
+        {
+          "feature": "Pocket1 sketch",
+          "deleted": 0,
+          "split": 0,
+          "modified": 0,
+          "unchanged": 6,
+          "new": 0
+        },
+        {
+          "feature": "Pocket1",
+          "deleted": 0,
+          "split": 0,
+          "modified": 1,
+          "unchanged": 5,
+          "new": 5
+        },
+        {
+          "feature": "Pocket1 corners",
+          "deleted": 0,
+          "split": 0,
+          "modified": 6,
+          "unchanged": 5,
+          "new": 4
+        },
+        {
+          "feature": "Pocket2 sketch",
+          "deleted": 0,
+          "split": 0,
+          "modified": 0,
+          "unchanged": 15,
+          "new": 0
+        },
+        {
+          "feature": "Pocket2",
+          "deleted": 0,
+          "split": 0,
+          "modified": 1,
+          "unchanged": 14,
+          "new": 5
+        },
+        {
+          "feature": "Pocket3 sketch",
+          "deleted": 0,
+          "split": 0,
+          "modified": 0,
+          "unchanged": 20,
+          "new": 0
+        },
+        {
+          "feature": "Pocket3",
+          "deleted": 0,
+          "split": 0,
+          "modified": 1,
+          "unchanged": 19,
+          "new": 9
+        },
+        {
+          "feature": "Hole",
+          "deleted": 0,
+          "split": 0,
+          "modified": 1,
+          "unchanged": 28,
+          "new": 2
+        },
+        {
+          "feature": "SideHole",
+          "deleted": 0,
+          "split": 0,
+          "modified": 1,
+          "unchanged": 30,
+          "new": 2
+        }
+      ],
+      "final_faces_modified_by": {
+        "4": [
+          "Hole",
+          "Pocket1",
+          "Pocket1 corners",
+          "Pocket2",
+          "Pocket3"
+        ],
+        "108": [
+          "Pocket1 corners"
+        ],
+        "105": [
+          "Pocket1 corners"
+        ],
+        "103": [
+          "Pocket1 corners"
+        ],
+        "110": [
+          "Pocket1 corners"
+        ],
+        "107": [
+          "Pocket1 corners"
+        ],
+        "3": [
+          "SideHole"
+        ]
+      }
+    },
+    "tempId_note": "tempIds changed after recompute/rollback: owner map rebuilt",
+    "T3": {
+      "isSolid": true,
+      "lumps": 1,
+      "shells": [
+        {
+          "faces": 33,
+          "isVoid": false,
+          "isClosed": true
+        }
+      ],
+      "degenerate_edges(cone apex)": [
+        {
+          "faces": [
+            "Cone"
+          ]
+        },
+        {
+          "faces": [
+            "Cone"
+          ]
+        }
+      ],
+      "open_edges(1 face)": 0,
+      "non_manifold_edges(>2 faces)": 0,
+      "short_edges(<0.01mm)": [],
+      "tiny_faces(<0.001mm2)": 0,
+      "feature_health": {
+        "Block sketch": 0,
+        "Block": 0,
+        "Top plane": 0,
+        "Pocket1 sketch": 0,
+        "Pocket1": 0,
+        "Pocket1 corners": 0,
+        "Pocket2 sketch": 0,
+        "Pocket2": 0,
+        "Pocket3 sketch": 0,
+        "Pocket3": 0,
+        "Hole": 0,
+        "SideHole": 0
+      },
+      "text_commands": {
+        "TextCommands.List": {
+          "lines": 5789,
+          "matches": [
+            "ADP.EnableTestFlag                               - Runs ADP event validation",
+            "ADP.testEventValidator                           - Tests EventValidator callback mechanism",
+            "ADP.testOxygenId                                 - Tests oxygenId validation",
+            "ADP.VerifyLogFile                                - Verifies .adp log file contains no validation errors",
+            "ADP.VerifyWhitelistFile                          - Validates ADP whitelist: compares SDK-downloaded whitelist.json to the Fusion-shipped reference (matching \"filtering\", then DCP collection/dashboard/expiration rules).",
+            "APIDebug.CheckCommandInterruption                - [/on] [/off] Enable command interruption checks",
+            "AutomatedModeling.Host                           - Get/Set host, valid host name examples: http://localhost:3000 (or \"local\"), http://ecs-6026ceaa.ecs.ads.autodesk.com, use \"default\" to restore default settings.",
+            "AutomatedModeling.SetServerCheckIntervals        - [/interval_name interval_value] Set intervals values for AMJobController. You can provide more than one in single command.",
+            "Commands.CheckMarkMouseUp                        - Emulate left button mouse click on a check mark manipulator.",
+            "Commands.healthStatusVisibility                  - Toggle visibility of health status command",
+            "Commands.SetSameLineCheckBox                     - Given a target label set its same line checkbox state",
+            "DebugCommands.BodyCacheUpdateMgr                 - [/On|/Off/PIM|/Clear] [max threads (0+) [min time between checks (0+ ms)] Background body mass property calculations",
+            "DebugCommands.cwdDependentServicesCheckDisabled  - Enable Dependent Services",
+            "Electron.AvnetToggleAddinCheck                   - Toggle skipping the Avnet Fusion add-in install check. Usage: Electron.AvnetToggleAddinCheck",
+            "Electron.sch_get_deviceinfo                      - Get selected device-set / device information: library / name / value and check device / deviceSet properties. Usage: sch_get_deviceinfo library deviceset technology [device] [checkdeviceset] [checkdevice] [displayunit]. Use sch_get_deviceinfo without parameters for more information.",
+            "Electron.sch_testaliasnamevalidator              - Test Alias Name Validator implementation. Usage: sch_testaliasnamevalidator name. Use sch_testaliasnamevalidator without parameters for more information.",
+            "Electron.sch_testcoordinatevalidator             - Test Unit Coordinate Validator implementation. Usage: sch_testcoordinatevalidator min max value [unit]. Use sch_testcoordinatevalidator without parameters for more information.",
+            "Electron.sch_testintegervalidator                - Test Integer Validator implementation. Usage: sch_testintegervalidator min max value. Use sch_testintegervalidator without parameters for more information.",
+            "Electron.sch_testnamevalidator                   - Test Name Validator implementation. Usage: sch_testnamevalidator name [type]. Use sch_testnamevalidator without parameters for more information.",
+            "Electron.sch_testrealnumbervalidator             - Test Real Number Validator implementation. Usage: sch_testrealnumbervalidator min max value [decimals] [unit] [unitfactor]. Use sch_testrealnumbervalidator without parameters for more information.",
+            "Electron.sch_testsizevalidator                   - Test Unit Size Validator implementation. Usage: sch_testsizevalidator validatortype unit value. Use sch_testsizevalidator without parameters for more information.",
+            "Electron.UpdateLbrPackagesCmd                    - Checks for updates of all Fusion 3D Packages in the library. Usage: Electron.UpdateLbrPackages",
+            "Electron.version                                 - Check libeagle version",
+            "FusionMaterials.ValidateMaterialPanelWidgetCount - FusionMaterials.ValidateMaterialPanelWidgetCount <Count>",
+            "Geometry",
+            "Geometry.AddVector3ds                            - <vector1 JSON> <vector2 JSON> vector add result=(vector1 + vector2)",
+            "Geometry.AddVector3dToPoint3d                    - <point JSON> <vector JSON> result=(point + vector)",
+            "Geometry.AreLine3dsEqual                         - <line1 as JSON> <line2 as JSON> result=(line1 is co-linear to line2)",
+            "Geometry.ArePlanesEqual                          - <plane1 as JSON> <plane2 as JSON> result=(plane1 is co-planar to plane2)",
+            "Geometry.ArePoint3dEqual                         - <point1 JSON> <point2 JSON> result=(point1 == point2)",
+            "Geometry.AreVector3dEqual                        - <vector1 JSON> <vector2 JSON> result=(vector1 == vector2)",
+            "Geometry.CrossProduct                            - <vector1 JSON> <vector2 JSON> cross product result=(vector1 x vector2)",
+            "Geometry.DotProduct                              - <vector1 JSON> <vector2 JSON> dot product result=(vector1 . vector2)",
+            "Geometry.Line3dCreate                            - <Properties> Create a line3d from properties startPoint+endPoint or startPoint+vector or x0,y0,z0,x1,y1,z1",
+            "Geometry.Line3dProperties                        - <Line3d> Returns the properties of a line3d",
+            "Geometry.PlaneCreate                             - <Properties> Create a plane from properties {pointOnPlane, normal}, {x0,y0,z0,x1,y1,z1} or {a,b,c,d}",
+            "Geometry.PlaneProperties                         - <Plane> Returns the properties of a plane",
+            "Geometry.SubtractPoint3dFromPoint3d              - <point1 JSON> <point2 JSON> result=(point1 - point2)",
+            "Geometry.SubtractVector3ds                       - <vector1 JSON> <vector2 JSON> vector subtract result=(vector1 - vector2)",
+            "Geometry.Vector3dMultiply                        - <Vector> <double> Multiply a vector by a scalar",
+            "Joints.SolveValidSystems                         - [/on] [/off] solve joints in valid systems",
+            "LocalToWorld.Line3d                              - <Local to World Matrix JSON> <Local Line JSON> Converts line geometry from local to world space",
+            "LocalToWorld.Plane                               - <Local to World Matrix JSON> <Local plane JSON> Converts plane geometry from local to world space",
+            "LocalToWorld.Point3d                             - <Local to World Matrix JSON> <Local point JSON> Converts point geometry from local to world space",
+            "LocalToWorld.Vector3d                            - <Local to World Matrix JSON> <Local vector JSON> Converts vector geometry from local to world space",
+            "LogValidator",
+            "LogValidator.MarkEnd                             - <region_name: string> mark the end of a log region",
+            "LogValidator.MarkStart                           - <regionName: string> mark the start of a log region",
+            "Materials.ValidateMaterialUseCounts              - Validate the material use count",
+            "- Use Case: Creating thin-walled features like ribs, brackets, or sheet metal-like geometry",
+            "* axis (string or number, required): Rotation axis - \"x\", \"y\", \"z\" or entity token for a ConstructionAxis, SketchLine, or linear BRepEdge",
+            "* directionOneAxis (string or number, required): Primary direction - \"x\", \"y\", \"z\" or entity token for a ConstructionAxis, SketchLine, or linear BRepEdge",
+            "Unlike 3D circularPattern, this operates on sketch geometry (lines, circles, arcs) as geometric constraints.",
+            "Unlike 3D rectangularPattern, this operates on sketch geometry as geometric constraints.",
+            "- Can reference sketch profiles or BRep faces",
+            "* axisToken (number or string, required): Axis of revolution - entity token (number) for a ConstructionAxis, SketchLine, or linear BRepEdge, OR a string \"x\", \"y\", \"z\" to use a predefined construction axis",
+            "- holeType (string): Hole geometry type (default: \"simple\")",
+            "* ONLY valid when extentType=\"all\", ignored for other extent types",
+            "* Valid entity types: BRepBody, BRepFace, BRepVertex, ConstructionPlane, ConstructionPoint",
+            "* ONLY valid when extentType=\"to\", ignored otherwise"
+          ]
+        },
+        "TextCommands.List /hidden": {
+          "lines": 5789,
+          "matches": [
+            "ADP.EnableTestFlag                               - Runs ADP event validation",
+            "ADP.testEventValidator                           - Tests EventValidator callback mechanism",
+            "ADP.testOxygenId                                 - Tests oxygenId validation",
+            "ADP.VerifyLogFile                                - Verifies .adp log file contains no validation errors",
+            "ADP.VerifyWhitelistFile                          - Validates ADP whitelist: compares SDK-downloaded whitelist.json to the Fusion-shipped reference (matching \"filtering\", then DCP collection/dashboard/expiration rules).",
+            "APIDebug.CheckCommandInterruption                - [/on] [/off] Enable command interruption checks",
+            "AutomatedModeling.Host                           - Get/Set host, valid host name examples: http://localhost:3000 (or \"local\"), http://ecs-6026ceaa.ecs.ads.autodesk.com, use \"default\" to restore default settings.",
+            "AutomatedModeling.SetServerCheckIntervals        - [/interval_name interval_value] Set intervals values for AMJobController. You can provide more than one in single command.",
+            "Commands.CheckMarkMouseUp                        - Emulate left button mouse click on a check mark manipulator.",
+            "Commands.healthStatusVisibility                  - Toggle visibility of health status command",
+            "Commands.SetSameLineCheckBox                     - Given a target label set its same line checkbox state",
+            "DebugCommands.BodyCacheUpdateMgr                 - [/On|/Off/PIM|/Clear] [max threads (0+) [min time between checks (0+ ms)] Background body mass property calculations",
+            "DebugCommands.cwdDependentServicesCheckDisabled  - Enable Dependent Services",
+            "Electron.AvnetToggleAddinCheck                   - Toggle skipping the Avnet Fusion add-in install check. Usage: Electron.AvnetToggleAddinCheck",
+            "Electron.sch_get_deviceinfo                      - Get selected device-set / device information: library / name / value and check device / deviceSet properties. Usage: sch_get_deviceinfo library deviceset technology [device] [checkdeviceset] [checkdevice] [displayunit]. Use sch_get_deviceinfo without parameters for more information.",
+            "Electron.sch_testaliasnamevalidator              - Test Alias Name Validator implementation. Usage: sch_testaliasnamevalidator name. Use sch_testaliasnamevalidator without parameters for more information.",
+            "Electron.sch_testcoordinatevalidator             - Test Unit Coordinate Validator implementation. Usage: sch_testcoordinatevalidator min max value [unit]. Use sch_testcoordinatevalidator without parameters for more information.",
+            "Electron.sch_testintegervalidator                - Test Integer Validator implementation. Usage: sch_testintegervalidator min max value. Use sch_testintegervalidator without parameters for more information.",
+            "Electron.sch_testnamevalidator                   - Test Name Validator implementation. Usage: sch_testnamevalidator name [type]. Use sch_testnamevalidator without parameters for more information.",
+            "Electron.sch_testrealnumbervalidator             - Test Real Number Validator implementation. Usage: sch_testrealnumbervalidator min max value [decimals] [unit] [unitfactor]. Use sch_testrealnumbervalidator without parameters for more information.",
+            "Electron.sch_testsizevalidator                   - Test Unit Size Validator implementation. Usage: sch_testsizevalidator validatortype unit value. Use sch_testsizevalidator without parameters for more information.",
+            "Electron.UpdateLbrPackagesCmd                    - Checks for updates of all Fusion 3D Packages in the library. Usage: Electron.UpdateLbrPackages",
+            "Electron.version                                 - Check libeagle version",
+            "FusionMaterials.ValidateMaterialPanelWidgetCount - FusionMaterials.ValidateMaterialPanelWidgetCount <Count>",
+            "Geometry",
+            "Geometry.AddVector3ds                            - <vector1 JSON> <vector2 JSON> vector add result=(vector1 + vector2)",
+            "Geometry.AddVector3dToPoint3d                    - <point JSON> <vector JSON> result=(point + vector)",
+            "Geometry.AreLine3dsEqual                         - <line1 as JSON> <line2 as JSON> result=(line1 is co-linear to line2)",
+            "Geometry.ArePlanesEqual                          - <plane1 as JSON> <plane2 as JSON> result=(plane1 is co-planar to plane2)",
+            "Geometry.ArePoint3dEqual                         - <point1 JSON> <point2 JSON> result=(point1 == point2)",
+            "Geometry.AreVector3dEqual                        - <vector1 JSON> <vector2 JSON> result=(vector1 == vector2)",
+            "Geometry.CrossProduct                            - <vector1 JSON> <vector2 JSON> cross product result=(vector1 x vector2)",
+            "Geometry.DotProduct                              - <vector1 JSON> <vector2 JSON> dot product result=(vector1 . vector2)",
+            "Geometry.Line3dCreate                            - <Properties> Create a line3d from properties startPoint+endPoint or startPoint+vector or x0,y0,z0,x1,y1,z1",
+            "Geometry.Line3dProperties                        - <Line3d> Returns the properties of a line3d",
+            "Geometry.PlaneCreate                             - <Properties> Create a plane from properties {pointOnPlane, normal}, {x0,y0,z0,x1,y1,z1} or {a,b,c,d}",
+            "Geometry.PlaneProperties                         - <Plane> Returns the properties of a plane",
+            "Geometry.SubtractPoint3dFromPoint3d              - <point1 JSON> <point2 JSON> result=(point1 - point2)",
+            "Geometry.SubtractVector3ds                       - <vector1 JSON> <vector2 JSON> vector subtract result=(vector1 - vector2)",
+            "Geometry.Vector3dMultiply                        - <Vector> <double> Multiply a vector by a scalar",
+            "Joints.SolveValidSystems                         - [/on] [/off] solve joints in valid systems",
+            "LocalToWorld.Line3d                              - <Local to World Matrix JSON> <Local Line JSON> Converts line geometry from local to world space",
+            "LocalToWorld.Plane                               - <Local to World Matrix JSON> <Local plane JSON> Converts plane geometry from local to world space",
+            "LocalToWorld.Point3d                             - <Local to World Matrix JSON> <Local point JSON> Converts point geometry from local to world space",
+            "LocalToWorld.Vector3d                            - <Local to World Matrix JSON> <Local vector JSON> Converts vector geometry from local to world space",
+            "LogValidator",
+            "LogValidator.MarkEnd                             - <region_name: string> mark the end of a log region",
+            "LogValidator.MarkStart                           - <regionName: string> mark the start of a log region",
+            "Materials.ValidateMaterialUseCounts              - Validate the material use count",
+            "- Use Case: Creating thin-walled features like ribs, brackets, or sheet metal-like geometry",
+            "* axis (string or number, required): Rotation axis - \"x\", \"y\", \"z\" or entity token for a ConstructionAxis, SketchLine, or linear BRepEdge",
+            "* directionOneAxis (string or number, required): Primary direction - \"x\", \"y\", \"z\" or entity token for a ConstructionAxis, SketchLine, or linear BRepEdge",
+            "Unlike 3D circularPattern, this operates on sketch geometry (lines, circles, arcs) as geometric constraints.",
+            "Unlike 3D rectangularPattern, this operates on sketch geometry as geometric constraints.",
+            "- Can reference sketch profiles or BRep faces",
+            "* axisToken (number or string, required): Axis of revolution - entity token (number) for a ConstructionAxis, SketchLine, or linear BRepEdge, OR a string \"x\", \"y\", \"z\" to use a predefined construction axis",
+            "- holeType (string): Hole geometry type (default: \"simple\")",
+            "* ONLY valid when extentType=\"all\", ignored for other extent types",
+            "* Valid entity types: BRepBody, BRepFace, BRepVertex, ConstructionPlane, ConstructionPoint",
+            "* ONLY valid when extentType=\"to\", ignored otherwise"
+          ]
+        }
+      }
+    },
+    "T4": {
+      "edges": 78,
+      "ours": {
+        "concave": 26,
+        "convex": 34,
+        "tangent": 16
+      },
+      "api": {
+        "concave": 26,
+        "convex": 52
+      },
+      "agree_on_non_tangent": 60,
+      "disagree": 0,
+      "detail": [
+        {
+          "edge": 122,
+          "ours": "tangent",
+          "api": "convex"
+        },
+        {
+          "edge": 124,
+          "ours": "tangent",
+          "api": "convex"
+        },
+        {
+          "edge": 126,
+          "ours": "tangent",
+          "api": "convex"
+        },
+        {
+          "edge": 129,
+          "ours": "tangent",
+          "api": "convex"
+        },
+        {
+          "edge": 132,
+          "ours": "tangent",
+          "api": "convex"
+        },
+        {
+          "edge": 135,
+          "ours": "tangent",
+          "api": "convex"
+        },
+        {
+          "edge": 138,
+          "ours": "tangent",
+          "api": "convex"
+        },
+        {
+          "edge": 141,
+          "ours": "tangent",
+          "api": "convex"
+        },
+        {
+          "edge": 158,
+          "ours": "tangent",
+          "api": "convex"
+        },
+        {
+          "edge": 160,
+          "ours": "tangent",
+          "api": "convex"
+        },
+        {
+          "edge": 162,
+          "ours": "tangent",
+          "api": "convex"
+        },
+        {
+          "edge": 165,
+          "ours": "tangent",
+          "api": "convex"
+        },
+        {
+          "edge": 168,
+          "ours": "tangent",
+          "api": "convex"
+        },
+        {
+          "edge": 171,
+          "ours": "tangent",
+          "api": "convex"
+        },
+        {
+          "edge": 173,
+          "ours": "tangent",
+          "api": "convex"
+        },
+        {
+          "edge": 178,
+          "ours": "tangent",
+          "api": "convex"
+        }
+      ]
+    },
+    "T5": {
+      "components": 5,
+      "cavities": [
+        {
+          "faces": 2,
+          "owners": [
+            "SideHole"
+          ],
+          "depth_mm": 5.0,
+          "min_opening_mm": 5.0,
+          "min_vertical_internal_radius_mm": null,
+          "sharp_vertical_concave_edges": 0,
+          "aspect_depth/tool_d": null,
+          "aspect_depth/opening": 1.0,
+          "axis_horizontal_cylinders": 1
+        },
+        {
+          "faces": 2,
+          "owners": [
+            "Hole"
+          ],
+          "depth_mm": 21.8026,
+          "min_opening_mm": 6.0,
+          "min_vertical_internal_radius_mm": 3.0,
+          "sharp_vertical_concave_edges": 0,
+          "aspect_depth/tool_d": 3.63,
+          "aspect_depth/opening": 3.63,
+          "axis_horizontal_cylinders": 0
+        },
+        {
+          "faces": 9,
+          "owners": [
+            "Pocket3"
+          ],
+          "depth_mm": 8.0,
+          "min_opening_mm": 10.0,
+          "min_vertical_internal_radius_mm": 2.0,
+          "sharp_vertical_concave_edges": 0,
+          "aspect_depth/tool_d": 2.0,
+          "aspect_depth/opening": 0.8,
+          "axis_horizontal_cylinders": 0
+        },
+        {
+          "faces": 5,
+          "owners": [
+            "Pocket2"
+          ],
+          "depth_mm": 10.0,
+          "min_opening_mm": 20.0,
+          "min_vertical_internal_radius_mm": 0.0,
+          "sharp_vertical_concave_edges": 4,
+          "aspect_depth/tool_d": null,
+          "aspect_depth/opening": 0.5,
+          "axis_horizontal_cylinders": 0
+        },
+        {
+          "faces": 9,
+          "owners": [
+            "Pocket1",
+            "Pocket1 corners"
+          ],
+          "depth_mm": 25.0,
+          "min_opening_mm": 20.0,
+          "min_vertical_internal_radius_mm": 1.0,
+          "sharp_vertical_concave_edges": 0,
+          "aspect_depth/tool_d": 12.5,
+          "aspect_depth/opening": 1.25,
+          "axis_horizontal_cylinders": 0
+        }
+      ]
+    },
+    "T6": {
+      "faces_not_fully_reachable_from_+Z": [
+        {
+          "tempId": 84,
+          "type": "Cone",
+          "owner": "SideHole",
+          "area_mm2": 22.91,
+          "centroid_mm": [
+            30.5007,
+            10.0,
+            15.0
+          ],
+          "samples": 25,
+          "facing_down": 10,
+          "occluded": 15,
+          "free": 0
+        },
+        {
+          "tempId": 85,
+          "type": "Cylinder",
+          "owner": "SideHole",
+          "area_mm2": 471.24,
+          "centroid_mm": [
+            15.0,
+            10.0,
+            15.0
+          ],
+          "radius_mm": 2.5,
+          "samples": 25,
+          "facing_down": 10,
+          "occluded": 15,
+          "free": 0
+        }
+      ],
+      "fixture_faces_skipped": [
+        5
+      ]
+    },
+    "T7": {
+      "thinnest_faces": [
+        {
+          "tempId": 98,
+          "type": "Plane",
+          "owner": "Pocket2",
+          "area_mm2": 200.0,
+          "centroid_mm": [
+            98.5,
+            30.0,
+            25.0
+          ],
+          "min_thickness_mm": 1.5
+        },
+        {
+          "tempId": 1,
+          "type": "Plane",
+          "owner": "Block",
+          "area_mm2": 1800.0,
+          "centroid_mm": [
+            100.0,
+            30.0,
+            15.0
+          ],
+          "min_thickness_mm": 1.5
+        },
+        {
+          "tempId": 92,
+          "type": "Plane",
+          "owner": "Pocket3",
+          "area_mm2": 288.0,
+          "centroid_mm": [
+            30.0,
+            56.0,
+            26.0
+          ],
+          "min_thickness_mm": 4.0
+        },
+        {
+          "tempId": 0,
+          "type": "Plane",
+          "owner": "Block",
+          "area_mm2": 3000.0,
+          "centroid_mm": [
+            50.0,
+            60.0,
+            15.0
+          ],
+          "min_thickness_mm": 4.0
+        },
+        {
+          "tempId": 91,
+          "type": "Cylinder",
+          "owner": "Pocket3",
+          "area_mm2": 25.13,
+          "centroid_mm": [
+            49.2732,
+            55.2732,
+            26.0
+          ],
+          "radius_mm": 2.0,
+          "min_thickness_mm": 4.1175
+        },
+        {
+          "tempId": 93,
+          "type": "Cylinder",
+          "owner": "Pocket3",
+          "area_mm2": 25.13,
+          "centroid_mm": [
+            10.7268,
+            55.2732,
+            26.0
+          ],
+          "radius_mm": 2.0,
+          "min_thickness_mm": 4.1175
+        }
+      ]
+    },
+    "T8": {
+      "pocket3_cylinders": [
+        {
+          "face": 91,
+          "radius_mm": 2.0,
+          "sketch": "Pocket3 sketch",
+          "arc_found": true,
+          "arc_fully_constrained": false,
+          "radius_parameter": null
+        },
+        {
+          "face": 89,
+          "radius_mm": 2.0,
+          "sketch": "Pocket3 sketch",
+          "arc_found": true,
+          "arc_fully_constrained": false,
+          "radius_parameter": null
+        },
+        {
+          "face": 93,
+          "radius_mm": 2.0,
+          "sketch": "Pocket3 sketch",
+          "arc_found": true,
+          "arc_fully_constrained": false,
+          "radius_parameter": null
+        },
+        {
+          "face": 95,
+          "radius_mm": 2.0,
+          "sketch": "Pocket3 sketch",
+          "arc_found": true,
+          "arc_fully_constrained": false,
+          "radius_parameter": null
+        }
+      ],
+      "note": "radius_parameter None => only the sketch curve can be proposed for correction"
+    },
+    "T9": {
+      "step": [
+        "C:\\Users\\<usuario>\\Documents\\ClaudeBridge\\artifacts\\probe02.step",
+        40628
+      ],
+      "stl": [
+        "C:\\Users\\<usuario>\\Documents\\ClaudeBridge\\artifacts\\probe02.stl",
+        65684
+      ],
+      "smt": [
+        "C:\\Users\\<usuario>\\Documents\\ClaudeBridge\\artifacts\\probe02.smt",
+        39966
+      ],
+      "body_mesh": {
+        "nodes": 389,
+        "triangles": 300
+      },
+      "per_face_mesh_available": true
+    },
+    "T10": {
+      "python": "3.14.7 (tags/v3.14.7:823f032, Aug  5 2026, 10:51:32) [MSC v.1944 64 bit (AMD64)]",
+      "executable": "C:\\Users\\<usuario>\\AppData\\Local\\Autodesk\\webdeploy\\production\\39e8a3d5e919c70b05ef3ebfe9c6bfc8d9ee001e\\Fusion360.exe",
+      "modules": {
+        "numpy": "ModuleNotFoundError(\"No module named 'numpy'\")",
+        "scipy": "ModuleNotFoundError(\"No module named 'scipy'\")",
+        "requests": "ModuleNotFoundError(\"No module named 'requests'\")",
+        "urllib.request": true,
+        "ssl": true,
+        "sqlite3": true,
+        "json": true
+      }
+    },
+    "T11": {
+      "highlighted_faces": 7,
+      "config_roundtrip": {
+        "min_internal_radius_mm": 1.5,
+        "max_aspect": 4,
+        "min_wall_mm": 2
+      },
+      "palettes_api": true,
+      "selection_api": true
+    }
+  },
+  "stdout": "",
+  "error": null,
+  "elapsed_ms": 2871.149
+}

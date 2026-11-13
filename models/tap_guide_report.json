@@ -1,0 +1,33 @@
+{
+  "id": "20261104_095550_434658",
+  "ok": true,
+  "result": {
+    "bodies": [
+      {
+        "name": "Body1",
+        "solid": true,
+        "faces": 17,
+        "edges": 53,
+        "volume_in3": 2.25401
+      }
+    ],
+    "expected_volume_in3": null,
+    "unhealthy": [],
+    "timeline_items": 20,
+    "user_parameters": 13,
+    "log": [
+      "V 90: ok (pos), 0.3906 in^3 removed",
+      "Agujero 1 D0.136 THRU: ok (pos), 0.0086 in^3 removed",
+      "Agujero 2 D0.164 THRU: ok (pos), 0.0126 in^3 removed",
+      "Agujero 3 D0.190 THRU: ok (pos), 0.0171 in^3 removed",
+      "Agujero 4 D0.250 THRU: ok (pos), 0.0302 in^3 removed",
+      "Agujero 5 D0.313 THRU: ok (pos), 0.0484 in^3 removed",
+      "Agujero 6 D0.375 THRU: ok (pos), 0.0709 in^3 removed",
+      "Agujero 7 D0.438 THRU: ok (pos), 0.0988 in^3 removed",
+      "Agujero 8 D0.500 THRU: ok (pos), 0.1313 in^3 removed"
+    ]
+  },
+  "stdout": "",
+  "error": null,
+  "elapsed_ms": 1634.049
+}

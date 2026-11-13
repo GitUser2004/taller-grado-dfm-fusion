@@ -1,0 +1,349 @@
+{
+  "bodies": [
+    {
+      "name": "Toolmaker vise base",
+      "is_solid": true,
+      "faces": 68,
+      "edges": 209,
+      "volume_in3": 15.56671,
+      "bbox_min_in": [
+        0.0,
+        -1.225,
+        0.0
+      ],
+      "bbox_max_in": [
+        6.0,
+        1.225,
+        2.45
+      ]
+    }
+  ],
+  "features": [
+    {
+      "index": 0,
+      "name": "Base - perfil",
+      "type": "Sketch",
+      "healthy": true,
+      "message": null,
+      "faces": null
+    },
+    {
+      "index": 1,
+      "name": "Base",
+      "type": "ExtrudeFeature",
+      "healthy": true,
+      "message": null,
+      "faces": 3
+    },
+    {
+      "index": 2,
+      "name": "Plano superior de la base",
+      "type": "ConstructionPlane",
+      "healthy": true,
+      "message": null,
+      "faces": null
+    },
+    {
+      "index": 3,
+      "name": "Montante - perfil",
+      "type": "Sketch",
+      "healthy": true,
+      "message": null,
+      "faces": null
+    },
+    {
+      "index": 4,
+      "name": "Montante fijo",
+      "type": "ExtrudeFeature",
+      "healthy": true,
+      "message": null,
+      "faces": 7
+    },
+    {
+      "index": 5,
+      "name": "Guias - perfil",
+      "type": "Sketch",
+      "healthy": true,
+      "message": null,
+      "faces": null
+    },
+    {
+      "index": 6,
+      "name": "Guias (rebaje lateral)",
+      "type": "ExtrudeFeature",
+      "healthy": true,
+      "message": null,
+      "faces": 6
+    },
+    {
+      "index": 7,
+      "name": "Alivio U-cut - perfil",
+      "type": "Sketch",
+      "healthy": true,
+      "message": null,
+      "faces": null
+    },
+    {
+      "index": 8,
+      "name": "Alivio U-cut 1/8",
+      "type": "ExtrudeFeature",
+      "healthy": true,
+      "message": null,
+      "faces": 1
+    },
+    {
+      "index": 9,
+      "name": "Cajera inferior - perfil",
+      "type": "Sketch",
+      "healthy": true,
+      "message": null,
+      "faces": null
+    },
+    {
+      "index": 10,
+      "name": "Cajera inferior",
+      "type": "ExtrudeFeature",
+      "healthy": true,
+      "message": null,
+      "faces": 22
+    },
+    {
+      "index": 11,
+      "name": "Cajera inferior - radios R.250",
+      "type": "FilletFeature",
+      "healthy": true,
+      "message": null,
+      "faces": 4
+    },
+    {
+      "index": 12,
+      "name": "Ranura pasante - perfil",
+      "type": "Sketch",
+      "healthy": true,
+      "message": null,
+      "faces": null
+    },
+    {
+      "index": 13,
+      "name": "Ranura pasante",
+      "type": "ExtrudeFeature",
+      "healthy": true,
+      "message": null,
+      "faces": 5
+    },
+    {
+      "index": 14,
+      "name": "Plano cara lateral A",
+      "type": "ConstructionPlane",
+      "healthy": true,
+      "message": null,
+      "faces": null
+    },
+    {
+      "index": 15,
+      "name": "Plano cara lateral B",
+      "type": "ConstructionPlane",
+      "healthy": true,
+      "message": null,
+      "faces": null
+    },
+    {
+      "index": 16,
+      "name": "Agujeros pasantes - centro",
+      "type": "Sketch",
+      "healthy": true,
+      "message": null,
+      "faces": null
+    },
+    {
+      "index": 17,
+      "name": "Agujero pasante .375",
+      "type": "HoleFeature",
+      "healthy": true,
+      "message": null,
+      "faces": 2
+    },
+    {
+      "index": 18,
+      "name": "Agujeros pasantes 8X (patron)",
+      "type": "RectangularPatternFeature",
+      "healthy": true,
+      "message": null,
+      "faces": 14
+    },
+    {
+      "index": 19,
+      "name": "Roscado 1/4-20 lado A - centro",
+      "type": "Sketch",
+      "healthy": true,
+      "message": null,
+      "faces": null
+    },
+    {
+      "index": 20,
+      "name": "Roscado 1/4-20 lado A",
+      "type": "HoleFeature",
+      "healthy": true,
+      "message": null,
+      "faces": 2
+    },
+    {
+      "index": 21,
+      "name": "Roscado 1/4-20 lado B - centro",
+      "type": "Sketch",
+      "healthy": true,
+      "message": null,
+      "faces": null
+    },
+    {
+      "index": 22,
+      "name": "Roscado 1/4-20 lado B",
+      "type": "HoleFeature",
+      "healthy": true,
+      "message": null,
+      "faces": 2
+    }
+  ],
+  "parameters": [
+    {
+      "name": "vb_L",
+      "expression": "6.000 in",
+      "value_in": 6.0
+    },
+    {
+      "name": "vb_W",
+      "expression": "2.450 in",
+      "value_in": 2.45
+    },
+    {
+      "name": "vb_base_H",
+      "expression": "1.250 in",
+      "value_in": 1.25
+    },
+    {
+      "name": "vb_up_L",
+      "expression": "1.375 in",
+      "value_in": 1.375
+    },
+    {
+      "name": "vb_up_H",
+      "expression": "1.200 in",
+      "value_in": 1.2
+    },
+    {
+      "name": "vb_way_W",
+      "expression": "2.075 in",
+      "value_in": 2.075
+    },
+    {
+      "name": "vb_way_H",
+      "expression": "0.375 in",
+      "value_in": 0.375
+    },
+    {
+      "name": "vb_ucut_d",
+      "expression": "0.125 in",
+      "value_in": 0.125
+    },
+    {
+      "name": "vb_slot_x",
+      "expression": "0.734 in",
+      "value_in": 0.734
+    },
+    {
+      "name": "vb_slot_L",
+      "expression": "4.531 in",
+      "value_in": 4.531
+    },
+    {
+      "name": "vb_slot_W",
+      "expression": "0.531 in",
+      "value_in": 0.531
+    },
+    {
+      "name": "vb_cb_W",
+      "expression": "1.063 in",
+      "value_in": 1.063
+    },
+    {
+      "name": "vb_cb_D",
+      "expression": "0.688 in",
+      "value_in": 0.688
+    },
+    {
+      "name": "vb_cb_R",
+      "expression": "0.250 in",
+      "value_in": 0.25
+    },
+    {
+      "name": "vb_pin_d",
+      "expression": "0.375 in",
+      "value_in": 0.375
+    },
+    {
+      "name": "vb_pin_x",
+      "expression": "1.500 in",
+      "value_in": 1.5
+    },
+    {
+      "name": "vb_pin_p",
+      "expression": "0.438 in",
+      "value_in": 0.438
+    },
+    {
+      "name": "vb_pin_n",
+      "expression": "8",
+      "value_in": 8.0
+    },
+    {
+      "name": "vb_pin_z",
+      "expression": "0.625 in",
+      "value_in": 0.625
+    },
+    {
+      "name": "vb_tap_x",
+      "expression": "vb_up_L - 0.375 in",
+      "value_in": 1.0
+    },
+    {
+      "name": "vb_tap_z",
+      "expression": "vb_base_H + vb_up_H - 0.375 in",
+      "value_in": 2.075
+    },
+    {
+      "name": "vb_tap_depth",
+      "expression": "0.500 in",
+      "value_in": 0.5
+    },
+    {
+      "name": "vb_tap_drill",
+      "expression": "0.201 in",
+      "value_in": 0.201
+    }
+  ],
+  "sketches_not_fully_constrained": [],
+  "log": [
+    "Montante fijo: ok (sentido +), 4.0425 in^3 agregados",
+    "Guias (rebaje lateral): descartado (sentido +), sano=True, cambio=3.1686 cm^3",
+    "Guias (rebaje lateral): ok (sentido -), 0.8437 in^3 removidos",
+    "Cajera inferior: ok (sentido +), 3.3137 in^3 removidos",
+    "Cajera inferior: 4 aristas verticales para R.250 (se esperan 4)",
+    "Ranura: addOverallSlot devolvio 6 objetos",
+    "Ranura pasante: ok (sentido +), 1.3149 in^3 removidos",
+    "Plano A en y=1.2250 in, plano B en y=-1.2250 in",
+    "Agujero pasante .375: fallo (todo, sentido negativo): 2 : InternalValidationError : logicalSelection",
+    "Agujero pasante .375: ok (todo, sentido positivo), 0.1702 in^3 removidos",
+    "Agujeros pasantes 8X (patron): ok (paso +X), 1.1917 in^3 removidos",
+    "Roscado 1/4-20 lado A: ok (roscado, sentido natural), 0.0166 in^3 removidos",
+    "Roscado 1/4-20 lado B: fallo (roscado, sentido natural): 3 : No target body found to cut or intersect!",
+    "Roscado 1/4-20 lado B: ok (roscado, sentido invertido), 0.0166 in^3 removidos"
+  ],
+  "assumptions": [
+    "Altura de base 1.250 = .875 + .375 (vista lateral); el montante sube 1.200 sobre ella (total 2.450).",
+    "Las guias (2.075 de ancho, .375 de alto) recorren todo el largo, tambien bajo el montante (linea oculta en la vista superior); el montante sobresale .1875 a cada lado.",
+    "El alivio 1/8 U-cut es un cilindro de 1/8 a lo largo de Y, centrado en la arista montante/guias.",
+    "La cajera inferior llega a .688 desde abajo (linea oculta de la vista frontal) y R.250 TYP son sus 4 esquinas verticales.",
+    "La ranura de .531 atraviesa toda la base (0 a 1.250), no el montante.",
+    "Los agujeros .375 THRU ALL tienen el eje en Y (se ven como circulos en la vista frontal)."
+  ]
+}
